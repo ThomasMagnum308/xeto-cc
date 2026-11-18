@@ -45,20 +45,49 @@ Point scale factors assume the following meter settings:
 - Real-Time Reading mode (Modicon register 404126) set to Primary; values
   include PT/CT ratios with no external multiplier
 - Energy Display mode (Modicon register 404122) set to Secondary or Primary
-  0.01kWh; energy registers convert with Rx/1000 (`*0.001` scale)
+  0.001 mode; energy registers convert with Rx/1000 (`*0.001` scale)
 - Power factor convention IEC (Modicon register 404118, factory default)
 - Energy calculating mode Full, so power factor points are true power factor
 
-## Omitted BACnet Objects
+## Coverage
 
-- AI33 Load Type: reports an ASCII character code (R/L/C), not a sensor value
-- AI44 Energy Total and AI46 Reactive Energy Total: import plus export sums
-- Per-phase export apparent energy registers have no BACnet objects; AI61-63
-  expose the per-phase import apparent energy registers
+The specs model every register in the Modbus register map of the
+Acuvim-L user manual v4.1.5 (August 2024, chapter 6, Tables 6-15 to 6-81),
+following `cc.accuenergy.acuvim2`'s conventions. Accuenergy's current manual,
+v4.1.13 (November 2026), no longer contains the register map.
 
-## Omitted Modbus Registers
+- Points with a ph.elec spec use it. Points without one (configuration,
+  status, logs, TOU, alarms, I/O modules, SunSpec, max/min records,
+  quadrant energies, import plus export totals) are `NumberPoint`,
+  `EnumPoint` or `BoolPoint` with `<notHaystack>`, as in acuvim2. A second
+  register for a quantity that already has a Haystack point, such as the
+  measured neutral current, is typed but `<notHaystack>`.
+- Registers that are R/W also carry a `modbusWriteAddr`.
+- Apart from real-time metering and energy, the Acuvim-L's register map is
+  the Acuvim II's at the same register numbers. The Acuvim-L reads real-time
+  values and energy from its own Tables 6-19 (Modicon 408577-) and 6-20
+  (408321-), not the Acuvim II's 416385- block, and has no waveform capture.
+- Net energies (active, reactive, apparent) are `s4`: the manual's range is
+  -999999999 to 999999999 although its table says uint32.
 
-- In_measure (Modicon 408603): measured neutral current, only meaningful on
-  units with a neutral CT input; no BACnet object
-- Itotal (Modicon 408605): sum of phase currents; no BACnet object and no
-  corresponding ph.elec sensor flavor
+## Unverified
+
+- TOU energy registers (Tables 6-21 to 6-24 and 6-61, 6-62): the manual gives
+  no resolution. They are scaled like the energy registers of Table 6-20
+  (`*0.001`, Primary 0.001 mode). On a meter the TOU tariffs should sum to
+  the matching Table 6-20 total.
+- Max and min records (Tables 6-34, 6-35) are `int` registers scaled by the
+  meter's PT and CT ratios, (Rx*(PT1/PT2))/10 and so on, which no fixed
+  `scale` can express. They are read raw, as in acuvim2.
+
+## Errors in the manual
+
+Where the manual's hex and decimal addresses disagree, the address that
+continues the table's sequence is used. Among them: Table 6-29 prints 425DH
+for V2(V31) 45th harmonic (4529H); Table 6-46 prints 109H-10E1H for AO2
+(10D9H-10E1H); Table 6-18 prints 3403AH for total power factor (303AH);
+Table 6-55 gives channel 9 and 10 settings decimal addresses one lower than
+their hex; the holiday tables (6-70 to 6-73) have several. Table 6-15 labels
+1006H "PT2 (Low 16 bit)"; it is PT1's low word. Table 6-19 swaps the
+relationships and units of reactive and apparent power demand, and Table
+6-20 gives apparent energy in kVA (kVAh).
