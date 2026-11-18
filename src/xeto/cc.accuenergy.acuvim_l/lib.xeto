@@ -1,6 +1,6 @@
 pragma: Lib <
   doc: "Device models for Accuenergy's Acuvim-L Series"
-  version: "0.2.0"
+  version: "0.3.0"
   depends: {
     { lib: "sys" }
     { lib: "sys.files" }
@@ -8,6 +8,7 @@ pragma: Lib <
     { lib: "ph.attrs" }
     { lib: "ph.points" }
     { lib: "ph.elec" }
+    { lib: "ph.elec.x" }
     { lib: "ph.protocols" }
   }
   license: "AFL-3.0"

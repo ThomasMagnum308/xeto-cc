@@ -4,6 +4,7 @@
 //
 // History:
 //   14 Jul 2026  Trevor Adelman  Creation
+//   18 Nov 2026  Port to current ph.elec (ElecLocation markers, renamed specs); named point slots; bacnetCurAddr/modbusCurAddr
 //
 
 // Device model for Accuenergy's Acuvim-L Series Power Meter (2LL or 3LL
@@ -11,28 +12,32 @@
 // line voltage THD: 405AH=V12, 405BH=V31, 405CH=V23 (Table 6-27).
 AcuvimLElecAc2LLOr3LLMeter : AcuvimLElecAcMeter <abstract> {
   points: {
-    ElecAcPhaseQualityVoltageSensor {
-      totalHarmonicDistortion
-      phase: "L1-L2"
-      modbusAddr: ModbusAddr { addr: "416475", encoding: "s2", scale: "*0.01", dis: "THD_V12" }
-      bacnetAddr: BacnetAddr { addr: "AI64", dis: "Phase A Voltage THD" }
+    reg16474: ElecAcQualityVoltageSensor? {
+      elecThd
+      elecL1L2
+      dis: "THD_V12"
+      bacnetCurAddr: { addr: "AI64" }
+      modbusCurAddr: { addr: "416475", encoding: "s2", scale: "*0.01" }
     }
-    ElecAcPhaseQualityVoltageSensor {
-      totalHarmonicDistortion
-      phase: "L3-L1"
-      modbusAddr: ModbusAddr { addr: "416476", encoding: "s2", scale: "*0.01", dis: "THD_V31" }
-      bacnetAddr: BacnetAddr { addr: "AI65", dis: "Phase B Voltage THD" }
+    reg16475: ElecAcQualityVoltageSensor? {
+      elecThd
+      elecL3L1
+      dis: "THD_V31"
+      bacnetCurAddr: { addr: "AI65" }
+      modbusCurAddr: { addr: "416476", encoding: "s2", scale: "*0.01" }
     }
-    ElecAcPhaseQualityVoltageSensor {
-      totalHarmonicDistortion
-      phase: "L2-L3"
-      modbusAddr: ModbusAddr { addr: "416477", encoding: "s2", scale: "*0.01", dis: "THD_V23" }
-      bacnetAddr: BacnetAddr { addr: "AI66", dis: "Phase C Voltage THD" }
+    reg16476: ElecAcQualityVoltageSensor? {
+      elecThd
+      elecL2L3
+      dis: "THD_V23"
+      bacnetCurAddr: { addr: "AI66" }
+      modbusCurAddr: { addr: "416477", encoding: "s2", scale: "*0.01" }
     }
-    ElecAcLLAvgQualityVoltageSensor {
-      totalHarmonicDistortion
-      modbusAddr: ModbusAddr { addr: "416478", encoding: "s2", scale: "*0.01", dis: "THD_avg" }
-      bacnetAddr: BacnetAddr { addr: "AI67", dis: "Average Voltage THD" }
+    reg16477: ElecAcLineToLineAvgQualityVoltageSensor? {
+      elecThd
+      dis: "THD_avg"
+      bacnetCurAddr: { addr: "AI67" }
+      modbusCurAddr: { addr: "416478", encoding: "s2", scale: "*0.01" }
     }
   }
 }

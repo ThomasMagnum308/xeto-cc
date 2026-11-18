@@ -5,11 +5,12 @@
 // History:
 //   22 Jun 2026  Trevor Adelman  Creation
 //   14 Jul 2026  Trevor Adelman  Restructure for wiring configs and verify registers
+//   18 Nov 2026  Port to current ph.elec (ElecLocation markers, renamed specs); named point slots; bacnetCurAddr/modbusCurAddr
 //
 
 // Device model for Accuenergy's Acuvim-L Series Power Meter
 AcuvimLElecAcMeter : AcElecMeter <abstract> {
-  resources: Query {
+  resources: List? <of:File> {
     PdfFile {
       dis: "Acuvim-L Multifunction Power and Energy Meter User Manual"
       uri: "https://www.accuenergy.com/wp-content/uploads/Acuvim-L-Multifunction-Power-and-Energy-Meter-User-Manual-v4.pdf"
@@ -25,317 +26,381 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     MaxRatedOperatingTempAttr { val: 70°C }
   }
   points: {
-    ElecAcFreqSensor {
-      modbusAddr: ModbusAddr { addr: "408577", encoding: "f4", dis: "Frequency" }
-      bacnetAddr: BacnetAddr { addr: "AI1", dis: "Frequency" }
+    reg8576: ElecAcFreqSensor? {
+      dis: "Frequency"
+      bacnetCurAddr: { addr: "AI1" }
+      modbusCurAddr: { addr: "408577", encoding: "f4" }
     }
-    ElecAcPhaseRmsVoltageSensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408579", encoding: "f4", dis: "Phase 1 Voltage" }
-      bacnetAddr: BacnetAddr { addr: "AI2", dis: "Phase A Voltage" }
+    reg8578: ElecAcRmsVoltageSensor? {
+      elecL1
+      dis: "Phase 1 Voltage"
+      bacnetCurAddr: { addr: "AI2" }
+      modbusCurAddr: { addr: "408579", encoding: "f4" }
     }
-    ElecAcPhaseRmsVoltageSensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408581", encoding: "f4", dis: "Phase 2 Voltage" }
-      bacnetAddr: BacnetAddr { addr: "AI3", dis: "Phase B Voltage" }
+    reg8580: ElecAcRmsVoltageSensor? {
+      elecL2
+      dis: "Phase 2 Voltage"
+      bacnetCurAddr: { addr: "AI3" }
+      modbusCurAddr: { addr: "408581", encoding: "f4" }
     }
-    ElecAcPhaseRmsVoltageSensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408583", encoding: "f4", dis: "Phase 3 Voltage" }
-      bacnetAddr: BacnetAddr { addr: "AI4", dis: "Phase C Voltage" }
+    reg8582: ElecAcRmsVoltageSensor? {
+      elecL3
+      dis: "Phase 3 Voltage"
+      bacnetCurAddr: { addr: "AI4" }
+      modbusCurAddr: { addr: "408583", encoding: "f4" }
     }
-    ElecAcLAvgRmsVoltageSensor {
-      modbusAddr: ModbusAddr { addr: "408585", encoding: "f4", dis: "Average Phase Voltage" }
-      bacnetAddr: BacnetAddr { addr: "AI5", dis: "Average Phase Voltage" }
+    reg8584: ElecAcLineAvgRmsVoltageSensor? {
+      dis: "Average Phase Voltage"
+      bacnetCurAddr: { addr: "AI5" }
+      modbusCurAddr: { addr: "408585", encoding: "f4" }
     }
-    ElecAcPhaseRmsVoltageSensor {
-      phase: "L1-L2"
-      modbusAddr: ModbusAddr { addr: "408587", encoding: "f4", dis: "Line Voltage 1-2" }
-      bacnetAddr: BacnetAddr { addr: "AI6", dis: "Line Voltage AB" }
+    reg8586: ElecAcRmsVoltageSensor? {
+      elecL1L2
+      dis: "Line Voltage 1-2"
+      bacnetCurAddr: { addr: "AI6" }
+      modbusCurAddr: { addr: "408587", encoding: "f4" }
     }
-    ElecAcPhaseRmsVoltageSensor {
-      phase: "L2-L3"
-      modbusAddr: ModbusAddr { addr: "408589", encoding: "f4", dis: "Line Voltage 2-3" }
-      bacnetAddr: BacnetAddr { addr: "AI7", dis: "Line Voltage BC" }
+    reg8588: ElecAcRmsVoltageSensor? {
+      elecL2L3
+      dis: "Line Voltage 2-3"
+      bacnetCurAddr: { addr: "AI7" }
+      modbusCurAddr: { addr: "408589", encoding: "f4" }
     }
-    ElecAcPhaseRmsVoltageSensor {
-      phase: "L3-L1"
-      modbusAddr: ModbusAddr { addr: "408591", encoding: "f4", dis: "Line Voltage 3-1" }
-      bacnetAddr: BacnetAddr { addr: "AI8", dis: "Line Voltage CA" }
+    reg8590: ElecAcRmsVoltageSensor? {
+      elecL3L1
+      dis: "Line Voltage 3-1"
+      bacnetCurAddr: { addr: "AI8" }
+      modbusCurAddr: { addr: "408591", encoding: "f4" }
     }
-    ElecAcLLAvgRmsVoltageSensor {
-      modbusAddr: ModbusAddr { addr: "408593", encoding: "f4", dis: "Average Line Voltage" }
-      bacnetAddr: BacnetAddr { addr: "AI9", dis: "Average Line Voltage" }
+    reg8592: ElecAcLineToLineAvgRmsVoltageSensor? {
+      dis: "Average Line Voltage"
+      bacnetCurAddr: { addr: "AI9" }
+      modbusCurAddr: { addr: "408593", encoding: "f4" }
     }
-    ElecAcPhaseUnsignedRmsCurrentSensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408595", encoding: "f4", dis: "Total Phase A Current" }
-      bacnetAddr: BacnetAddr { addr: "AI10", dis: "Phase A Current" }
+    reg8594: ElecAcRmsCurrentSensor? {
+      elecL1
+      dis: "Total Phase A Current"
+      bacnetCurAddr: { addr: "AI10" }
+      modbusCurAddr: { addr: "408595", encoding: "f4" }
     }
-    ElecAcPhaseUnsignedRmsCurrentSensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408597", encoding: "f4", dis: "Total Phase B Current" }
-      bacnetAddr: BacnetAddr { addr: "AI11", dis: "Phase B Current" }
+    reg8596: ElecAcRmsCurrentSensor? {
+      elecL2
+      dis: "Total Phase B Current"
+      bacnetCurAddr: { addr: "AI11" }
+      modbusCurAddr: { addr: "408597", encoding: "f4" }
     }
-    ElecAcPhaseUnsignedRmsCurrentSensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408599", encoding: "f4", dis: "Total Phase C Current" }
-      bacnetAddr: BacnetAddr { addr: "AI12", dis: "Phase C Current" }
+    reg8598: ElecAcRmsCurrentSensor? {
+      elecL3
+      dis: "Total Phase C Current"
+      bacnetCurAddr: { addr: "AI12" }
+      modbusCurAddr: { addr: "408599", encoding: "f4" }
     }
-    ElecAcLAvgUnsignedRmsCurrentSensor {
-      modbusAddr: ModbusAddr { addr: "408607", encoding: "f4", dis: "Average Current" }
-      bacnetAddr: BacnetAddr { addr: "AI13", dis: "Average Current" }
+    reg8606: ElecAcLineAvgRmsCurrentSensor? {
+      dis: "Average Current"
+      bacnetCurAddr: { addr: "AI13" }
+      modbusCurAddr: { addr: "408607", encoding: "f4" }
     }
-    ElecAcNeutralUnsignedRmsCurrentSensor {
-      modbusAddr: ModbusAddr { addr: "408601", encoding: "f4", dis: "Neutral Current Calculated" }
-      bacnetAddr: BacnetAddr { addr: "AI14", dis: "Neutral Current" }
+    reg8600: ElecAcNeutralRmsCurrentSensor? {
+      dis: "Neutral Current Calculated"
+      bacnetCurAddr: { addr: "AI14" }
+      modbusCurAddr: { addr: "408601", encoding: "f4" }
     }
-    ElecAcPhaseNetActivePowerSensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408609", encoding: "f4", scale: "*0.001", dis: "Phase A Power" }
-      bacnetAddr: BacnetAddr { addr: "AI15", dis: "Phase A Active Power" }
+    reg8608: ElecAcNetActivePowerSensor? {
+      elecL1
+      dis: "Phase A Power"
+      bacnetCurAddr: { addr: "AI15" }
+      modbusCurAddr: { addr: "408609", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetActivePowerSensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408611", encoding: "f4", scale: "*0.001", dis: "Phase B Power" }
-      bacnetAddr: BacnetAddr { addr: "AI16", dis: "Phase B Active Power" }
+    reg8610: ElecAcNetActivePowerSensor? {
+      elecL2
+      dis: "Phase B Power"
+      bacnetCurAddr: { addr: "AI16" }
+      modbusCurAddr: { addr: "408611", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetActivePowerSensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408613", encoding: "f4", scale: "*0.001", dis: "Phase C Power" }
-      bacnetAddr: BacnetAddr { addr: "AI17", dis: "Phase C Active Power" }
+    reg8612: ElecAcNetActivePowerSensor? {
+      elecL3
+      dis: "Phase C Power"
+      bacnetCurAddr: { addr: "AI17" }
+      modbusCurAddr: { addr: "408613", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcTotalNetActivePowerSensor {
-      modbusAddr: ModbusAddr { addr: "408615", encoding: "f4", scale: "*0.001", dis: "Total System Power" }
-      bacnetAddr: BacnetAddr { addr: "AI18", dis: "Total Active Power" }
+    reg8614: ElecAcTotalNetActivePowerSensor? {
+      dis: "Total System Power"
+      bacnetCurAddr: { addr: "AI18" }
+      modbusCurAddr: { addr: "408615", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetReactivePowerSensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408617", encoding: "f4", scale: "*0.001", dis: "Phase A Reactive Power" }
-      bacnetAddr: BacnetAddr { addr: "AI19", dis: "Phase A Reactive Power" }
+    reg8616: ElecAcNetReactivePowerSensor? {
+      elecL1
+      dis: "Phase A Reactive Power"
+      bacnetCurAddr: { addr: "AI19" }
+      modbusCurAddr: { addr: "408617", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetReactivePowerSensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408619", encoding: "f4", scale: "*0.001", dis: "Phase B Reactive Power" }
-      bacnetAddr: BacnetAddr { addr: "AI20", dis: "Phase B Reactive Power" }
+    reg8618: ElecAcNetReactivePowerSensor? {
+      elecL2
+      dis: "Phase B Reactive Power"
+      bacnetCurAddr: { addr: "AI20" }
+      modbusCurAddr: { addr: "408619", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetReactivePowerSensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408621", encoding: "f4", scale: "*0.001", dis: "Phase C Reactive Power" }
-      bacnetAddr: BacnetAddr { addr: "AI21", dis: "Phase C Reactive Power" }
+    reg8620: ElecAcNetReactivePowerSensor? {
+      elecL3
+      dis: "Phase C Reactive Power"
+      bacnetCurAddr: { addr: "AI21" }
+      modbusCurAddr: { addr: "408621", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcTotalNetReactivePowerSensor {
-      modbusAddr: ModbusAddr { addr: "408623", encoding: "f4", scale: "*0.001", dis: "Total Reactive Power" }
-      bacnetAddr: BacnetAddr { addr: "AI22", dis: "Total Reactive Power" }
+    reg8622: ElecAcTotalNetReactivePowerSensor? {
+      dis: "Total Reactive Power"
+      bacnetCurAddr: { addr: "AI22" }
+      modbusCurAddr: { addr: "408623", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetApparentPowerSensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408625", encoding: "f4", scale: "*0.001", dis: "Phase A Apparent Power" }
-      bacnetAddr: BacnetAddr { addr: "AI23", dis: "Phase A Apparent Power" }
+    reg8624: ElecAcApparentPowerSensor? {
+      elecL1
+      dis: "Phase A Apparent Power"
+      bacnetCurAddr: { addr: "AI23" }
+      modbusCurAddr: { addr: "408625", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetApparentPowerSensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408627", encoding: "f4", scale: "*0.001", dis: "Phase B Apparent Power" }
-      bacnetAddr: BacnetAddr { addr: "AI24", dis: "Phase B Apparent Power" }
+    reg8626: ElecAcApparentPowerSensor? {
+      elecL2
+      dis: "Phase B Apparent Power"
+      bacnetCurAddr: { addr: "AI24" }
+      modbusCurAddr: { addr: "408627", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetApparentPowerSensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408629", encoding: "f4", scale: "*0.001", dis: "Phase C Apparent Power" }
-      bacnetAddr: BacnetAddr { addr: "AI25", dis: "Phase C Apparent Power" }
+    reg8628: ElecAcApparentPowerSensor? {
+      elecL3
+      dis: "Phase C Apparent Power"
+      bacnetCurAddr: { addr: "AI25" }
+      modbusCurAddr: { addr: "408629", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcTotalNetApparentPowerSensor {
-      modbusAddr: ModbusAddr { addr: "408631", encoding: "f4", scale: "*0.001", dis: "Total Apparent Power" }
-      bacnetAddr: BacnetAddr { addr: "AI26", dis: "Total Apparent Power" }
+    reg8630: ElecAcTotalApparentPowerSensor? {
+      dis: "Total Apparent Power"
+      bacnetCurAddr: { addr: "AI26" }
+      modbusCurAddr: { addr: "408631", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhasePfSensor {
-      pfTrue
-      pfIec
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408633", encoding: "f4", dis: "Phase A Power Factor" }
-      bacnetAddr: BacnetAddr { addr: "AI27", dis: "Phase A Power Factor" }
+    reg8632: ElecAcPfSensor? {
+      elecPfTrue
+      elecPfIec
+      elecL1
+      dis: "Phase A Power Factor"
+      bacnetCurAddr: { addr: "AI27" }
+      modbusCurAddr: { addr: "408633", encoding: "f4" }
     }
-    ElecAcPhasePfSensor {
-      pfTrue
-      pfIec
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408635", encoding: "f4", dis: "Phase B Power Factor" }
-      bacnetAddr: BacnetAddr { addr: "AI28", dis: "Phase B Power Factor" }
+    reg8634: ElecAcPfSensor? {
+      elecPfTrue
+      elecPfIec
+      elecL2
+      dis: "Phase B Power Factor"
+      bacnetCurAddr: { addr: "AI28" }
+      modbusCurAddr: { addr: "408635", encoding: "f4" }
     }
-    ElecAcPhasePfSensor {
-      pfTrue
-      pfIec
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408637", encoding: "f4", dis: "Phase C Power Factor" }
-      bacnetAddr: BacnetAddr { addr: "AI29", dis: "Phase C Power Factor" }
+    reg8636: ElecAcPfSensor? {
+      elecPfTrue
+      elecPfIec
+      elecL3
+      dis: "Phase C Power Factor"
+      bacnetCurAddr: { addr: "AI29" }
+      modbusCurAddr: { addr: "408637", encoding: "f4" }
     }
-    ElecAcTotalPfSensor {
-      pfTrue
-      pfIec
-      modbusAddr: ModbusAddr { addr: "408639", encoding: "f4", dis: "Total Power Factor" }
-      bacnetAddr: BacnetAddr { addr: "AI30", dis: "Total Power Factor" }
+    reg8638: ElecAcTotalPfSensor? {
+      elecPfTrue
+      elecPfIec
+      dis: "Total Power Factor"
+      bacnetCurAddr: { addr: "AI30" }
+      modbusCurAddr: { addr: "408639", encoding: "f4" }
     }
-    ElecAcLLAvgQualityVoltageSensor {
+    reg8640: ElecAcLineToLineAvgQualityVoltageSensor? {
       imbalance
-      modbusAddr: ModbusAddr { addr: "408641", encoding: "f4", scale: "*100", dis: "Voltage Unbalance" }
-      bacnetAddr: BacnetAddr { addr: "AI31", dis: "Voltage Unbalance Factor" }
+      dis: "Voltage Unbalance"
+      bacnetCurAddr: { addr: "AI31" }
+      modbusCurAddr: { addr: "408641", encoding: "f4", scale: "*100" }
     }
-    ElecAcLAvgQualityCurrentSensor {
+    reg8642: ElecAcLineAvgQualityCurrentSensor? {
       imbalance
-      modbusAddr: ModbusAddr { addr: "408643", encoding: "f4", scale: "*100", dis: "Current Unbalance" }
-      bacnetAddr: BacnetAddr { addr: "AI32", dis: "Current Unbalance Factor" }
+      dis: "Current Unbalance"
+      bacnetCurAddr: { addr: "AI32" }
+      modbusCurAddr: { addr: "408643", encoding: "f4", scale: "*100" }
     }
-    ElecAcTotalNetActiveDemandSensor {
-      modbusAddr: ModbusAddr { addr: "408647", encoding: "f4", scale: "*0.001", dis: "Power Demand" }
-      bacnetAddr: BacnetAddr { addr: "AI34", dis: "Active Power Demand" }
+    reg8646: ElecAcTotalNetActiveDemandSensor? {
+      dis: "Power Demand"
+      bacnetCurAddr: { addr: "AI34" }
+      modbusCurAddr: { addr: "408647", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcTotalNetReactiveDemandSensor {
-      modbusAddr: ModbusAddr { addr: "408649", encoding: "f4", scale: "*0.001", dis: "Reactive Power Demand" }
-      bacnetAddr: BacnetAddr { addr: "AI35", dis: "Reactive Power Demand" }
+    reg8648: ElecAcTotalNetReactiveDemandSensor? {
+      dis: "Reactive Power Demand"
+      bacnetCurAddr: { addr: "AI35" }
+      modbusCurAddr: { addr: "408649", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcTotalNetApparentDemandSensor {
-      modbusAddr: ModbusAddr { addr: "408651", encoding: "f4", scale: "*0.001", dis: "Apparent Power Demand" }
-      bacnetAddr: BacnetAddr { addr: "AI36", dis: "Apparent Power Demand" }
+    reg8650: ElecAcTotalNetApparentDemandSensor? {
+      dis: "Apparent Power Demand"
+      bacnetCurAddr: { addr: "AI36" }
+      modbusCurAddr: { addr: "408651", encoding: "f4", scale: "*0.001" }
     }
-    ElecAcPhaseNetCurrentDemandSensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408653", encoding: "f4", dis: "Phase A Current Demand" }
-      bacnetAddr: BacnetAddr { addr: "AI37", dis: "Phase A Current Demand" }
+    reg8652: ElecAcCurrentDemandSensor? {
+      elecL1
+      dis: "Phase A Current Demand"
+      bacnetCurAddr: { addr: "AI37" }
+      modbusCurAddr: { addr: "408653", encoding: "f4" }
     }
-    ElecAcPhaseNetCurrentDemandSensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408655", encoding: "f4", dis: "Phase B Current Demand" }
-      bacnetAddr: BacnetAddr { addr: "AI38", dis: "Phase B Current Demand" }
+    reg8654: ElecAcCurrentDemandSensor? {
+      elecL2
+      dis: "Phase B Current Demand"
+      bacnetCurAddr: { addr: "AI38" }
+      modbusCurAddr: { addr: "408655", encoding: "f4" }
     }
-    ElecAcPhaseNetCurrentDemandSensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408657", encoding: "f4", dis: "Phase C Current Demand" }
-      bacnetAddr: BacnetAddr { addr: "AI39", dis: "Phase C Current Demand" }
+    reg8656: ElecAcCurrentDemandSensor? {
+      elecL3
+      dis: "Phase C Current Demand"
+      bacnetCurAddr: { addr: "AI39" }
+      modbusCurAddr: { addr: "408657", encoding: "f4" }
     }
-    ElecAcTotalImportActiveEnergySensor {
-      modbusAddr: ModbusAddr { addr: "408321", encoding: "u4", scale: "*0.001", dis: "Import Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI40", dis: "Import Active Energy" }
+    reg8320: ElecAcTotalImportActiveEnergySensor? {
+      dis: "Import Active Energy"
+      bacnetCurAddr: { addr: "AI40" }
+      modbusCurAddr: { addr: "408321", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcTotalExportActiveEnergySensor {
-      modbusAddr: ModbusAddr { addr: "408323", encoding: "u4", scale: "*0.001", dis: "Export Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI41", dis: "Export Active Energy" }
+    reg8322: ElecAcTotalExportActiveEnergySensor? {
+      dis: "Export Active Energy"
+      bacnetCurAddr: { addr: "AI41" }
+      modbusCurAddr: { addr: "408323", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcTotalImportReactiveEnergySensor {
-      modbusAddr: ModbusAddr { addr: "408337", encoding: "u4", scale: "*0.001", dis: "Import Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI42", dis: "Import Reactive Energy" }
+    reg8336: ElecAcTotalImportReactiveEnergySensor? {
+      dis: "Import Reactive Energy"
+      bacnetCurAddr: { addr: "AI42" }
+      modbusCurAddr: { addr: "408337", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcTotalExportReactiveEnergySensor {
-      modbusAddr: ModbusAddr { addr: "408339", encoding: "u4", scale: "*0.001", dis: "Export Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI43", dis: "Export Reactive Energy" }
+    reg8338: ElecAcTotalExportReactiveEnergySensor? {
+      dis: "Export Reactive Energy"
+      bacnetCurAddr: { addr: "AI43" }
+      modbusCurAddr: { addr: "408339", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcTotalNetActiveEnergySensor {
-      modbusAddr: ModbusAddr { addr: "408327", encoding: "u4", scale: "*0.001", dis: "Net Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI45", dis: "Energy Net" }
+    reg8326: ElecAcTotalNetActiveEnergySensor? {
+      dis: "Net Active Energy"
+      bacnetCurAddr: { addr: "AI45" }
+      modbusCurAddr: { addr: "408327", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcTotalNetReactiveEnergySensor {
-      modbusAddr: ModbusAddr { addr: "408343", encoding: "u4", scale: "*0.001", dis: "Net Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI47", dis: "Reactive Energy Net" }
+    reg8342: ElecAcTotalNetReactiveEnergySensor? {
+      dis: "Net Reactive Energy"
+      bacnetCurAddr: { addr: "AI47" }
+      modbusCurAddr: { addr: "408343", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcTotalNetApparentEnergySensor {
-      modbusAddr: ModbusAddr { addr: "408357", encoding: "u4", scale: "*0.001", dis: "Total Apparent Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI48", dis: "Apparent Energy" }
+    reg8356: ElecAcTotalNetApparentEnergySensor? {
+      dis: "Total Apparent Energy"
+      bacnetCurAddr: { addr: "AI48" }
+      modbusCurAddr: { addr: "408357", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportActiveEnergySensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408369", encoding: "u4", scale: "*0.001", dis: "Phase A Import Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI49", dis: "Phase A Import Active Energy" }
+    reg8368: ElecAcImportActiveEnergySensor? {
+      elecL1
+      dis: "Phase A Import Active Energy"
+      bacnetCurAddr: { addr: "AI49" }
+      modbusCurAddr: { addr: "408369", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseExportActiveEnergySensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408371", encoding: "u4", scale: "*0.001", dis: "Phase A Export Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI50", dis: "Phase A Export Active Energy" }
+    reg8370: ElecAcExportActiveEnergySensor? {
+      elecL1
+      dis: "Phase A Export Active Energy"
+      bacnetCurAddr: { addr: "AI50" }
+      modbusCurAddr: { addr: "408371", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportActiveEnergySensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408373", encoding: "u4", scale: "*0.001", dis: "Phase B Import Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI51", dis: "Phase B Import Active Energy" }
+    reg8372: ElecAcImportActiveEnergySensor? {
+      elecL2
+      dis: "Phase B Import Active Energy"
+      bacnetCurAddr: { addr: "AI51" }
+      modbusCurAddr: { addr: "408373", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseExportActiveEnergySensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408375", encoding: "u4", scale: "*0.001", dis: "Phase B Export Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI52", dis: "Phase B Export Active Energy" }
+    reg8374: ElecAcExportActiveEnergySensor? {
+      elecL2
+      dis: "Phase B Export Active Energy"
+      bacnetCurAddr: { addr: "AI52" }
+      modbusCurAddr: { addr: "408375", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportActiveEnergySensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408377", encoding: "u4", scale: "*0.001", dis: "Phase C Import Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI53", dis: "Phase C Import Active Energy" }
+    reg8376: ElecAcImportActiveEnergySensor? {
+      elecL3
+      dis: "Phase C Import Active Energy"
+      bacnetCurAddr: { addr: "AI53" }
+      modbusCurAddr: { addr: "408377", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseExportActiveEnergySensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408379", encoding: "u4", scale: "*0.001", dis: "Phase C Export Active Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI54", dis: "Phase C Export Active Energy" }
+    reg8378: ElecAcExportActiveEnergySensor? {
+      elecL3
+      dis: "Phase C Export Active Energy"
+      bacnetCurAddr: { addr: "AI54" }
+      modbusCurAddr: { addr: "408379", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportReactiveEnergySensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408381", encoding: "u4", scale: "*0.001", dis: "Phase A Import Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI55", dis: "Phase A Import Reactive Energy" }
+    reg8380: ElecAcImportReactiveEnergySensor? {
+      elecL1
+      dis: "Phase A Import Reactive Energy"
+      bacnetCurAddr: { addr: "AI55" }
+      modbusCurAddr: { addr: "408381", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseExportReactiveEnergySensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408383", encoding: "u4", scale: "*0.001", dis: "Phase A Export Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI56", dis: "Phase A Export Reactive Energy" }
+    reg8382: ElecAcExportReactiveEnergySensor? {
+      elecL1
+      dis: "Phase A Export Reactive Energy"
+      bacnetCurAddr: { addr: "AI56" }
+      modbusCurAddr: { addr: "408383", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportReactiveEnergySensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408385", encoding: "u4", scale: "*0.001", dis: "Phase B Import Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI57", dis: "Phase B Import Reactive Energy" }
+    reg8384: ElecAcImportReactiveEnergySensor? {
+      elecL2
+      dis: "Phase B Import Reactive Energy"
+      bacnetCurAddr: { addr: "AI57" }
+      modbusCurAddr: { addr: "408385", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseExportReactiveEnergySensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408387", encoding: "u4", scale: "*0.001", dis: "Phase B Export Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI58", dis: "Phase B Export Reactive Energy" }
+    reg8386: ElecAcExportReactiveEnergySensor? {
+      elecL2
+      dis: "Phase B Export Reactive Energy"
+      bacnetCurAddr: { addr: "AI58" }
+      modbusCurAddr: { addr: "408387", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportReactiveEnergySensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408389", encoding: "u4", scale: "*0.001", dis: "Phase C Import Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI59", dis: "Phase C Import Reactive Energy" }
+    reg8388: ElecAcImportReactiveEnergySensor? {
+      elecL3
+      dis: "Phase C Import Reactive Energy"
+      bacnetCurAddr: { addr: "AI59" }
+      modbusCurAddr: { addr: "408389", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseExportReactiveEnergySensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408391", encoding: "u4", scale: "*0.001", dis: "Phase C Export Reactive Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI60", dis: "Phase C Export Reactive Energy" }
+    reg8390: ElecAcExportReactiveEnergySensor? {
+      elecL3
+      dis: "Phase C Export Reactive Energy"
+      bacnetCurAddr: { addr: "AI60" }
+      modbusCurAddr: { addr: "408391", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportApparentEnergySensor {
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "408393", encoding: "u4", scale: "*0.001", dis: "Phase A Import Apparent Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI61", dis: "Phase A Apparent Energy" }
+    reg8392: ElecAcImportApparentEnergySensor? {
+      elecL1
+      dis: "Phase A Import Apparent Energy"
+      bacnetCurAddr: { addr: "AI61" }
+      modbusCurAddr: { addr: "408393", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportApparentEnergySensor {
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "408397", encoding: "u4", scale: "*0.001", dis: "Phase B Import Apparent Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI62", dis: "Phase B Apparent Energy" }
+    reg8396: ElecAcImportApparentEnergySensor? {
+      elecL2
+      dis: "Phase B Import Apparent Energy"
+      bacnetCurAddr: { addr: "AI62" }
+      modbusCurAddr: { addr: "408397", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseImportApparentEnergySensor {
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "408401", encoding: "u4", scale: "*0.001", dis: "Phase C Import Apparent Energy" }
-      bacnetAddr: BacnetAddr { addr: "AI63", dis: "Phase C Apparent Energy" }
+    reg8400: ElecAcImportApparentEnergySensor? {
+      elecL3
+      dis: "Phase C Import Apparent Energy"
+      bacnetCurAddr: { addr: "AI63" }
+      modbusCurAddr: { addr: "408401", encoding: "u4", scale: "*0.001" }
     }
-    ElecAcPhaseQualityCurrentSensor {
-      totalHarmonicDistortion
-      phase: "L1"
-      modbusAddr: ModbusAddr { addr: "416479", encoding: "s2", scale: "*0.01", dis: "THD_I1" }
-      bacnetAddr: BacnetAddr { addr: "AI68", dis: "Phase A Current THD" }
+    reg16478: ElecAcQualityCurrentSensor? {
+      elecThd
+      elecL1
+      dis: "THD_I1"
+      bacnetCurAddr: { addr: "AI68" }
+      modbusCurAddr: { addr: "416479", encoding: "s2", scale: "*0.01" }
     }
-    ElecAcPhaseQualityCurrentSensor {
-      totalHarmonicDistortion
-      phase: "L2"
-      modbusAddr: ModbusAddr { addr: "416480", encoding: "s2", scale: "*0.01", dis: "THD_I2" }
-      bacnetAddr: BacnetAddr { addr: "AI69", dis: "Phase B Current THD" }
+    reg16479: ElecAcQualityCurrentSensor? {
+      elecThd
+      elecL2
+      dis: "THD_I2"
+      bacnetCurAddr: { addr: "AI69" }
+      modbusCurAddr: { addr: "416480", encoding: "s2", scale: "*0.01" }
     }
-    ElecAcPhaseQualityCurrentSensor {
-      totalHarmonicDistortion
-      phase: "L3"
-      modbusAddr: ModbusAddr { addr: "416481", encoding: "s2", scale: "*0.01", dis: "THD_I3" }
-      bacnetAddr: BacnetAddr { addr: "AI70", dis: "Phase C Current THD" }
+    reg16480: ElecAcQualityCurrentSensor? {
+      elecThd
+      elecL3
+      dis: "THD_I3"
+      bacnetCurAddr: { addr: "AI70" }
+      modbusCurAddr: { addr: "416481", encoding: "s2", scale: "*0.01" }
     }
-    ElecAcLAvgQualityCurrentSensor {
-      totalHarmonicDistortion
-      modbusAddr: ModbusAddr { addr: "416482", encoding: "s2", scale: "*0.01", dis: "THD_Iavg" }
-      bacnetAddr: BacnetAddr { addr: "AI71", dis: "Average Current THD" }
+    reg16481: ElecAcLineAvgQualityCurrentSensor? {
+      elecThd
+      dis: "THD_Iavg"
+      bacnetCurAddr: { addr: "AI71" }
+      modbusCurAddr: { addr: "416482", encoding: "s2", scale: "*0.01" }
     }
   }
 }
