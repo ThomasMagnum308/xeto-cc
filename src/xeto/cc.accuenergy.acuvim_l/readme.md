@@ -45,7 +45,7 @@ Point scale factors assume the following meter settings:
 - Real-Time Reading mode (Modicon register 404126) set to Primary; values
   include PT/CT ratios with no external multiplier
 - Energy Display mode (Modicon register 404122) set to Secondary or Primary
-  0.001 mode; energy registers convert with Rx/1000 (`*0.001` scale)
+  0.001 mode; energy registers convert with Rx/1000 (`/1000` scale)
 - Power factor convention IEC (Modicon register 404118, factory default)
 - Energy calculating mode Full, so power factor points are true power factor
 
@@ -92,7 +92,7 @@ An Acuvim-L (RCT, CT1 1000, PT1 and PT2 220.0, Primary parameter mode,
 Primary 0.001 energy mode), read with Haxall 4.0.7 and compared with the
 meter's web page, November 2026:
 
-- TOU energy (Tables 6-21 to 6-24, 6-61, 6-62) is `*0.001`, as Table 6-20.
+- TOU energy (Tables 6-21 to 6-24, 6-61, 6-62) is `/1000`, as Table 6-20.
 - Max and min records follow the formulas above; their timestamps are
   year, month, day, hour, minute, second.
 - The 100ms block (Table 6-18) is in Hz, V, A, kW, kvar and kVA.

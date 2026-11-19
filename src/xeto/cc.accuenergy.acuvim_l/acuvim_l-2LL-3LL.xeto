@@ -18,27 +18,27 @@ AcuvimLElecAc2LLOr3LLMeter : AcuvimLElecAcMeter <abstract> {
       elecL1L2
       dis: "THD_V12"
       bacnetCurAddr: { addr: "AI64" }
-      modbusCurAddr: { addr: "416475", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416475", encoding: "s2", scale: "/100" }
     }
     reg16475: ElecAcQualityVoltageSensor? {
       elecThd
       elecL3L1
       dis: "THD_V31"
       bacnetCurAddr: { addr: "AI65" }
-      modbusCurAddr: { addr: "416476", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416476", encoding: "s2", scale: "/100" }
     }
     reg16476: ElecAcQualityVoltageSensor? {
       elecThd
       elecL2L3
       dis: "THD_V23"
       bacnetCurAddr: { addr: "AI66" }
-      modbusCurAddr: { addr: "416477", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416477", encoding: "s2", scale: "/100" }
     }
     reg16477: ElecAcLineToLineAvgQualityVoltageSensor? {
       elecThd
       dis: "THD_avg"
       bacnetCurAddr: { addr: "AI67" }
-      modbusCurAddr: { addr: "416478", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416478", encoding: "s2", scale: "/100" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -52,702 +52,702 @@ AcuvimLElecAc2LLOr3LLMeter : AcuvimLElecAcMeter <abstract> {
       elecIhd
       elecL1L2
       dis: "V12 2nd Harmonic"
-      modbusCurAddr: { addr: "416483", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416483", encoding: "s2", scale: "/100" }
     }
     reg16483: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 3
       elecIhd
       elecL1L2
       dis: "V12 3rd Harmonic"
-      modbusCurAddr: { addr: "416484", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416484", encoding: "s2", scale: "/100" }
     }
     reg16484: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 4
       elecIhd
       elecL1L2
       dis: "V12 4th Harmonic"
-      modbusCurAddr: { addr: "416485", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416485", encoding: "s2", scale: "/100" }
     }
     reg16485: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 5
       elecIhd
       elecL1L2
       dis: "V12 5th Harmonic"
-      modbusCurAddr: { addr: "416486", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416486", encoding: "s2", scale: "/100" }
     }
     reg16486: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 6
       elecIhd
       elecL1L2
       dis: "V12 6th Harmonic"
-      modbusCurAddr: { addr: "416487", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416487", encoding: "s2", scale: "/100" }
     }
     reg16487: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 7
       elecIhd
       elecL1L2
       dis: "V12 7th Harmonic"
-      modbusCurAddr: { addr: "416488", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416488", encoding: "s2", scale: "/100" }
     }
     reg16488: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 8
       elecIhd
       elecL1L2
       dis: "V12 8th Harmonic"
-      modbusCurAddr: { addr: "416489", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416489", encoding: "s2", scale: "/100" }
     }
     reg16489: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 9
       elecIhd
       elecL1L2
       dis: "V12 9th Harmonic"
-      modbusCurAddr: { addr: "416490", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416490", encoding: "s2", scale: "/100" }
     }
     reg16490: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 10
       elecIhd
       elecL1L2
       dis: "V12 10th Harmonic"
-      modbusCurAddr: { addr: "416491", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416491", encoding: "s2", scale: "/100" }
     }
     reg16491: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 11
       elecIhd
       elecL1L2
       dis: "V12 11th Harmonic"
-      modbusCurAddr: { addr: "416492", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416492", encoding: "s2", scale: "/100" }
     }
     reg16492: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 12
       elecIhd
       elecL1L2
       dis: "V12 12th Harmonic"
-      modbusCurAddr: { addr: "416493", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416493", encoding: "s2", scale: "/100" }
     }
     reg16493: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 13
       elecIhd
       elecL1L2
       dis: "V12 13th Harmonic"
-      modbusCurAddr: { addr: "416494", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416494", encoding: "s2", scale: "/100" }
     }
     reg16494: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 14
       elecIhd
       elecL1L2
       dis: "V12 14th Harmonic"
-      modbusCurAddr: { addr: "416495", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416495", encoding: "s2", scale: "/100" }
     }
     reg16495: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 15
       elecIhd
       elecL1L2
       dis: "V12 15th Harmonic"
-      modbusCurAddr: { addr: "416496", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416496", encoding: "s2", scale: "/100" }
     }
     reg16496: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 16
       elecIhd
       elecL1L2
       dis: "V12 16th Harmonic"
-      modbusCurAddr: { addr: "416497", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416497", encoding: "s2", scale: "/100" }
     }
     reg16497: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 17
       elecIhd
       elecL1L2
       dis: "V12 17th Harmonic"
-      modbusCurAddr: { addr: "416498", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416498", encoding: "s2", scale: "/100" }
     }
     reg16498: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 18
       elecIhd
       elecL1L2
       dis: "V12 18th Harmonic"
-      modbusCurAddr: { addr: "416499", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416499", encoding: "s2", scale: "/100" }
     }
     reg16499: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 19
       elecIhd
       elecL1L2
       dis: "V12 19th Harmonic"
-      modbusCurAddr: { addr: "416500", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416500", encoding: "s2", scale: "/100" }
     }
     reg16500: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 20
       elecIhd
       elecL1L2
       dis: "V12 20th Harmonic"
-      modbusCurAddr: { addr: "416501", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416501", encoding: "s2", scale: "/100" }
     }
     reg16501: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 21
       elecIhd
       elecL1L2
       dis: "V12 21st Harmonic"
-      modbusCurAddr: { addr: "416502", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416502", encoding: "s2", scale: "/100" }
     }
     reg16502: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 22
       elecIhd
       elecL1L2
       dis: "V12 22nd Harmonic"
-      modbusCurAddr: { addr: "416503", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416503", encoding: "s2", scale: "/100" }
     }
     reg16503: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 23
       elecIhd
       elecL1L2
       dis: "V12 23rd Harmonic"
-      modbusCurAddr: { addr: "416504", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416504", encoding: "s2", scale: "/100" }
     }
     reg16504: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 24
       elecIhd
       elecL1L2
       dis: "V12 24th Harmonic"
-      modbusCurAddr: { addr: "416505", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416505", encoding: "s2", scale: "/100" }
     }
     reg16505: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 25
       elecIhd
       elecL1L2
       dis: "V12 25th Harmonic"
-      modbusCurAddr: { addr: "416506", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416506", encoding: "s2", scale: "/100" }
     }
     reg16506: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 26
       elecIhd
       elecL1L2
       dis: "V12 26th Harmonic"
-      modbusCurAddr: { addr: "416507", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416507", encoding: "s2", scale: "/100" }
     }
     reg16507: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 27
       elecIhd
       elecL1L2
       dis: "V12 27th Harmonic"
-      modbusCurAddr: { addr: "416508", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416508", encoding: "s2", scale: "/100" }
     }
     reg16508: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 28
       elecIhd
       elecL1L2
       dis: "V12 28th Harmonic"
-      modbusCurAddr: { addr: "416509", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416509", encoding: "s2", scale: "/100" }
     }
     reg16509: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 29
       elecIhd
       elecL1L2
       dis: "V12 29th Harmonic"
-      modbusCurAddr: { addr: "416510", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416510", encoding: "s2", scale: "/100" }
     }
     reg16510: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 30
       elecIhd
       elecL1L2
       dis: "V12 30th Harmonic"
-      modbusCurAddr: { addr: "416511", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416511", encoding: "s2", scale: "/100" }
     }
     reg16511: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 31
       elecIhd
       elecL1L2
       dis: "V12 31st Harmonic"
-      modbusCurAddr: { addr: "416512", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416512", encoding: "s2", scale: "/100" }
     }
     reg16512: ElecAcQualityVoltageSensor? {
       elecOddThd
       elecL1L2
       dis: "Odd THD_V12"
-      modbusCurAddr: { addr: "416513", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416513", encoding: "s2", scale: "/100" }
     }
     reg16513: ElecAcQualityVoltageSensor? {
       elecEvenThd
       elecL1L2
       dis: "Even THD_V12"
-      modbusCurAddr: { addr: "416514", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416514", encoding: "s2", scale: "/100" }
     }
     reg16514: ElecAcQualityVoltageSensor? {
       elecCrestFactor
       elecL1L2
       dis: "Crest Factor V12"
-      modbusCurAddr: { addr: "416515", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416515", encoding: "s2", scale: "/100" }
     }
     reg16515: ElecAcQualityVoltageSensor? {
       elecThff
       elecL1L2
       dis: "THFF_V12"
-      modbusCurAddr: { addr: "416516", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416516", encoding: "s2", scale: "/100" }
     }
     reg16516: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 2
       elecIhd
       elecL3L1
       dis: "V31 2nd Harmonic"
-      modbusCurAddr: { addr: "416517", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416517", encoding: "s2", scale: "/100" }
     }
     reg16517: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 3
       elecIhd
       elecL3L1
       dis: "V31 3rd Harmonic"
-      modbusCurAddr: { addr: "416518", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416518", encoding: "s2", scale: "/100" }
     }
     reg16518: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 4
       elecIhd
       elecL3L1
       dis: "V31 4th Harmonic"
-      modbusCurAddr: { addr: "416519", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416519", encoding: "s2", scale: "/100" }
     }
     reg16519: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 5
       elecIhd
       elecL3L1
       dis: "V31 5th Harmonic"
-      modbusCurAddr: { addr: "416520", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416520", encoding: "s2", scale: "/100" }
     }
     reg16520: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 6
       elecIhd
       elecL3L1
       dis: "V31 6th Harmonic"
-      modbusCurAddr: { addr: "416521", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416521", encoding: "s2", scale: "/100" }
     }
     reg16521: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 7
       elecIhd
       elecL3L1
       dis: "V31 7th Harmonic"
-      modbusCurAddr: { addr: "416522", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416522", encoding: "s2", scale: "/100" }
     }
     reg16522: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 8
       elecIhd
       elecL3L1
       dis: "V31 8th Harmonic"
-      modbusCurAddr: { addr: "416523", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416523", encoding: "s2", scale: "/100" }
     }
     reg16523: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 9
       elecIhd
       elecL3L1
       dis: "V31 9th Harmonic"
-      modbusCurAddr: { addr: "416524", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416524", encoding: "s2", scale: "/100" }
     }
     reg16524: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 10
       elecIhd
       elecL3L1
       dis: "V31 10th Harmonic"
-      modbusCurAddr: { addr: "416525", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416525", encoding: "s2", scale: "/100" }
     }
     reg16525: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 11
       elecIhd
       elecL3L1
       dis: "V31 11th Harmonic"
-      modbusCurAddr: { addr: "416526", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416526", encoding: "s2", scale: "/100" }
     }
     reg16526: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 12
       elecIhd
       elecL3L1
       dis: "V31 12th Harmonic"
-      modbusCurAddr: { addr: "416527", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416527", encoding: "s2", scale: "/100" }
     }
     reg16527: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 13
       elecIhd
       elecL3L1
       dis: "V31 13th Harmonic"
-      modbusCurAddr: { addr: "416528", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416528", encoding: "s2", scale: "/100" }
     }
     reg16528: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 14
       elecIhd
       elecL3L1
       dis: "V31 14th Harmonic"
-      modbusCurAddr: { addr: "416529", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416529", encoding: "s2", scale: "/100" }
     }
     reg16529: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 15
       elecIhd
       elecL3L1
       dis: "V31 15th Harmonic"
-      modbusCurAddr: { addr: "416530", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416530", encoding: "s2", scale: "/100" }
     }
     reg16530: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 16
       elecIhd
       elecL3L1
       dis: "V31 16th Harmonic"
-      modbusCurAddr: { addr: "416531", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416531", encoding: "s2", scale: "/100" }
     }
     reg16531: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 17
       elecIhd
       elecL3L1
       dis: "V31 17th Harmonic"
-      modbusCurAddr: { addr: "416532", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416532", encoding: "s2", scale: "/100" }
     }
     reg16532: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 18
       elecIhd
       elecL3L1
       dis: "V31 18th Harmonic"
-      modbusCurAddr: { addr: "416533", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416533", encoding: "s2", scale: "/100" }
     }
     reg16533: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 19
       elecIhd
       elecL3L1
       dis: "V31 19th Harmonic"
-      modbusCurAddr: { addr: "416534", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416534", encoding: "s2", scale: "/100" }
     }
     reg16534: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 20
       elecIhd
       elecL3L1
       dis: "V31 20th Harmonic"
-      modbusCurAddr: { addr: "416535", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416535", encoding: "s2", scale: "/100" }
     }
     reg16535: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 21
       elecIhd
       elecL3L1
       dis: "V31 21st Harmonic"
-      modbusCurAddr: { addr: "416536", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416536", encoding: "s2", scale: "/100" }
     }
     reg16536: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 22
       elecIhd
       elecL3L1
       dis: "V31 22nd Harmonic"
-      modbusCurAddr: { addr: "416537", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416537", encoding: "s2", scale: "/100" }
     }
     reg16537: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 23
       elecIhd
       elecL3L1
       dis: "V31 23rd Harmonic"
-      modbusCurAddr: { addr: "416538", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416538", encoding: "s2", scale: "/100" }
     }
     reg16538: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 24
       elecIhd
       elecL3L1
       dis: "V31 24th Harmonic"
-      modbusCurAddr: { addr: "416539", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416539", encoding: "s2", scale: "/100" }
     }
     reg16539: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 25
       elecIhd
       elecL3L1
       dis: "V31 25th Harmonic"
-      modbusCurAddr: { addr: "416540", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416540", encoding: "s2", scale: "/100" }
     }
     reg16540: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 26
       elecIhd
       elecL3L1
       dis: "V31 26th Harmonic"
-      modbusCurAddr: { addr: "416541", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416541", encoding: "s2", scale: "/100" }
     }
     reg16541: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 27
       elecIhd
       elecL3L1
       dis: "V31 27th Harmonic"
-      modbusCurAddr: { addr: "416542", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416542", encoding: "s2", scale: "/100" }
     }
     reg16542: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 28
       elecIhd
       elecL3L1
       dis: "V31 28th Harmonic"
-      modbusCurAddr: { addr: "416543", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416543", encoding: "s2", scale: "/100" }
     }
     reg16543: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 29
       elecIhd
       elecL3L1
       dis: "V31 29th Harmonic"
-      modbusCurAddr: { addr: "416544", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416544", encoding: "s2", scale: "/100" }
     }
     reg16544: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 30
       elecIhd
       elecL3L1
       dis: "V31 30th Harmonic"
-      modbusCurAddr: { addr: "416545", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416545", encoding: "s2", scale: "/100" }
     }
     reg16545: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 31
       elecIhd
       elecL3L1
       dis: "V31 31st Harmonic"
-      modbusCurAddr: { addr: "416546", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416546", encoding: "s2", scale: "/100" }
     }
     reg16546: ElecAcQualityVoltageSensor? {
       elecOddThd
       elecL3L1
       dis: "Odd THD_V31"
-      modbusCurAddr: { addr: "416547", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416547", encoding: "s2", scale: "/100" }
     }
     reg16547: ElecAcQualityVoltageSensor? {
       elecEvenThd
       elecL3L1
       dis: "Even THD_V31"
-      modbusCurAddr: { addr: "416548", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416548", encoding: "s2", scale: "/100" }
     }
     reg16548: ElecAcQualityVoltageSensor? {
       elecCrestFactor
       elecL3L1
       dis: "Crest Factor V31"
-      modbusCurAddr: { addr: "416549", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416549", encoding: "s2", scale: "/100" }
     }
     reg16549: ElecAcQualityVoltageSensor? {
       elecThff
       elecL3L1
       dis: "THFF_V31"
-      modbusCurAddr: { addr: "416550", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416550", encoding: "s2", scale: "/100" }
     }
     reg16550: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 2
       elecIhd
       elecL2L3
       dis: "V23 2nd Harmonic"
-      modbusCurAddr: { addr: "416551", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416551", encoding: "s2", scale: "/100" }
     }
     reg16551: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 3
       elecIhd
       elecL2L3
       dis: "V23 3rd Harmonic"
-      modbusCurAddr: { addr: "416552", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416552", encoding: "s2", scale: "/100" }
     }
     reg16552: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 4
       elecIhd
       elecL2L3
       dis: "V23 4th Harmonic"
-      modbusCurAddr: { addr: "416553", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416553", encoding: "s2", scale: "/100" }
     }
     reg16553: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 5
       elecIhd
       elecL2L3
       dis: "V23 5th Harmonic"
-      modbusCurAddr: { addr: "416554", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416554", encoding: "s2", scale: "/100" }
     }
     reg16554: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 6
       elecIhd
       elecL2L3
       dis: "V23 6th Harmonic"
-      modbusCurAddr: { addr: "416555", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416555", encoding: "s2", scale: "/100" }
     }
     reg16555: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 7
       elecIhd
       elecL2L3
       dis: "V23 7th Harmonic"
-      modbusCurAddr: { addr: "416556", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416556", encoding: "s2", scale: "/100" }
     }
     reg16556: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 8
       elecIhd
       elecL2L3
       dis: "V23 8th Harmonic"
-      modbusCurAddr: { addr: "416557", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416557", encoding: "s2", scale: "/100" }
     }
     reg16557: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 9
       elecIhd
       elecL2L3
       dis: "V23 9th Harmonic"
-      modbusCurAddr: { addr: "416558", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416558", encoding: "s2", scale: "/100" }
     }
     reg16558: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 10
       elecIhd
       elecL2L3
       dis: "V23 10th Harmonic"
-      modbusCurAddr: { addr: "416559", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416559", encoding: "s2", scale: "/100" }
     }
     reg16559: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 11
       elecIhd
       elecL2L3
       dis: "V23 11th Harmonic"
-      modbusCurAddr: { addr: "416560", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416560", encoding: "s2", scale: "/100" }
     }
     reg16560: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 12
       elecIhd
       elecL2L3
       dis: "V23 12th Harmonic"
-      modbusCurAddr: { addr: "416561", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416561", encoding: "s2", scale: "/100" }
     }
     reg16561: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 13
       elecIhd
       elecL2L3
       dis: "V23 13th Harmonic"
-      modbusCurAddr: { addr: "416562", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416562", encoding: "s2", scale: "/100" }
     }
     reg16562: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 14
       elecIhd
       elecL2L3
       dis: "V23 14th Harmonic"
-      modbusCurAddr: { addr: "416563", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416563", encoding: "s2", scale: "/100" }
     }
     reg16563: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 15
       elecIhd
       elecL2L3
       dis: "V23 15th Harmonic"
-      modbusCurAddr: { addr: "416564", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416564", encoding: "s2", scale: "/100" }
     }
     reg16564: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 16
       elecIhd
       elecL2L3
       dis: "V23 16th Harmonic"
-      modbusCurAddr: { addr: "416565", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416565", encoding: "s2", scale: "/100" }
     }
     reg16565: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 17
       elecIhd
       elecL2L3
       dis: "V23 17th Harmonic"
-      modbusCurAddr: { addr: "416566", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416566", encoding: "s2", scale: "/100" }
     }
     reg16566: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 18
       elecIhd
       elecL2L3
       dis: "V23 18th Harmonic"
-      modbusCurAddr: { addr: "416567", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416567", encoding: "s2", scale: "/100" }
     }
     reg16567: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 19
       elecIhd
       elecL2L3
       dis: "V23 19th Harmonic"
-      modbusCurAddr: { addr: "416568", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416568", encoding: "s2", scale: "/100" }
     }
     reg16568: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 20
       elecIhd
       elecL2L3
       dis: "V23 20th Harmonic"
-      modbusCurAddr: { addr: "416569", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416569", encoding: "s2", scale: "/100" }
     }
     reg16569: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 21
       elecIhd
       elecL2L3
       dis: "V23 21st Harmonic"
-      modbusCurAddr: { addr: "416570", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416570", encoding: "s2", scale: "/100" }
     }
     reg16570: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 22
       elecIhd
       elecL2L3
       dis: "V23 22nd Harmonic"
-      modbusCurAddr: { addr: "416571", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416571", encoding: "s2", scale: "/100" }
     }
     reg16571: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 23
       elecIhd
       elecL2L3
       dis: "V23 23rd Harmonic"
-      modbusCurAddr: { addr: "416572", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416572", encoding: "s2", scale: "/100" }
     }
     reg16572: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 24
       elecIhd
       elecL2L3
       dis: "V23 24th Harmonic"
-      modbusCurAddr: { addr: "416573", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416573", encoding: "s2", scale: "/100" }
     }
     reg16573: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 25
       elecIhd
       elecL2L3
       dis: "V23 25th Harmonic"
-      modbusCurAddr: { addr: "416574", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416574", encoding: "s2", scale: "/100" }
     }
     reg16574: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 26
       elecIhd
       elecL2L3
       dis: "V23 26th Harmonic"
-      modbusCurAddr: { addr: "416575", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416575", encoding: "s2", scale: "/100" }
     }
     reg16575: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 27
       elecIhd
       elecL2L3
       dis: "V23 27th Harmonic"
-      modbusCurAddr: { addr: "416576", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416576", encoding: "s2", scale: "/100" }
     }
     reg16576: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 28
       elecIhd
       elecL2L3
       dis: "V23 28th Harmonic"
-      modbusCurAddr: { addr: "416577", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416577", encoding: "s2", scale: "/100" }
     }
     reg16577: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 29
       elecIhd
       elecL2L3
       dis: "V23 29th Harmonic"
-      modbusCurAddr: { addr: "416578", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416578", encoding: "s2", scale: "/100" }
     }
     reg16578: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 30
       elecIhd
       elecL2L3
       dis: "V23 30th Harmonic"
-      modbusCurAddr: { addr: "416579", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416579", encoding: "s2", scale: "/100" }
     }
     reg16579: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 31
       elecIhd
       elecL2L3
       dis: "V23 31st Harmonic"
-      modbusCurAddr: { addr: "416580", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416580", encoding: "s2", scale: "/100" }
     }
     reg16580: ElecAcQualityVoltageSensor? {
       elecOddThd
       elecL2L3
       dis: "Odd THD_V23"
-      modbusCurAddr: { addr: "416581", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416581", encoding: "s2", scale: "/100" }
     }
     reg16581: ElecAcQualityVoltageSensor? {
       elecEvenThd
       elecL2L3
       dis: "Even THD_V23"
-      modbusCurAddr: { addr: "416582", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416582", encoding: "s2", scale: "/100" }
     }
     reg16582: ElecAcQualityVoltageSensor? {
       elecCrestFactor
       elecL2L3
       dis: "Crest Factor V23"
-      modbusCurAddr: { addr: "416583", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416583", encoding: "s2", scale: "/100" }
     }
     reg16583: ElecAcQualityVoltageSensor? {
       elecThff
       elecL2L3
       dis: "THFF_V23"
-      modbusCurAddr: { addr: "416584", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416584", encoding: "s2", scale: "/100" }
     }
 
     reg17664: ElecAcQualityVoltageSensor? {
@@ -755,672 +755,672 @@ AcuvimLElecAc2LLOr3LLMeter : AcuvimLElecAcMeter <abstract> {
       elecIhd
       elecL1L2
       dis: "V12 32nd Harmonic"
-      modbusCurAddr: { addr: "417665", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417665", encoding: "u2", scale: "/100" }
     }
     reg17665: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 33
       elecIhd
       elecL1L2
       dis: "V12 33rd Harmonic"
-      modbusCurAddr: { addr: "417666", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417666", encoding: "u2", scale: "/100" }
     }
     reg17666: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 34
       elecIhd
       elecL1L2
       dis: "V12 34th Harmonic"
-      modbusCurAddr: { addr: "417667", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417667", encoding: "u2", scale: "/100" }
     }
     reg17667: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 35
       elecIhd
       elecL1L2
       dis: "V12 35th Harmonic"
-      modbusCurAddr: { addr: "417668", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417668", encoding: "u2", scale: "/100" }
     }
     reg17668: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 36
       elecIhd
       elecL1L2
       dis: "V12 36th Harmonic"
-      modbusCurAddr: { addr: "417669", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417669", encoding: "u2", scale: "/100" }
     }
     reg17669: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 37
       elecIhd
       elecL1L2
       dis: "V12 37th Harmonic"
-      modbusCurAddr: { addr: "417670", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417670", encoding: "u2", scale: "/100" }
     }
     reg17670: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 38
       elecIhd
       elecL1L2
       dis: "V12 38th Harmonic"
-      modbusCurAddr: { addr: "417671", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417671", encoding: "u2", scale: "/100" }
     }
     reg17671: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 39
       elecIhd
       elecL1L2
       dis: "V12 39th Harmonic"
-      modbusCurAddr: { addr: "417672", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417672", encoding: "u2", scale: "/100" }
     }
     reg17672: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 40
       elecIhd
       elecL1L2
       dis: "V12 40th Harmonic"
-      modbusCurAddr: { addr: "417673", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417673", encoding: "u2", scale: "/100" }
     }
     reg17673: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 41
       elecIhd
       elecL1L2
       dis: "V12 41st Harmonic"
-      modbusCurAddr: { addr: "417674", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417674", encoding: "u2", scale: "/100" }
     }
     reg17674: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 42
       elecIhd
       elecL1L2
       dis: "V12 42nd Harmonic"
-      modbusCurAddr: { addr: "417675", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417675", encoding: "u2", scale: "/100" }
     }
     reg17675: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 43
       elecIhd
       elecL1L2
       dis: "V12 43rd Harmonic"
-      modbusCurAddr: { addr: "417676", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417676", encoding: "u2", scale: "/100" }
     }
     reg17676: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 44
       elecIhd
       elecL1L2
       dis: "V12 44th Harmonic"
-      modbusCurAddr: { addr: "417677", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417677", encoding: "u2", scale: "/100" }
     }
     reg17677: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 45
       elecIhd
       elecL1L2
       dis: "V12 45th Harmonic"
-      modbusCurAddr: { addr: "417678", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417678", encoding: "u2", scale: "/100" }
     }
     reg17678: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 46
       elecIhd
       elecL1L2
       dis: "V12 46th Harmonic"
-      modbusCurAddr: { addr: "417679", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417679", encoding: "u2", scale: "/100" }
     }
     reg17679: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 47
       elecIhd
       elecL1L2
       dis: "V12 47th Harmonic"
-      modbusCurAddr: { addr: "417680", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417680", encoding: "u2", scale: "/100" }
     }
     reg17680: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 48
       elecIhd
       elecL1L2
       dis: "V12 48th Harmonic"
-      modbusCurAddr: { addr: "417681", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417681", encoding: "u2", scale: "/100" }
     }
     reg17681: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 49
       elecIhd
       elecL1L2
       dis: "V12 49th Harmonic"
-      modbusCurAddr: { addr: "417682", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417682", encoding: "u2", scale: "/100" }
     }
     reg17682: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 50
       elecIhd
       elecL1L2
       dis: "V12 50th Harmonic"
-      modbusCurAddr: { addr: "417683", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417683", encoding: "u2", scale: "/100" }
     }
     reg17683: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 51
       elecIhd
       elecL1L2
       dis: "V12 51st Harmonic"
-      modbusCurAddr: { addr: "417684", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417684", encoding: "u2", scale: "/100" }
     }
     reg17684: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 52
       elecIhd
       elecL1L2
       dis: "V12 52nd Harmonic"
-      modbusCurAddr: { addr: "417685", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417685", encoding: "u2", scale: "/100" }
     }
     reg17685: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 53
       elecIhd
       elecL1L2
       dis: "V12 53rd Harmonic"
-      modbusCurAddr: { addr: "417686", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417686", encoding: "u2", scale: "/100" }
     }
     reg17686: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 54
       elecIhd
       elecL1L2
       dis: "V12 54th Harmonic"
-      modbusCurAddr: { addr: "417687", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417687", encoding: "u2", scale: "/100" }
     }
     reg17687: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 55
       elecIhd
       elecL1L2
       dis: "V12 55th Harmonic"
-      modbusCurAddr: { addr: "417688", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417688", encoding: "u2", scale: "/100" }
     }
     reg17688: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 56
       elecIhd
       elecL1L2
       dis: "V12 56th Harmonic"
-      modbusCurAddr: { addr: "417689", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417689", encoding: "u2", scale: "/100" }
     }
     reg17689: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 57
       elecIhd
       elecL1L2
       dis: "V12 57th Harmonic"
-      modbusCurAddr: { addr: "417690", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417690", encoding: "u2", scale: "/100" }
     }
     reg17690: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 58
       elecIhd
       elecL1L2
       dis: "V12 58th Harmonic"
-      modbusCurAddr: { addr: "417691", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417691", encoding: "u2", scale: "/100" }
     }
     reg17691: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 59
       elecIhd
       elecL1L2
       dis: "V12 59th Harmonic"
-      modbusCurAddr: { addr: "417692", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417692", encoding: "u2", scale: "/100" }
     }
     reg17692: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 60
       elecIhd
       elecL1L2
       dis: "V12 60th Harmonic"
-      modbusCurAddr: { addr: "417693", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417693", encoding: "u2", scale: "/100" }
     }
     reg17693: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 61
       elecIhd
       elecL1L2
       dis: "V12 61st Harmonic"
-      modbusCurAddr: { addr: "417694", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417694", encoding: "u2", scale: "/100" }
     }
     reg17694: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 62
       elecIhd
       elecL1L2
       dis: "V12 62nd Harmonic"
-      modbusCurAddr: { addr: "417695", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417695", encoding: "u2", scale: "/100" }
     }
     reg17695: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 63
       elecIhd
       elecL1L2
       dis: "V12 63rd Harmonic"
-      modbusCurAddr: { addr: "417696", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417696", encoding: "u2", scale: "/100" }
     }
     reg17696: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 32
       elecIhd
       elecL3L1
       dis: "V31 32nd Harmonic"
-      modbusCurAddr: { addr: "417697", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417697", encoding: "u2", scale: "/100" }
     }
     reg17697: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 33
       elecIhd
       elecL3L1
       dis: "V31 33rd Harmonic"
-      modbusCurAddr: { addr: "417698", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417698", encoding: "u2", scale: "/100" }
     }
     reg17698: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 34
       elecIhd
       elecL3L1
       dis: "V31 34th Harmonic"
-      modbusCurAddr: { addr: "417699", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417699", encoding: "u2", scale: "/100" }
     }
     reg17699: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 35
       elecIhd
       elecL3L1
       dis: "V31 35th Harmonic"
-      modbusCurAddr: { addr: "417700", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417700", encoding: "u2", scale: "/100" }
     }
     reg17700: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 36
       elecIhd
       elecL3L1
       dis: "V31 36th Harmonic"
-      modbusCurAddr: { addr: "417701", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417701", encoding: "u2", scale: "/100" }
     }
     reg17701: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 37
       elecIhd
       elecL3L1
       dis: "V31 37th Harmonic"
-      modbusCurAddr: { addr: "417702", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417702", encoding: "u2", scale: "/100" }
     }
     reg17702: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 38
       elecIhd
       elecL3L1
       dis: "V31 38th Harmonic"
-      modbusCurAddr: { addr: "417703", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417703", encoding: "u2", scale: "/100" }
     }
     reg17703: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 39
       elecIhd
       elecL3L1
       dis: "V31 39th Harmonic"
-      modbusCurAddr: { addr: "417704", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417704", encoding: "u2", scale: "/100" }
     }
     reg17704: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 40
       elecIhd
       elecL3L1
       dis: "V31 40th Harmonic"
-      modbusCurAddr: { addr: "417705", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417705", encoding: "u2", scale: "/100" }
     }
     reg17705: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 41
       elecIhd
       elecL3L1
       dis: "V31 41st Harmonic"
-      modbusCurAddr: { addr: "417706", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417706", encoding: "u2", scale: "/100" }
     }
     reg17706: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 42
       elecIhd
       elecL3L1
       dis: "V31 42nd Harmonic"
-      modbusCurAddr: { addr: "417707", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417707", encoding: "u2", scale: "/100" }
     }
     reg17707: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 43
       elecIhd
       elecL3L1
       dis: "V31 43rd Harmonic"
-      modbusCurAddr: { addr: "417708", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417708", encoding: "u2", scale: "/100" }
     }
     reg17708: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 44
       elecIhd
       elecL3L1
       dis: "V31 44th Harmonic"
-      modbusCurAddr: { addr: "417709", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417709", encoding: "u2", scale: "/100" }
     }
     reg17709: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 45
       elecIhd
       elecL3L1
       dis: "V31 45th Harmonic"
-      modbusCurAddr: { addr: "417710", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417710", encoding: "u2", scale: "/100" }
     }
     reg17710: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 46
       elecIhd
       elecL3L1
       dis: "V31 46th Harmonic"
-      modbusCurAddr: { addr: "417711", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417711", encoding: "u2", scale: "/100" }
     }
     reg17711: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 47
       elecIhd
       elecL3L1
       dis: "V31 47th Harmonic"
-      modbusCurAddr: { addr: "417712", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417712", encoding: "u2", scale: "/100" }
     }
     reg17712: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 48
       elecIhd
       elecL3L1
       dis: "V31 48th Harmonic"
-      modbusCurAddr: { addr: "417713", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417713", encoding: "u2", scale: "/100" }
     }
     reg17713: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 49
       elecIhd
       elecL3L1
       dis: "V31 49th Harmonic"
-      modbusCurAddr: { addr: "417714", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417714", encoding: "u2", scale: "/100" }
     }
     reg17714: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 50
       elecIhd
       elecL3L1
       dis: "V31 50th Harmonic"
-      modbusCurAddr: { addr: "417715", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417715", encoding: "u2", scale: "/100" }
     }
     reg17715: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 51
       elecIhd
       elecL3L1
       dis: "V31 51st Harmonic"
-      modbusCurAddr: { addr: "417716", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417716", encoding: "u2", scale: "/100" }
     }
     reg17716: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 52
       elecIhd
       elecL3L1
       dis: "V31 52nd Harmonic"
-      modbusCurAddr: { addr: "417717", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417717", encoding: "u2", scale: "/100" }
     }
     reg17717: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 53
       elecIhd
       elecL3L1
       dis: "V31 53rd Harmonic"
-      modbusCurAddr: { addr: "417718", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417718", encoding: "u2", scale: "/100" }
     }
     reg17718: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 54
       elecIhd
       elecL3L1
       dis: "V31 54th Harmonic"
-      modbusCurAddr: { addr: "417719", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417719", encoding: "u2", scale: "/100" }
     }
     reg17719: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 55
       elecIhd
       elecL3L1
       dis: "V31 55th Harmonic"
-      modbusCurAddr: { addr: "417720", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417720", encoding: "u2", scale: "/100" }
     }
     reg17720: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 56
       elecIhd
       elecL3L1
       dis: "V31 56th Harmonic"
-      modbusCurAddr: { addr: "417721", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417721", encoding: "u2", scale: "/100" }
     }
     reg17721: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 57
       elecIhd
       elecL3L1
       dis: "V31 57th Harmonic"
-      modbusCurAddr: { addr: "417722", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417722", encoding: "u2", scale: "/100" }
     }
     reg17722: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 58
       elecIhd
       elecL3L1
       dis: "V31 58th Harmonic"
-      modbusCurAddr: { addr: "417723", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417723", encoding: "u2", scale: "/100" }
     }
     reg17723: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 59
       elecIhd
       elecL3L1
       dis: "V31 59th Harmonic"
-      modbusCurAddr: { addr: "417724", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417724", encoding: "u2", scale: "/100" }
     }
     reg17724: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 60
       elecIhd
       elecL3L1
       dis: "V31 60th Harmonic"
-      modbusCurAddr: { addr: "417725", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417725", encoding: "u2", scale: "/100" }
     }
     reg17725: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 61
       elecIhd
       elecL3L1
       dis: "V31 61st Harmonic"
-      modbusCurAddr: { addr: "417726", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417726", encoding: "u2", scale: "/100" }
     }
     reg17726: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 62
       elecIhd
       elecL3L1
       dis: "V31 62nd Harmonic"
-      modbusCurAddr: { addr: "417727", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417727", encoding: "u2", scale: "/100" }
     }
     reg17727: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 63
       elecIhd
       elecL3L1
       dis: "V31 63rd Harmonic"
-      modbusCurAddr: { addr: "417728", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417728", encoding: "u2", scale: "/100" }
     }
     reg17728: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 32
       elecIhd
       elecL2L3
       dis: "V23 32nd Harmonic"
-      modbusCurAddr: { addr: "417729", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417729", encoding: "u2", scale: "/100" }
     }
     reg17729: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 33
       elecIhd
       elecL2L3
       dis: "V23 33rd Harmonic"
-      modbusCurAddr: { addr: "417730", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417730", encoding: "u2", scale: "/100" }
     }
     reg17730: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 34
       elecIhd
       elecL2L3
       dis: "V23 34th Harmonic"
-      modbusCurAddr: { addr: "417731", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417731", encoding: "u2", scale: "/100" }
     }
     reg17731: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 35
       elecIhd
       elecL2L3
       dis: "V23 35th Harmonic"
-      modbusCurAddr: { addr: "417732", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417732", encoding: "u2", scale: "/100" }
     }
     reg17732: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 36
       elecIhd
       elecL2L3
       dis: "V23 36th Harmonic"
-      modbusCurAddr: { addr: "417733", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417733", encoding: "u2", scale: "/100" }
     }
     reg17733: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 37
       elecIhd
       elecL2L3
       dis: "V23 37th Harmonic"
-      modbusCurAddr: { addr: "417734", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417734", encoding: "u2", scale: "/100" }
     }
     reg17734: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 38
       elecIhd
       elecL2L3
       dis: "V23 38th Harmonic"
-      modbusCurAddr: { addr: "417735", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417735", encoding: "u2", scale: "/100" }
     }
     reg17735: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 39
       elecIhd
       elecL2L3
       dis: "V23 39th Harmonic"
-      modbusCurAddr: { addr: "417736", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417736", encoding: "u2", scale: "/100" }
     }
     reg17736: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 40
       elecIhd
       elecL2L3
       dis: "V23 40th Harmonic"
-      modbusCurAddr: { addr: "417737", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417737", encoding: "u2", scale: "/100" }
     }
     reg17737: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 41
       elecIhd
       elecL2L3
       dis: "V23 41st Harmonic"
-      modbusCurAddr: { addr: "417738", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417738", encoding: "u2", scale: "/100" }
     }
     reg17738: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 42
       elecIhd
       elecL2L3
       dis: "V23 42nd Harmonic"
-      modbusCurAddr: { addr: "417739", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417739", encoding: "u2", scale: "/100" }
     }
     reg17739: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 43
       elecIhd
       elecL2L3
       dis: "V23 43rd Harmonic"
-      modbusCurAddr: { addr: "417740", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417740", encoding: "u2", scale: "/100" }
     }
     reg17740: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 44
       elecIhd
       elecL2L3
       dis: "V23 44th Harmonic"
-      modbusCurAddr: { addr: "417741", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417741", encoding: "u2", scale: "/100" }
     }
     reg17741: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 45
       elecIhd
       elecL2L3
       dis: "V23 45th Harmonic"
-      modbusCurAddr: { addr: "417742", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417742", encoding: "u2", scale: "/100" }
     }
     reg17742: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 46
       elecIhd
       elecL2L3
       dis: "V23 46th Harmonic"
-      modbusCurAddr: { addr: "417743", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417743", encoding: "u2", scale: "/100" }
     }
     reg17743: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 47
       elecIhd
       elecL2L3
       dis: "V23 47th Harmonic"
-      modbusCurAddr: { addr: "417744", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417744", encoding: "u2", scale: "/100" }
     }
     reg17744: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 48
       elecIhd
       elecL2L3
       dis: "V23 48th Harmonic"
-      modbusCurAddr: { addr: "417745", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417745", encoding: "u2", scale: "/100" }
     }
     reg17745: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 49
       elecIhd
       elecL2L3
       dis: "V23 49th Harmonic"
-      modbusCurAddr: { addr: "417746", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417746", encoding: "u2", scale: "/100" }
     }
     reg17746: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 50
       elecIhd
       elecL2L3
       dis: "V23 50th Harmonic"
-      modbusCurAddr: { addr: "417747", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417747", encoding: "u2", scale: "/100" }
     }
     reg17747: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 51
       elecIhd
       elecL2L3
       dis: "V23 51st Harmonic"
-      modbusCurAddr: { addr: "417748", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417748", encoding: "u2", scale: "/100" }
     }
     reg17748: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 52
       elecIhd
       elecL2L3
       dis: "V23 52nd Harmonic"
-      modbusCurAddr: { addr: "417749", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417749", encoding: "u2", scale: "/100" }
     }
     reg17749: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 53
       elecIhd
       elecL2L3
       dis: "V23 53rd Harmonic"
-      modbusCurAddr: { addr: "417750", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417750", encoding: "u2", scale: "/100" }
     }
     reg17750: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 54
       elecIhd
       elecL2L3
       dis: "V23 54th Harmonic"
-      modbusCurAddr: { addr: "417751", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417751", encoding: "u2", scale: "/100" }
     }
     reg17751: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 55
       elecIhd
       elecL2L3
       dis: "V23 55th Harmonic"
-      modbusCurAddr: { addr: "417752", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417752", encoding: "u2", scale: "/100" }
     }
     reg17752: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 56
       elecIhd
       elecL2L3
       dis: "V23 56th Harmonic"
-      modbusCurAddr: { addr: "417753", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417753", encoding: "u2", scale: "/100" }
     }
     reg17753: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 57
       elecIhd
       elecL2L3
       dis: "V23 57th Harmonic"
-      modbusCurAddr: { addr: "417754", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417754", encoding: "u2", scale: "/100" }
     }
     reg17754: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 58
       elecIhd
       elecL2L3
       dis: "V23 58th Harmonic"
-      modbusCurAddr: { addr: "417755", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417755", encoding: "u2", scale: "/100" }
     }
     reg17755: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 59
       elecIhd
       elecL2L3
       dis: "V23 59th Harmonic"
-      modbusCurAddr: { addr: "417756", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417756", encoding: "u2", scale: "/100" }
     }
     reg17756: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 60
       elecIhd
       elecL2L3
       dis: "V23 60th Harmonic"
-      modbusCurAddr: { addr: "417757", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417757", encoding: "u2", scale: "/100" }
     }
     reg17757: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 61
       elecIhd
       elecL2L3
       dis: "V23 61st Harmonic"
-      modbusCurAddr: { addr: "417758", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417758", encoding: "u2", scale: "/100" }
     }
     reg17758: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 62
       elecIhd
       elecL2L3
       dis: "V23 62nd Harmonic"
-      modbusCurAddr: { addr: "417759", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417759", encoding: "u2", scale: "/100" }
     }
     reg17759: ElecAcQualityVoltageSensor? {
       elecHarmonicOrder: 63
       elecIhd
       elecL2L3
       dis: "V23 63rd Harmonic"
-      modbusCurAddr: { addr: "417760", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417760", encoding: "s2", scale: "/100" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -1430,27 +1430,27 @@ AcuvimLElecAc2LLOr3LLMeter : AcuvimLElecAcMeter <abstract> {
     reg17056: ElecAcAngleVoltageSensor? <notHaystack> {
       elecL2L3
       dis: "Phase Angle of V23 to V12"
-      modbusCurAddr: { addr: "417057", encoding: "u2", scale: "*0.1" }
+      modbusCurAddr: { addr: "417057", encoding: "u2", scale: "/10" }
     }
     reg17057: ElecAcAngleVoltageSensor? <notHaystack> {
       elecL3L1
       dis: "Phase Angle of V31 to V12"
-      modbusCurAddr: { addr: "417058", encoding: "u2", scale: "*0.1" }
+      modbusCurAddr: { addr: "417058", encoding: "u2", scale: "/10" }
     }
     reg17058: ElecAcAngleCurrentSensor? {
       elecL1
       dis: "Phase Angle of I1 to V12"
-      modbusCurAddr: { addr: "417059", encoding: "u2", scale: "*0.1" }
+      modbusCurAddr: { addr: "417059", encoding: "u2", scale: "/10" }
     }
     reg17059: ElecAcAngleCurrentSensor? {
       elecL2
       dis: "Phase Angle of I2 to V12"
-      modbusCurAddr: { addr: "417060", encoding: "u2", scale: "*0.1" }
+      modbusCurAddr: { addr: "417060", encoding: "u2", scale: "/10" }
     }
     reg17060: ElecAcAngleCurrentSensor? {
       elecL3
       dis: "Phase Angle of I3 to V12"
-      modbusCurAddr: { addr: "417061", encoding: "u2", scale: "*0.1" }
+      modbusCurAddr: { addr: "417061", encoding: "u2", scale: "/10" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -1463,37 +1463,37 @@ AcuvimLElecAc2LLOr3LLMeter : AcuvimLElecAcMeter <abstract> {
       elecThd
       elecL1L2
       dis: "Max of THD_V1(V12)"
-      modbusCurAddr: { addr: "416828", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416828", encoding: "s2", scale: "/100" }
     }
     reg16834: ElecAcQualityVoltageSensor? <notHaystack> {
       elecThd
       elecL3L1
       dis: "Max of THD_V2(V31)"
-      modbusCurAddr: { addr: "416835", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416835", encoding: "s2", scale: "/100" }
     }
     reg16841: ElecAcQualityVoltageSensor? <notHaystack> {
       elecThd
       elecL2L3
       dis: "Max of THD_V3(V23)"
-      modbusCurAddr: { addr: "416842", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416842", encoding: "s2", scale: "/100" }
     }
     reg17002: ElecAcQualityVoltageSensor? <notHaystack> {
       elecThd
       elecL1L2
       dis: "Min of THD_V1(V12)"
-      modbusCurAddr: { addr: "417003", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417003", encoding: "s2", scale: "/100" }
     }
     reg17009: ElecAcQualityVoltageSensor? <notHaystack> {
       elecThd
       elecL3L1
       dis: "Min of THD_V2(V31)"
-      modbusCurAddr: { addr: "417010", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417010", encoding: "s2", scale: "/100" }
     }
     reg17016: ElecAcQualityVoltageSensor? <notHaystack> {
       elecThd
       elecL2L3
       dis: "Min of THD_V3(V23)"
-      modbusCurAddr: { addr: "417017", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417017", encoding: "s2", scale: "/100" }
     }
 
     //////////////////////////////////////////////////////////////////

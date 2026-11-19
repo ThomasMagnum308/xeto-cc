@@ -110,70 +110,70 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       elecL1
       dis: "Phase A Power"
       bacnetCurAddr: { addr: "AI15" }
-      modbusCurAddr: { addr: "408609", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408609", encoding: "f4", scale: "/1000" }
     }
     reg8610: ElecAcNetActivePowerSensor? {
       elecL2
       dis: "Phase B Power"
       bacnetCurAddr: { addr: "AI16" }
-      modbusCurAddr: { addr: "408611", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408611", encoding: "f4", scale: "/1000" }
     }
     reg8612: ElecAcNetActivePowerSensor? {
       elecL3
       dis: "Phase C Power"
       bacnetCurAddr: { addr: "AI17" }
-      modbusCurAddr: { addr: "408613", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408613", encoding: "f4", scale: "/1000" }
     }
     reg8614: ElecAcTotalNetActivePowerSensor? {
       dis: "Total System Power"
       bacnetCurAddr: { addr: "AI18" }
-      modbusCurAddr: { addr: "408615", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408615", encoding: "f4", scale: "/1000" }
     }
     reg8616: ElecAcNetReactivePowerSensor? {
       elecL1
       dis: "Phase A Reactive Power"
       bacnetCurAddr: { addr: "AI19" }
-      modbusCurAddr: { addr: "408617", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408617", encoding: "f4", scale: "/1000" }
     }
     reg8618: ElecAcNetReactivePowerSensor? {
       elecL2
       dis: "Phase B Reactive Power"
       bacnetCurAddr: { addr: "AI20" }
-      modbusCurAddr: { addr: "408619", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408619", encoding: "f4", scale: "/1000" }
     }
     reg8620: ElecAcNetReactivePowerSensor? {
       elecL3
       dis: "Phase C Reactive Power"
       bacnetCurAddr: { addr: "AI21" }
-      modbusCurAddr: { addr: "408621", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408621", encoding: "f4", scale: "/1000" }
     }
     reg8622: ElecAcTotalNetReactivePowerSensor? {
       dis: "Total Reactive Power"
       bacnetCurAddr: { addr: "AI22" }
-      modbusCurAddr: { addr: "408623", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408623", encoding: "f4", scale: "/1000" }
     }
     reg8624: ElecAcApparentPowerSensor? {
       elecL1
       dis: "Phase A Apparent Power"
       bacnetCurAddr: { addr: "AI23" }
-      modbusCurAddr: { addr: "408625", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408625", encoding: "f4", scale: "/1000" }
     }
     reg8626: ElecAcApparentPowerSensor? {
       elecL2
       dis: "Phase B Apparent Power"
       bacnetCurAddr: { addr: "AI24" }
-      modbusCurAddr: { addr: "408627", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408627", encoding: "f4", scale: "/1000" }
     }
     reg8628: ElecAcApparentPowerSensor? {
       elecL3
       dis: "Phase C Apparent Power"
       bacnetCurAddr: { addr: "AI25" }
-      modbusCurAddr: { addr: "408629", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408629", encoding: "f4", scale: "/1000" }
     }
     reg8630: ElecAcTotalApparentPowerSensor? {
       dis: "Total Apparent Power"
       bacnetCurAddr: { addr: "AI26" }
-      modbusCurAddr: { addr: "408631", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408631", encoding: "f4", scale: "/1000" }
     }
     reg8632: ElecAcPfSensor? {
       elecPfTrue
@@ -221,17 +221,17 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg8646: ElecAcTotalNetActiveDemandSensor? {
       dis: "Power Demand"
       bacnetCurAddr: { addr: "AI34" }
-      modbusCurAddr: { addr: "408647", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408647", encoding: "f4", scale: "/1000" }
     }
     reg8648: ElecAcTotalNetReactiveDemandSensor? {
       dis: "Reactive Power Demand"
       bacnetCurAddr: { addr: "AI35" }
-      modbusCurAddr: { addr: "408649", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408649", encoding: "f4", scale: "/1000" }
     }
     reg8650: ElecAcTotalNetApparentDemandSensor? {
       dis: "Apparent Power Demand"
       bacnetCurAddr: { addr: "AI36" }
-      modbusCurAddr: { addr: "408651", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408651", encoding: "f4", scale: "/1000" }
     }
     reg8652: ElecAcCurrentDemandSensor? {
       elecL1
@@ -254,38 +254,38 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg8320: ElecAcTotalImportActiveEnergySensor? {
       dis: "Import Active Energy"
       bacnetCurAddr: { addr: "AI40" }
-      modbusCurAddr: { addr: "408321", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408321", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408321", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408321", encoding: "u4", scale: "/1000" }
     }
     reg8322: ElecAcTotalExportActiveEnergySensor? {
       dis: "Export Active Energy"
       bacnetCurAddr: { addr: "AI41" }
-      modbusCurAddr: { addr: "408323", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408323", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408323", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408323", encoding: "u4", scale: "/1000" }
     }
     reg8336: ElecAcTotalImportReactiveEnergySensor? {
       dis: "Import Reactive Energy"
       bacnetCurAddr: { addr: "AI42" }
-      modbusCurAddr: { addr: "408337", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408337", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408337", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408337", encoding: "u4", scale: "/1000" }
     }
     reg8338: ElecAcTotalExportReactiveEnergySensor? {
       dis: "Export Reactive Energy"
       bacnetCurAddr: { addr: "AI43" }
-      modbusCurAddr: { addr: "408339", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408339", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408339", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408339", encoding: "u4", scale: "/1000" }
     }
     reg8326: ElecAcTotalNetActiveEnergySensor? {
       dis: "Net Active Energy"
       bacnetCurAddr: { addr: "AI45" }
-      modbusCurAddr: { addr: "408327", encoding: "s4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408327", encoding: "s4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408327", encoding: "s4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408327", encoding: "s4", scale: "/1000" }
     }
     reg8342: ElecAcTotalNetReactiveEnergySensor? {
       dis: "Net Reactive Energy"
       bacnetCurAddr: { addr: "AI47" }
-      modbusCurAddr: { addr: "408343", encoding: "s4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408343", encoding: "s4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408343", encoding: "s4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408343", encoding: "s4", scale: "/1000" }
     }
     // Sum of import and export apparent energy
     reg8356: NumberPoint? <notHaystack> {
@@ -293,140 +293,140 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Total Apparent Energy"
       unit: Unit "kVAh"
       bacnetCurAddr: { addr: "AI48" }
-      modbusCurAddr: { addr: "408357", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408357", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408357", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408357", encoding: "u4", scale: "/1000" }
     }
     reg8368: ElecAcImportActiveEnergySensor? {
       elecL1
       dis: "Phase A Import Active Energy"
       bacnetCurAddr: { addr: "AI49" }
-      modbusCurAddr: { addr: "408369", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408369", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408369", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408369", encoding: "u4", scale: "/1000" }
     }
     reg8370: ElecAcExportActiveEnergySensor? {
       elecL1
       dis: "Phase A Export Active Energy"
       bacnetCurAddr: { addr: "AI50" }
-      modbusCurAddr: { addr: "408371", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408371", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408371", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408371", encoding: "u4", scale: "/1000" }
     }
     reg8372: ElecAcImportActiveEnergySensor? {
       elecL2
       dis: "Phase B Import Active Energy"
       bacnetCurAddr: { addr: "AI51" }
-      modbusCurAddr: { addr: "408373", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408373", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408373", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408373", encoding: "u4", scale: "/1000" }
     }
     reg8374: ElecAcExportActiveEnergySensor? {
       elecL2
       dis: "Phase B Export Active Energy"
       bacnetCurAddr: { addr: "AI52" }
-      modbusCurAddr: { addr: "408375", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408375", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408375", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408375", encoding: "u4", scale: "/1000" }
     }
     reg8376: ElecAcImportActiveEnergySensor? {
       elecL3
       dis: "Phase C Import Active Energy"
       bacnetCurAddr: { addr: "AI53" }
-      modbusCurAddr: { addr: "408377", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408377", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408377", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408377", encoding: "u4", scale: "/1000" }
     }
     reg8378: ElecAcExportActiveEnergySensor? {
       elecL3
       dis: "Phase C Export Active Energy"
       bacnetCurAddr: { addr: "AI54" }
-      modbusCurAddr: { addr: "408379", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408379", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408379", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408379", encoding: "u4", scale: "/1000" }
     }
     reg8380: ElecAcImportReactiveEnergySensor? {
       elecL1
       dis: "Phase A Import Reactive Energy"
       bacnetCurAddr: { addr: "AI55" }
-      modbusCurAddr: { addr: "408381", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408381", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408381", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408381", encoding: "u4", scale: "/1000" }
     }
     reg8382: ElecAcExportReactiveEnergySensor? {
       elecL1
       dis: "Phase A Export Reactive Energy"
       bacnetCurAddr: { addr: "AI56" }
-      modbusCurAddr: { addr: "408383", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408383", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408383", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408383", encoding: "u4", scale: "/1000" }
     }
     reg8384: ElecAcImportReactiveEnergySensor? {
       elecL2
       dis: "Phase B Import Reactive Energy"
       bacnetCurAddr: { addr: "AI57" }
-      modbusCurAddr: { addr: "408385", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408385", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408385", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408385", encoding: "u4", scale: "/1000" }
     }
     reg8386: ElecAcExportReactiveEnergySensor? {
       elecL2
       dis: "Phase B Export Reactive Energy"
       bacnetCurAddr: { addr: "AI58" }
-      modbusCurAddr: { addr: "408387", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408387", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408387", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408387", encoding: "u4", scale: "/1000" }
     }
     reg8388: ElecAcImportReactiveEnergySensor? {
       elecL3
       dis: "Phase C Import Reactive Energy"
       bacnetCurAddr: { addr: "AI59" }
-      modbusCurAddr: { addr: "408389", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408389", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408389", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408389", encoding: "u4", scale: "/1000" }
     }
     reg8390: ElecAcExportReactiveEnergySensor? {
       elecL3
       dis: "Phase C Export Reactive Energy"
       bacnetCurAddr: { addr: "AI60" }
-      modbusCurAddr: { addr: "408391", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408391", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408391", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408391", encoding: "u4", scale: "/1000" }
     }
     reg8392: ElecAcImportApparentEnergySensor? {
       elecL1
       dis: "Phase A Import Apparent Energy"
       bacnetCurAddr: { addr: "AI61" }
-      modbusCurAddr: { addr: "408393", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408393", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408393", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408393", encoding: "u4", scale: "/1000" }
     }
     reg8396: ElecAcImportApparentEnergySensor? {
       elecL2
       dis: "Phase B Import Apparent Energy"
       bacnetCurAddr: { addr: "AI62" }
-      modbusCurAddr: { addr: "408397", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408397", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408397", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408397", encoding: "u4", scale: "/1000" }
     }
     reg8400: ElecAcImportApparentEnergySensor? {
       elecL3
       dis: "Phase C Import Apparent Energy"
       bacnetCurAddr: { addr: "AI63" }
-      modbusCurAddr: { addr: "408401", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408401", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408401", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408401", encoding: "u4", scale: "/1000" }
     }
     reg16478: ElecAcQualityCurrentSensor? {
       elecThd
       elecL1
       dis: "THD_I1"
       bacnetCurAddr: { addr: "AI68" }
-      modbusCurAddr: { addr: "416479", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416479", encoding: "s2", scale: "/100" }
     }
     reg16479: ElecAcQualityCurrentSensor? {
       elecThd
       elecL2
       dis: "THD_I2"
       bacnetCurAddr: { addr: "AI69" }
-      modbusCurAddr: { addr: "416480", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416480", encoding: "s2", scale: "/100" }
     }
     reg16480: ElecAcQualityCurrentSensor? {
       elecThd
       elecL3
       dis: "THD_I3"
       bacnetCurAddr: { addr: "AI70" }
-      modbusCurAddr: { addr: "416481", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416481", encoding: "s2", scale: "/100" }
     }
     reg16481: ElecAcLineAvgQualityCurrentSensor? {
       elecThd
       dis: "THD_Iavg"
       bacnetCurAddr: { addr: "AI71" }
-      modbusCurAddr: { addr: "416482", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416482", encoding: "s2", scale: "/100" }
     }
 
 
@@ -463,36 +463,36 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Total Active Energy"
       unit: Unit "kWh"
       bacnetCurAddr: { addr: "AI44" }
-      modbusCurAddr: { addr: "408325", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408325", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408325", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408325", encoding: "u4", scale: "/1000" }
     }
     reg8328: NumberPoint? <notHaystack> {
       sensor
       dis: "Active Energy Q1"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "408329", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408329", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408329", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408329", encoding: "u4", scale: "/1000" }
     }
     reg8330: NumberPoint? <notHaystack> {
       sensor
       dis: "Active Energy Q2"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "408331", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408331", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408331", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408331", encoding: "u4", scale: "/1000" }
     }
     reg8332: NumberPoint? <notHaystack> {
       sensor
       dis: "Active Energy Q3"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "408333", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408333", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408333", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408333", encoding: "u4", scale: "/1000" }
     }
     reg8334: NumberPoint? <notHaystack> {
       sensor
       dis: "Active Energy Q4"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "408335", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408335", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408335", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408335", encoding: "u4", scale: "/1000" }
     }
     // Sum of import and export reactive energy
     reg8340: NumberPoint? <notHaystack> {
@@ -500,97 +500,97 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Total Reactive Energy"
       unit: Unit "kVARh"
       bacnetCurAddr: { addr: "AI46" }
-      modbusCurAddr: { addr: "408341", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408341", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408341", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408341", encoding: "u4", scale: "/1000" }
     }
     reg8344: NumberPoint? <notHaystack> {
       sensor
       dis: "Reactive Energy Q1"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "408345", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408345", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408345", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408345", encoding: "u4", scale: "/1000" }
     }
     reg8346: NumberPoint? <notHaystack> {
       sensor
       dis: "Reactive Energy Q2"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "408347", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408347", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408347", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408347", encoding: "u4", scale: "/1000" }
     }
     reg8348: NumberPoint? <notHaystack> {
       sensor
       dis: "Reactive Energy Q3"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "408349", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408349", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408349", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408349", encoding: "u4", scale: "/1000" }
     }
     reg8350: NumberPoint? <notHaystack> {
       sensor
       dis: "Reactive Energy Q4"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "408351", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408351", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408351", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408351", encoding: "u4", scale: "/1000" }
     }
     reg8352: ElecAcTotalImportApparentEnergySensor? {
       dis: "Import Apparent Energy"
-      modbusCurAddr: { addr: "408353", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408353", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408353", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408353", encoding: "u4", scale: "/1000" }
     }
     reg8354: ElecAcTotalExportApparentEnergySensor? {
       dis: "Export Apparent Energy"
-      modbusCurAddr: { addr: "408355", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408355", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408355", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408355", encoding: "u4", scale: "/1000" }
     }
     reg8358: ElecAcTotalNetApparentEnergySensor? {
       dis: "Net Apparent Energy"
-      modbusCurAddr: { addr: "408359", encoding: "s4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408359", encoding: "s4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408359", encoding: "s4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408359", encoding: "s4", scale: "/1000" }
     }
     reg8360: NumberPoint? <notHaystack> {
       sensor
       dis: "Apparent Energy Q1"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "408361", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408361", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408361", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408361", encoding: "u4", scale: "/1000" }
     }
     reg8362: NumberPoint? <notHaystack> {
       sensor
       dis: "Apparent Energy Q2"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "408363", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408363", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408363", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408363", encoding: "u4", scale: "/1000" }
     }
     reg8364: NumberPoint? <notHaystack> {
       sensor
       dis: "Apparent Energy Q3"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "408365", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408365", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408365", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408365", encoding: "u4", scale: "/1000" }
     }
     reg8366: NumberPoint? <notHaystack> {
       sensor
       dis: "Apparent Energy Q4"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "408367", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408367", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408367", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408367", encoding: "u4", scale: "/1000" }
     }
     reg8394: ElecAcExportApparentEnergySensor? {
       elecL1
       dis: "Phase A Export Apparent Energy"
-      modbusCurAddr: { addr: "408395", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408395", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408395", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408395", encoding: "u4", scale: "/1000" }
     }
     reg8398: ElecAcExportApparentEnergySensor? {
       elecL2
       dis: "Phase B Export Apparent Energy"
-      modbusCurAddr: { addr: "408399", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408399", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408399", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408399", encoding: "u4", scale: "/1000" }
     }
     reg8402: ElecAcExportApparentEnergySensor? {
       elecL3
       dis: "Phase C Export Apparent Energy"
-      modbusCurAddr: { addr: "408403", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "408403", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "408403", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "408403", encoding: "u4", scale: "/1000" }
     }
     // System status word (Table 6-16)
     reg4142: NumberPoint? <notHaystack> {
@@ -737,684 +737,684 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       elecIhd
       elecL1
       dis: "I1 2nd Harmonic"
-      modbusCurAddr: { addr: "416585", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416585", encoding: "s2", scale: "/100" }
     }
     reg16585: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 3
       elecIhd
       elecL1
       dis: "I1 3rd Harmonic"
-      modbusCurAddr: { addr: "416586", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416586", encoding: "s2", scale: "/100" }
     }
     reg16586: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 4
       elecIhd
       elecL1
       dis: "I1 4th Harmonic"
-      modbusCurAddr: { addr: "416587", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416587", encoding: "s2", scale: "/100" }
     }
     reg16587: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 5
       elecIhd
       elecL1
       dis: "I1 5th Harmonic"
-      modbusCurAddr: { addr: "416588", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416588", encoding: "s2", scale: "/100" }
     }
     reg16588: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 6
       elecIhd
       elecL1
       dis: "I1 6th Harmonic"
-      modbusCurAddr: { addr: "416589", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416589", encoding: "s2", scale: "/100" }
     }
     reg16589: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 7
       elecIhd
       elecL1
       dis: "I1 7th Harmonic"
-      modbusCurAddr: { addr: "416590", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416590", encoding: "s2", scale: "/100" }
     }
     reg16590: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 8
       elecIhd
       elecL1
       dis: "I1 8th Harmonic"
-      modbusCurAddr: { addr: "416591", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416591", encoding: "s2", scale: "/100" }
     }
     reg16591: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 9
       elecIhd
       elecL1
       dis: "I1 9th Harmonic"
-      modbusCurAddr: { addr: "416592", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416592", encoding: "s2", scale: "/100" }
     }
     reg16592: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 10
       elecIhd
       elecL1
       dis: "I1 10th Harmonic"
-      modbusCurAddr: { addr: "416593", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416593", encoding: "s2", scale: "/100" }
     }
     reg16593: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 11
       elecIhd
       elecL1
       dis: "I1 11th Harmonic"
-      modbusCurAddr: { addr: "416594", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416594", encoding: "s2", scale: "/100" }
     }
     reg16594: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 12
       elecIhd
       elecL1
       dis: "I1 12th Harmonic"
-      modbusCurAddr: { addr: "416595", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416595", encoding: "s2", scale: "/100" }
     }
     reg16595: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 13
       elecIhd
       elecL1
       dis: "I1 13th Harmonic"
-      modbusCurAddr: { addr: "416596", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416596", encoding: "s2", scale: "/100" }
     }
     reg16596: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 14
       elecIhd
       elecL1
       dis: "I1 14th Harmonic"
-      modbusCurAddr: { addr: "416597", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416597", encoding: "s2", scale: "/100" }
     }
     reg16597: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 15
       elecIhd
       elecL1
       dis: "I1 15th Harmonic"
-      modbusCurAddr: { addr: "416598", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416598", encoding: "s2", scale: "/100" }
     }
     reg16598: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 16
       elecIhd
       elecL1
       dis: "I1 16th Harmonic"
-      modbusCurAddr: { addr: "416599", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416599", encoding: "s2", scale: "/100" }
     }
     reg16599: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 17
       elecIhd
       elecL1
       dis: "I1 17th Harmonic"
-      modbusCurAddr: { addr: "416600", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416600", encoding: "s2", scale: "/100" }
     }
     reg16600: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 18
       elecIhd
       elecL1
       dis: "I1 18th Harmonic"
-      modbusCurAddr: { addr: "416601", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416601", encoding: "s2", scale: "/100" }
     }
     reg16601: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 19
       elecIhd
       elecL1
       dis: "I1 19th Harmonic"
-      modbusCurAddr: { addr: "416602", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416602", encoding: "s2", scale: "/100" }
     }
     reg16602: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 20
       elecIhd
       elecL1
       dis: "I1 20th Harmonic"
-      modbusCurAddr: { addr: "416603", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416603", encoding: "s2", scale: "/100" }
     }
     reg16603: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 21
       elecIhd
       elecL1
       dis: "I1 21st Harmonic"
-      modbusCurAddr: { addr: "416604", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416604", encoding: "s2", scale: "/100" }
     }
     reg16604: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 22
       elecIhd
       elecL1
       dis: "I1 22nd Harmonic"
-      modbusCurAddr: { addr: "416605", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416605", encoding: "s2", scale: "/100" }
     }
     reg16605: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 23
       elecIhd
       elecL1
       dis: "I1 23rd Harmonic"
-      modbusCurAddr: { addr: "416606", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416606", encoding: "s2", scale: "/100" }
     }
     reg16606: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 24
       elecIhd
       elecL1
       dis: "I1 24th Harmonic"
-      modbusCurAddr: { addr: "416607", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416607", encoding: "s2", scale: "/100" }
     }
     reg16607: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 25
       elecIhd
       elecL1
       dis: "I1 25th Harmonic"
-      modbusCurAddr: { addr: "416608", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416608", encoding: "s2", scale: "/100" }
     }
     reg16608: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 26
       elecIhd
       elecL1
       dis: "I1 26th Harmonic"
-      modbusCurAddr: { addr: "416609", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416609", encoding: "s2", scale: "/100" }
     }
     reg16609: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 27
       elecIhd
       elecL1
       dis: "I1 27th Harmonic"
-      modbusCurAddr: { addr: "416610", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416610", encoding: "s2", scale: "/100" }
     }
     reg16610: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 28
       elecIhd
       elecL1
       dis: "I1 28th Harmonic"
-      modbusCurAddr: { addr: "416611", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416611", encoding: "s2", scale: "/100" }
     }
     reg16611: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 29
       elecIhd
       elecL1
       dis: "I1 29th Harmonic"
-      modbusCurAddr: { addr: "416612", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416612", encoding: "s2", scale: "/100" }
     }
     reg16612: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 30
       elecIhd
       elecL1
       dis: "I1 30th Harmonic"
-      modbusCurAddr: { addr: "416613", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416613", encoding: "s2", scale: "/100" }
     }
     reg16613: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 31
       elecIhd
       elecL1
       dis: "I1 31st Harmonic"
-      modbusCurAddr: { addr: "416614", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416614", encoding: "s2", scale: "/100" }
     }
     reg16614: ElecAcQualityCurrentSensor? {
       elecOddThd
       elecL1
       dis: "Odd THD_I1"
-      modbusCurAddr: { addr: "416615", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416615", encoding: "s2", scale: "/100" }
     }
     reg16615: ElecAcQualityCurrentSensor? {
       elecEvenThd
       elecL1
       dis: "Even_THD_I1"
-      modbusCurAddr: { addr: "416616", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416616", encoding: "s2", scale: "/100" }
     }
     reg16616: ElecAcQualityCurrentSensor? {
       elecKFactor
       elecL1
       dis: "K Factor of I1"
-      modbusCurAddr: { addr: "416617", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416617", encoding: "s2", scale: "/100" }
     }
     reg16617: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 2
       elecIhd
       elecL2
       dis: "I2 2nd Harmonic"
-      modbusCurAddr: { addr: "416618", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416618", encoding: "s2", scale: "/100" }
     }
     reg16618: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 3
       elecIhd
       elecL2
       dis: "I2 3rd Harmonic"
-      modbusCurAddr: { addr: "416619", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416619", encoding: "s2", scale: "/100" }
     }
     reg16619: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 4
       elecIhd
       elecL2
       dis: "I2 4th Harmonic"
-      modbusCurAddr: { addr: "416620", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416620", encoding: "s2", scale: "/100" }
     }
     reg16620: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 5
       elecIhd
       elecL2
       dis: "I2 5th Harmonic"
-      modbusCurAddr: { addr: "416621", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416621", encoding: "s2", scale: "/100" }
     }
     reg16621: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 6
       elecIhd
       elecL2
       dis: "I2 6th Harmonic"
-      modbusCurAddr: { addr: "416622", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416622", encoding: "s2", scale: "/100" }
     }
     reg16622: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 7
       elecIhd
       elecL2
       dis: "I2 7th Harmonic"
-      modbusCurAddr: { addr: "416623", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416623", encoding: "s2", scale: "/100" }
     }
     reg16623: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 8
       elecIhd
       elecL2
       dis: "I2 8th Harmonic"
-      modbusCurAddr: { addr: "416624", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416624", encoding: "s2", scale: "/100" }
     }
     reg16624: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 9
       elecIhd
       elecL2
       dis: "I2 9th Harmonic"
-      modbusCurAddr: { addr: "416625", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416625", encoding: "s2", scale: "/100" }
     }
     reg16625: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 10
       elecIhd
       elecL2
       dis: "I2 10th Harmonic"
-      modbusCurAddr: { addr: "416626", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416626", encoding: "s2", scale: "/100" }
     }
     reg16626: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 11
       elecIhd
       elecL2
       dis: "I2 11th Harmonic"
-      modbusCurAddr: { addr: "416627", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416627", encoding: "s2", scale: "/100" }
     }
     reg16627: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 12
       elecIhd
       elecL2
       dis: "I2 12th Harmonic"
-      modbusCurAddr: { addr: "416628", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416628", encoding: "s2", scale: "/100" }
     }
     reg16628: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 13
       elecIhd
       elecL2
       dis: "I2 13th Harmonic"
-      modbusCurAddr: { addr: "416629", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416629", encoding: "s2", scale: "/100" }
     }
     reg16629: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 14
       elecIhd
       elecL2
       dis: "I2 14th Harmonic"
-      modbusCurAddr: { addr: "416630", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416630", encoding: "s2", scale: "/100" }
     }
     reg16630: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 15
       elecIhd
       elecL2
       dis: "I2 15th Harmonic"
-      modbusCurAddr: { addr: "416631", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416631", encoding: "s2", scale: "/100" }
     }
     reg16631: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 16
       elecIhd
       elecL2
       dis: "I2 16th Harmonic"
-      modbusCurAddr: { addr: "416632", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416632", encoding: "s2", scale: "/100" }
     }
     reg16632: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 17
       elecIhd
       elecL2
       dis: "I2 17th Harmonic"
-      modbusCurAddr: { addr: "416633", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416633", encoding: "s2", scale: "/100" }
     }
     reg16633: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 18
       elecIhd
       elecL2
       dis: "I2 18th Harmonic"
-      modbusCurAddr: { addr: "416634", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416634", encoding: "s2", scale: "/100" }
     }
     reg16634: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 19
       elecIhd
       elecL2
       dis: "I2 19th Harmonic"
-      modbusCurAddr: { addr: "416635", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416635", encoding: "s2", scale: "/100" }
     }
     reg16635: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 20
       elecIhd
       elecL2
       dis: "I2 20th Harmonic"
-      modbusCurAddr: { addr: "416636", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416636", encoding: "s2", scale: "/100" }
     }
     reg16636: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 21
       elecIhd
       elecL2
       dis: "I2 21st Harmonic"
-      modbusCurAddr: { addr: "416637", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416637", encoding: "s2", scale: "/100" }
     }
     reg16637: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 22
       elecIhd
       elecL2
       dis: "I2 22nd Harmonic"
-      modbusCurAddr: { addr: "416638", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416638", encoding: "s2", scale: "/100" }
     }
     reg16638: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 23
       elecIhd
       elecL2
       dis: "I2 23rd Harmonic"
-      modbusCurAddr: { addr: "416639", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416639", encoding: "s2", scale: "/100" }
     }
     reg16639: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 24
       elecIhd
       elecL2
       dis: "I2 24th Harmonic"
-      modbusCurAddr: { addr: "416640", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416640", encoding: "s2", scale: "/100" }
     }
     reg16640: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 25
       elecIhd
       elecL2
       dis: "I2 25th Harmonic"
-      modbusCurAddr: { addr: "416641", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416641", encoding: "s2", scale: "/100" }
     }
     reg16641: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 26
       elecIhd
       elecL2
       dis: "I2 26th Harmonic"
-      modbusCurAddr: { addr: "416642", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416642", encoding: "s2", scale: "/100" }
     }
     reg16642: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 27
       elecIhd
       elecL2
       dis: "I2 27th Harmonic"
-      modbusCurAddr: { addr: "416643", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416643", encoding: "s2", scale: "/100" }
     }
     reg16643: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 28
       elecIhd
       elecL2
       dis: "I2 28th Harmonic"
-      modbusCurAddr: { addr: "416644", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416644", encoding: "s2", scale: "/100" }
     }
     reg16644: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 29
       elecIhd
       elecL2
       dis: "I2 29th Harmonic"
-      modbusCurAddr: { addr: "416645", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416645", encoding: "s2", scale: "/100" }
     }
     reg16645: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 30
       elecIhd
       elecL2
       dis: "I2 30th Harmonic"
-      modbusCurAddr: { addr: "416646", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416646", encoding: "s2", scale: "/100" }
     }
     reg16646: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 31
       elecIhd
       elecL2
       dis: "I2 31st Harmonic"
-      modbusCurAddr: { addr: "416647", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416647", encoding: "s2", scale: "/100" }
     }
     reg16647: ElecAcQualityCurrentSensor? {
       elecOddThd
       elecL2
       dis: "Odd THD_I2"
-      modbusCurAddr: { addr: "416648", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416648", encoding: "s2", scale: "/100" }
     }
     reg16648: ElecAcQualityCurrentSensor? {
       elecEvenThd
       elecL2
       dis: "Even THD_I2"
-      modbusCurAddr: { addr: "416649", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416649", encoding: "s2", scale: "/100" }
     }
     reg16649: ElecAcQualityCurrentSensor? {
       elecKFactor
       elecL2
       dis: "K Factor of I2"
-      modbusCurAddr: { addr: "416650", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416650", encoding: "s2", scale: "/100" }
     }
     reg16650: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 2
       elecIhd
       elecL3
       dis: "I3 2nd Harmonic"
-      modbusCurAddr: { addr: "416651", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416651", encoding: "s2", scale: "/100" }
     }
     reg16651: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 3
       elecIhd
       elecL3
       dis: "I3 3rd Harmonic"
-      modbusCurAddr: { addr: "416652", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416652", encoding: "s2", scale: "/100" }
     }
     reg16652: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 4
       elecIhd
       elecL3
       dis: "I3 4th Harmonic"
-      modbusCurAddr: { addr: "416653", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416653", encoding: "s2", scale: "/100" }
     }
     reg16653: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 5
       elecIhd
       elecL3
       dis: "I3 5th Harmonic"
-      modbusCurAddr: { addr: "416654", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416654", encoding: "s2", scale: "/100" }
     }
     reg16654: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 6
       elecIhd
       elecL3
       dis: "I3 6th Harmonic"
-      modbusCurAddr: { addr: "416655", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416655", encoding: "s2", scale: "/100" }
     }
     reg16655: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 7
       elecIhd
       elecL3
       dis: "I3 7th Harmonic"
-      modbusCurAddr: { addr: "416656", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416656", encoding: "s2", scale: "/100" }
     }
     reg16656: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 8
       elecIhd
       elecL3
       dis: "I3 8th Harmonic"
-      modbusCurAddr: { addr: "416657", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416657", encoding: "s2", scale: "/100" }
     }
     reg16657: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 9
       elecIhd
       elecL3
       dis: "I3 9th Harmonic"
-      modbusCurAddr: { addr: "416658", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416658", encoding: "s2", scale: "/100" }
     }
     reg16658: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 10
       elecIhd
       elecL3
       dis: "I3 10th Harmonic"
-      modbusCurAddr: { addr: "416659", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416659", encoding: "s2", scale: "/100" }
     }
     reg16659: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 11
       elecIhd
       elecL3
       dis: "I3 11th Harmonic"
-      modbusCurAddr: { addr: "416660", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416660", encoding: "s2", scale: "/100" }
     }
     reg16660: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 12
       elecIhd
       elecL3
       dis: "I3 12th Harmonic"
-      modbusCurAddr: { addr: "416661", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416661", encoding: "s2", scale: "/100" }
     }
     reg16661: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 13
       elecIhd
       elecL3
       dis: "I3 13th Harmonic"
-      modbusCurAddr: { addr: "416662", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416662", encoding: "s2", scale: "/100" }
     }
     reg16662: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 14
       elecIhd
       elecL3
       dis: "I3 14th Harmonic"
-      modbusCurAddr: { addr: "416663", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416663", encoding: "s2", scale: "/100" }
     }
     reg16663: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 15
       elecIhd
       elecL3
       dis: "I3 15th Harmonic"
-      modbusCurAddr: { addr: "416664", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416664", encoding: "s2", scale: "/100" }
     }
     reg16664: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 16
       elecIhd
       elecL3
       dis: "I3 16th Harmonic"
-      modbusCurAddr: { addr: "416665", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416665", encoding: "s2", scale: "/100" }
     }
     reg16665: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 17
       elecIhd
       elecL3
       dis: "I3 17th Harmonic"
-      modbusCurAddr: { addr: "416666", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416666", encoding: "s2", scale: "/100" }
     }
     reg16666: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 18
       elecIhd
       elecL3
       dis: "I3 18th Harmonic"
-      modbusCurAddr: { addr: "416667", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416667", encoding: "s2", scale: "/100" }
     }
     reg16667: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 19
       elecIhd
       elecL3
       dis: "I3 19th Harmonic"
-      modbusCurAddr: { addr: "416668", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416668", encoding: "s2", scale: "/100" }
     }
     reg16668: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 20
       elecIhd
       elecL3
       dis: "I3 20th Harmonic"
-      modbusCurAddr: { addr: "416669", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416669", encoding: "s2", scale: "/100" }
     }
     reg16669: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 21
       elecIhd
       elecL3
       dis: "I3 21st Harmonic"
-      modbusCurAddr: { addr: "416670", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416670", encoding: "s2", scale: "/100" }
     }
     reg16670: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 22
       elecIhd
       elecL3
       dis: "I3 22nd Harmonic"
-      modbusCurAddr: { addr: "416671", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416671", encoding: "s2", scale: "/100" }
     }
     reg16671: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 23
       elecIhd
       elecL3
       dis: "I3 23rd Harmonic"
-      modbusCurAddr: { addr: "416672", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416672", encoding: "s2", scale: "/100" }
     }
     reg16672: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 24
       elecIhd
       elecL3
       dis: "I3 24th Harmonic"
-      modbusCurAddr: { addr: "416673", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416673", encoding: "s2", scale: "/100" }
     }
     reg16673: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 25
       elecIhd
       elecL3
       dis: "I3 25th Harmonic"
-      modbusCurAddr: { addr: "416674", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416674", encoding: "s2", scale: "/100" }
     }
     reg16674: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 26
       elecIhd
       elecL3
       dis: "I3 26th Harmonic"
-      modbusCurAddr: { addr: "416675", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416675", encoding: "s2", scale: "/100" }
     }
     reg16675: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 27
       elecIhd
       elecL3
       dis: "I3 27th Harmonic"
-      modbusCurAddr: { addr: "416676", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416676", encoding: "s2", scale: "/100" }
     }
     reg16676: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 28
       elecIhd
       elecL3
       dis: "I3 28th Harmonic"
-      modbusCurAddr: { addr: "416677", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416677", encoding: "s2", scale: "/100" }
     }
     reg16677: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 29
       elecIhd
       elecL3
       dis: "I3 29th Harmonic"
-      modbusCurAddr: { addr: "416678", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416678", encoding: "s2", scale: "/100" }
     }
     reg16678: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 30
       elecIhd
       elecL3
       dis: "I3 30th Harmonic"
-      modbusCurAddr: { addr: "416679", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416679", encoding: "s2", scale: "/100" }
     }
     reg16679: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 31
       elecIhd
       elecL3
       dis: "I3 31st Harmonic"
-      modbusCurAddr: { addr: "416680", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416680", encoding: "s2", scale: "/100" }
     }
     reg16680: ElecAcQualityCurrentSensor? {
       elecOddThd
       elecL3
       dis: "Odd THD_I3"
-      modbusCurAddr: { addr: "416681", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416681", encoding: "s2", scale: "/100" }
     }
     reg16681: ElecAcQualityCurrentSensor? {
       elecEvenThd
       elecL3
       dis: "Even THD_I3"
-      modbusCurAddr: { addr: "416682", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416682", encoding: "s2", scale: "/100" }
     }
     reg16682: ElecAcQualityCurrentSensor? {
       elecKFactor
       elecL3
       dis: "K Factor of I3"
-      modbusCurAddr: { addr: "416683", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416683", encoding: "s2", scale: "/100" }
     }
 
     reg17760: ElecAcQualityCurrentSensor? {
@@ -1422,672 +1422,672 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       elecIhd
       elecL1
       dis: "I1 32nd Harmonic"
-      modbusCurAddr: { addr: "417761", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417761", encoding: "u2", scale: "/100" }
     }
     reg17761: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 33
       elecIhd
       elecL1
       dis: "I1 33rd Harmonic"
-      modbusCurAddr: { addr: "417762", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417762", encoding: "u2", scale: "/100" }
     }
     reg17762: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 34
       elecIhd
       elecL1
       dis: "I1 34th Harmonic"
-      modbusCurAddr: { addr: "417763", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417763", encoding: "u2", scale: "/100" }
     }
     reg17763: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 35
       elecIhd
       elecL1
       dis: "I1 35th Harmonic"
-      modbusCurAddr: { addr: "417764", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417764", encoding: "u2", scale: "/100" }
     }
     reg17764: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 36
       elecIhd
       elecL1
       dis: "I1 36th Harmonic"
-      modbusCurAddr: { addr: "417765", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417765", encoding: "u2", scale: "/100" }
     }
     reg17765: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 37
       elecIhd
       elecL1
       dis: "I1 37th Harmonic"
-      modbusCurAddr: { addr: "417766", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417766", encoding: "u2", scale: "/100" }
     }
     reg17766: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 38
       elecIhd
       elecL1
       dis: "I1 38th Harmonic"
-      modbusCurAddr: { addr: "417767", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417767", encoding: "u2", scale: "/100" }
     }
     reg17767: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 39
       elecIhd
       elecL1
       dis: "I1 39th Harmonic"
-      modbusCurAddr: { addr: "417768", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417768", encoding: "u2", scale: "/100" }
     }
     reg17768: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 40
       elecIhd
       elecL1
       dis: "I1 40th Harmonic"
-      modbusCurAddr: { addr: "417769", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417769", encoding: "u2", scale: "/100" }
     }
     reg17769: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 41
       elecIhd
       elecL1
       dis: "I1 41st Harmonic"
-      modbusCurAddr: { addr: "417770", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417770", encoding: "u2", scale: "/100" }
     }
     reg17770: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 42
       elecIhd
       elecL1
       dis: "I1 42nd Harmonic"
-      modbusCurAddr: { addr: "417771", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417771", encoding: "u2", scale: "/100" }
     }
     reg17771: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 43
       elecIhd
       elecL1
       dis: "I1 43rd Harmonic"
-      modbusCurAddr: { addr: "417772", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417772", encoding: "u2", scale: "/100" }
     }
     reg17772: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 44
       elecIhd
       elecL1
       dis: "I1 44th Harmonic"
-      modbusCurAddr: { addr: "417773", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417773", encoding: "u2", scale: "/100" }
     }
     reg17773: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 45
       elecIhd
       elecL1
       dis: "I1 45th Harmonic"
-      modbusCurAddr: { addr: "417774", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417774", encoding: "u2", scale: "/100" }
     }
     reg17774: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 46
       elecIhd
       elecL1
       dis: "I1 46th Harmonic"
-      modbusCurAddr: { addr: "417775", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417775", encoding: "u2", scale: "/100" }
     }
     reg17775: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 47
       elecIhd
       elecL1
       dis: "I1 47th Harmonic"
-      modbusCurAddr: { addr: "417776", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417776", encoding: "u2", scale: "/100" }
     }
     reg17776: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 48
       elecIhd
       elecL1
       dis: "I1 48th Harmonic"
-      modbusCurAddr: { addr: "417777", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417777", encoding: "u2", scale: "/100" }
     }
     reg17777: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 49
       elecIhd
       elecL1
       dis: "I1 49th Harmonic"
-      modbusCurAddr: { addr: "417778", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417778", encoding: "u2", scale: "/100" }
     }
     reg17778: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 50
       elecIhd
       elecL1
       dis: "I1 50th Harmonic"
-      modbusCurAddr: { addr: "417779", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417779", encoding: "u2", scale: "/100" }
     }
     reg17779: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 51
       elecIhd
       elecL1
       dis: "I1 51st Harmonic"
-      modbusCurAddr: { addr: "417780", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417780", encoding: "u2", scale: "/100" }
     }
     reg17780: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 52
       elecIhd
       elecL1
       dis: "I1 52nd Harmonic"
-      modbusCurAddr: { addr: "417781", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417781", encoding: "u2", scale: "/100" }
     }
     reg17781: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 53
       elecIhd
       elecL1
       dis: "I1 53rd Harmonic"
-      modbusCurAddr: { addr: "417782", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417782", encoding: "u2", scale: "/100" }
     }
     reg17782: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 54
       elecIhd
       elecL1
       dis: "I1 54th Harmonic"
-      modbusCurAddr: { addr: "417783", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417783", encoding: "u2", scale: "/100" }
     }
     reg17783: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 55
       elecIhd
       elecL1
       dis: "I1 55th Harmonic"
-      modbusCurAddr: { addr: "417784", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417784", encoding: "u2", scale: "/100" }
     }
     reg17784: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 56
       elecIhd
       elecL1
       dis: "I1 56th Harmonic"
-      modbusCurAddr: { addr: "417785", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417785", encoding: "u2", scale: "/100" }
     }
     reg17785: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 57
       elecIhd
       elecL1
       dis: "I1 57th Harmonic"
-      modbusCurAddr: { addr: "417786", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417786", encoding: "u2", scale: "/100" }
     }
     reg17786: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 58
       elecIhd
       elecL1
       dis: "I1 58th Harmonic"
-      modbusCurAddr: { addr: "417787", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417787", encoding: "u2", scale: "/100" }
     }
     reg17787: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 59
       elecIhd
       elecL1
       dis: "I1 59th Harmonic"
-      modbusCurAddr: { addr: "417788", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417788", encoding: "u2", scale: "/100" }
     }
     reg17788: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 60
       elecIhd
       elecL1
       dis: "I1 60th Harmonic"
-      modbusCurAddr: { addr: "417789", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417789", encoding: "u2", scale: "/100" }
     }
     reg17789: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 61
       elecIhd
       elecL1
       dis: "I1 61st Harmonic"
-      modbusCurAddr: { addr: "417790", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417790", encoding: "u2", scale: "/100" }
     }
     reg17790: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 62
       elecIhd
       elecL1
       dis: "I1 62nd Harmonic"
-      modbusCurAddr: { addr: "417791", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417791", encoding: "u2", scale: "/100" }
     }
     reg17791: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 63
       elecIhd
       elecL1
       dis: "I1 63rd Harmonic"
-      modbusCurAddr: { addr: "417792", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417792", encoding: "u2", scale: "/100" }
     }
     reg17792: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 32
       elecIhd
       elecL2
       dis: "I2 32nd Harmonic"
-      modbusCurAddr: { addr: "417793", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417793", encoding: "u2", scale: "/100" }
     }
     reg17793: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 33
       elecIhd
       elecL2
       dis: "I2 33rd Harmonic"
-      modbusCurAddr: { addr: "417794", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417794", encoding: "u2", scale: "/100" }
     }
     reg17794: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 34
       elecIhd
       elecL2
       dis: "I2 34th Harmonic"
-      modbusCurAddr: { addr: "417795", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417795", encoding: "u2", scale: "/100" }
     }
     reg17795: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 35
       elecIhd
       elecL2
       dis: "I2 35th Harmonic"
-      modbusCurAddr: { addr: "417796", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417796", encoding: "u2", scale: "/100" }
     }
     reg17796: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 36
       elecIhd
       elecL2
       dis: "I2 36th Harmonic"
-      modbusCurAddr: { addr: "417797", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417797", encoding: "u2", scale: "/100" }
     }
     reg17797: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 37
       elecIhd
       elecL2
       dis: "I2 37th Harmonic"
-      modbusCurAddr: { addr: "417798", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417798", encoding: "u2", scale: "/100" }
     }
     reg17798: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 38
       elecIhd
       elecL2
       dis: "I2 38th Harmonic"
-      modbusCurAddr: { addr: "417799", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417799", encoding: "u2", scale: "/100" }
     }
     reg17799: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 39
       elecIhd
       elecL2
       dis: "I2 39th Harmonic"
-      modbusCurAddr: { addr: "417800", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417800", encoding: "u2", scale: "/100" }
     }
     reg17800: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 40
       elecIhd
       elecL2
       dis: "I2 40th Harmonic"
-      modbusCurAddr: { addr: "417801", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417801", encoding: "u2", scale: "/100" }
     }
     reg17801: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 41
       elecIhd
       elecL2
       dis: "I2 41st Harmonic"
-      modbusCurAddr: { addr: "417802", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417802", encoding: "u2", scale: "/100" }
     }
     reg17802: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 42
       elecIhd
       elecL2
       dis: "I2 42nd Harmonic"
-      modbusCurAddr: { addr: "417803", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417803", encoding: "u2", scale: "/100" }
     }
     reg17803: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 43
       elecIhd
       elecL2
       dis: "I2 43rd Harmonic"
-      modbusCurAddr: { addr: "417804", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417804", encoding: "u2", scale: "/100" }
     }
     reg17804: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 44
       elecIhd
       elecL2
       dis: "I2 44th Harmonic"
-      modbusCurAddr: { addr: "417805", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417805", encoding: "u2", scale: "/100" }
     }
     reg17805: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 45
       elecIhd
       elecL2
       dis: "I2 45th Harmonic"
-      modbusCurAddr: { addr: "417806", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417806", encoding: "u2", scale: "/100" }
     }
     reg17806: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 46
       elecIhd
       elecL2
       dis: "I2 46th Harmonic"
-      modbusCurAddr: { addr: "417807", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417807", encoding: "u2", scale: "/100" }
     }
     reg17807: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 47
       elecIhd
       elecL2
       dis: "I2 47th Harmonic"
-      modbusCurAddr: { addr: "417808", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417808", encoding: "u2", scale: "/100" }
     }
     reg17808: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 48
       elecIhd
       elecL2
       dis: "I2 48th Harmonic"
-      modbusCurAddr: { addr: "417809", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417809", encoding: "u2", scale: "/100" }
     }
     reg17809: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 49
       elecIhd
       elecL2
       dis: "I2 49th Harmonic"
-      modbusCurAddr: { addr: "417810", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417810", encoding: "u2", scale: "/100" }
     }
     reg17810: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 50
       elecIhd
       elecL2
       dis: "I2 50th Harmonic"
-      modbusCurAddr: { addr: "417811", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417811", encoding: "u2", scale: "/100" }
     }
     reg17811: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 51
       elecIhd
       elecL2
       dis: "I2 51st Harmonic"
-      modbusCurAddr: { addr: "417812", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417812", encoding: "u2", scale: "/100" }
     }
     reg17812: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 52
       elecIhd
       elecL2
       dis: "I2 52nd Harmonic"
-      modbusCurAddr: { addr: "417813", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417813", encoding: "u2", scale: "/100" }
     }
     reg17813: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 53
       elecIhd
       elecL2
       dis: "I2 53rd Harmonic"
-      modbusCurAddr: { addr: "417814", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417814", encoding: "u2", scale: "/100" }
     }
     reg17814: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 54
       elecIhd
       elecL2
       dis: "I2 54th Harmonic"
-      modbusCurAddr: { addr: "417815", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417815", encoding: "u2", scale: "/100" }
     }
     reg17815: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 55
       elecIhd
       elecL2
       dis: "I2 55th Harmonic"
-      modbusCurAddr: { addr: "417816", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417816", encoding: "u2", scale: "/100" }
     }
     reg17816: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 56
       elecIhd
       elecL2
       dis: "I2 56th Harmonic"
-      modbusCurAddr: { addr: "417817", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417817", encoding: "u2", scale: "/100" }
     }
     reg17817: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 57
       elecIhd
       elecL2
       dis: "I2 57th Harmonic"
-      modbusCurAddr: { addr: "417818", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417818", encoding: "u2", scale: "/100" }
     }
     reg17818: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 58
       elecIhd
       elecL2
       dis: "I2 58th Harmonic"
-      modbusCurAddr: { addr: "417819", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417819", encoding: "u2", scale: "/100" }
     }
     reg17819: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 59
       elecIhd
       elecL2
       dis: "I2 59th Harmonic"
-      modbusCurAddr: { addr: "417820", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417820", encoding: "u2", scale: "/100" }
     }
     reg17820: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 60
       elecIhd
       elecL2
       dis: "I2 60th Harmonic"
-      modbusCurAddr: { addr: "417821", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417821", encoding: "u2", scale: "/100" }
     }
     reg17821: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 61
       elecIhd
       elecL2
       dis: "I2 61st Harmonic"
-      modbusCurAddr: { addr: "417822", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417822", encoding: "u2", scale: "/100" }
     }
     reg17822: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 62
       elecIhd
       elecL2
       dis: "I2 62nd Harmonic"
-      modbusCurAddr: { addr: "417823", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417823", encoding: "u2", scale: "/100" }
     }
     reg17823: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 63
       elecIhd
       elecL2
       dis: "I2 63rd Harmonic"
-      modbusCurAddr: { addr: "417824", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417824", encoding: "u2", scale: "/100" }
     }
     reg17824: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 32
       elecIhd
       elecL3
       dis: "I3 32nd Harmonic"
-      modbusCurAddr: { addr: "417825", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417825", encoding: "u2", scale: "/100" }
     }
     reg17825: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 33
       elecIhd
       elecL3
       dis: "I3 33rd Harmonic"
-      modbusCurAddr: { addr: "417826", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417826", encoding: "u2", scale: "/100" }
     }
     reg17826: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 34
       elecIhd
       elecL3
       dis: "I3 34th Harmonic"
-      modbusCurAddr: { addr: "417827", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417827", encoding: "u2", scale: "/100" }
     }
     reg17827: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 35
       elecIhd
       elecL3
       dis: "I3 35th Harmonic"
-      modbusCurAddr: { addr: "417828", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417828", encoding: "u2", scale: "/100" }
     }
     reg17828: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 36
       elecIhd
       elecL3
       dis: "I3 36th Harmonic"
-      modbusCurAddr: { addr: "417829", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417829", encoding: "u2", scale: "/100" }
     }
     reg17829: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 37
       elecIhd
       elecL3
       dis: "I3 37th Harmonic"
-      modbusCurAddr: { addr: "417830", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417830", encoding: "u2", scale: "/100" }
     }
     reg17830: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 38
       elecIhd
       elecL3
       dis: "I3 38th Harmonic"
-      modbusCurAddr: { addr: "417831", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417831", encoding: "u2", scale: "/100" }
     }
     reg17831: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 39
       elecIhd
       elecL3
       dis: "I3 39th Harmonic"
-      modbusCurAddr: { addr: "417832", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417832", encoding: "u2", scale: "/100" }
     }
     reg17832: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 40
       elecIhd
       elecL3
       dis: "I3 40th Harmonic"
-      modbusCurAddr: { addr: "417833", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417833", encoding: "u2", scale: "/100" }
     }
     reg17833: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 41
       elecIhd
       elecL3
       dis: "I3 41st Harmonic"
-      modbusCurAddr: { addr: "417834", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417834", encoding: "u2", scale: "/100" }
     }
     reg17834: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 42
       elecIhd
       elecL3
       dis: "I3 42nd Harmonic"
-      modbusCurAddr: { addr: "417835", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417835", encoding: "u2", scale: "/100" }
     }
     reg17835: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 43
       elecIhd
       elecL3
       dis: "I3 43rd Harmonic"
-      modbusCurAddr: { addr: "417836", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417836", encoding: "u2", scale: "/100" }
     }
     reg17836: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 44
       elecIhd
       elecL3
       dis: "I3 44th Harmonic"
-      modbusCurAddr: { addr: "417837", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417837", encoding: "u2", scale: "/100" }
     }
     reg17837: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 45
       elecIhd
       elecL3
       dis: "I3 45th Harmonic"
-      modbusCurAddr: { addr: "417838", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417838", encoding: "u2", scale: "/100" }
     }
     reg17838: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 46
       elecIhd
       elecL3
       dis: "I3 46th Harmonic"
-      modbusCurAddr: { addr: "417839", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417839", encoding: "u2", scale: "/100" }
     }
     reg17839: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 47
       elecIhd
       elecL3
       dis: "I3 47th Harmonic"
-      modbusCurAddr: { addr: "417840", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417840", encoding: "u2", scale: "/100" }
     }
     reg17840: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 48
       elecIhd
       elecL3
       dis: "I3 48th Harmonic"
-      modbusCurAddr: { addr: "417841", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417841", encoding: "u2", scale: "/100" }
     }
     reg17841: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 49
       elecIhd
       elecL3
       dis: "I3 49th Harmonic"
-      modbusCurAddr: { addr: "417842", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417842", encoding: "u2", scale: "/100" }
     }
     reg17842: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 50
       elecIhd
       elecL3
       dis: "I3 50th Harmonic"
-      modbusCurAddr: { addr: "417843", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417843", encoding: "u2", scale: "/100" }
     }
     reg17843: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 51
       elecIhd
       elecL3
       dis: "I3 51st Harmonic"
-      modbusCurAddr: { addr: "417844", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417844", encoding: "u2", scale: "/100" }
     }
     reg17844: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 52
       elecIhd
       elecL3
       dis: "I3 52nd Harmonic"
-      modbusCurAddr: { addr: "417845", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417845", encoding: "u2", scale: "/100" }
     }
     reg17845: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 53
       elecIhd
       elecL3
       dis: "I3 53rd Harmonic"
-      modbusCurAddr: { addr: "417846", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417846", encoding: "u2", scale: "/100" }
     }
     reg17846: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 54
       elecIhd
       elecL3
       dis: "I3 54th Harmonic"
-      modbusCurAddr: { addr: "417847", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417847", encoding: "u2", scale: "/100" }
     }
     reg17847: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 55
       elecIhd
       elecL3
       dis: "I3 55th Harmonic"
-      modbusCurAddr: { addr: "417848", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417848", encoding: "u2", scale: "/100" }
     }
     reg17848: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 56
       elecIhd
       elecL3
       dis: "I3 56th Harmonic"
-      modbusCurAddr: { addr: "417849", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417849", encoding: "u2", scale: "/100" }
     }
     reg17849: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 57
       elecIhd
       elecL3
       dis: "I3 57th Harmonic"
-      modbusCurAddr: { addr: "417850", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417850", encoding: "u2", scale: "/100" }
     }
     reg17850: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 58
       elecIhd
       elecL3
       dis: "I3 58th Harmonic"
-      modbusCurAddr: { addr: "417851", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417851", encoding: "u2", scale: "/100" }
     }
     reg17851: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 59
       elecIhd
       elecL3
       dis: "I3 59th Harmonic"
-      modbusCurAddr: { addr: "417852", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417852", encoding: "u2", scale: "/100" }
     }
     reg17852: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 60
       elecIhd
       elecL3
       dis: "I3 60th Harmonic"
-      modbusCurAddr: { addr: "417853", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417853", encoding: "u2", scale: "/100" }
     }
     reg17853: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 61
       elecIhd
       elecL3
       dis: "I3 61st Harmonic"
-      modbusCurAddr: { addr: "417854", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417854", encoding: "u2", scale: "/100" }
     }
     reg17854: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 62
       elecIhd
       elecL3
       dis: "I3 62nd Harmonic"
-      modbusCurAddr: { addr: "417855", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417855", encoding: "u2", scale: "/100" }
     }
     reg17855: ElecAcQualityCurrentSensor? {
       elecHarmonicOrder: 63
       elecIhd
       elecL3
       dis: "I3 63rd Harmonic"
-      modbusCurAddr: { addr: "417856", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417856", encoding: "s2", scale: "/100" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -2262,11 +2262,11 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       elecPfTrue
       elecPfIec
       dis: "Max of Power Factor"
-      modbusCurAddr: { addr: "416779", encoding: "s2", scale: "*0.001" }
+      modbusCurAddr: { addr: "416779", encoding: "s2", scale: "/1000" }
     }
     reg16785: ElecAcFreqSensor? <notHaystack> {
       dis: "Max of Frequency"
-      modbusCurAddr: { addr: "416786", encoding: "u2", scale: "*0.001" }
+      modbusCurAddr: { addr: "416786", encoding: "u2", scale: "/1000" }
     }
     // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kW, whole kW on a meter in Primary parameter mode.
     reg16792: NumberPoint? <notHaystack> {
@@ -2289,30 +2289,30 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg16813: ElecAcLineToLineAvgQualityVoltageSensor? <notHaystack> {
       imbalance
       dis: "Max of Voltage Unbalance"
-      modbusCurAddr: { addr: "416814", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "416814", encoding: "s2", scale: "/10" }
     }
     reg16820: ElecAcLineAvgQualityCurrentSensor? <notHaystack> {
       imbalance
       dis: "Max of Current Unbalance"
-      modbusCurAddr: { addr: "416821", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "416821", encoding: "s2", scale: "/10" }
     }
     reg16848: ElecAcQualityCurrentSensor? <notHaystack> {
       elecThd
       elecL1
       dis: "Max of THD_I1"
-      modbusCurAddr: { addr: "416849", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416849", encoding: "s2", scale: "/100" }
     }
     reg16855: ElecAcQualityCurrentSensor? <notHaystack> {
       elecThd
       elecL2
       dis: "Max of THD_I2"
-      modbusCurAddr: { addr: "416856", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416856", encoding: "s2", scale: "/100" }
     }
     reg16862: ElecAcQualityCurrentSensor? <notHaystack> {
       elecThd
       elecL3
       dis: "Max of THD_I3"
-      modbusCurAddr: { addr: "416863", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "416863", encoding: "s2", scale: "/100" }
     }
     // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
     reg16869: NumberPoint? <notHaystack> {
@@ -2390,11 +2390,11 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       elecPfTrue
       elecPfIec
       dis: "Min of Power Factor"
-      modbusCurAddr: { addr: "416954", encoding: "s2", scale: "*0.001" }
+      modbusCurAddr: { addr: "416954", encoding: "s2", scale: "/1000" }
     }
     reg16960: ElecAcFreqSensor? <notHaystack> {
       dis: "Min of Frequency"
-      modbusCurAddr: { addr: "416961", encoding: "u2", scale: "*0.001" }
+      modbusCurAddr: { addr: "416961", encoding: "u2", scale: "/1000" }
     }
     // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kW, whole kW on a meter in Primary parameter mode.
     reg16967: NumberPoint? <notHaystack> {
@@ -2417,30 +2417,30 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg16988: ElecAcLineToLineAvgQualityVoltageSensor? <notHaystack> {
       imbalance
       dis: "Min of Voltage Unbalance"
-      modbusCurAddr: { addr: "416989", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "416989", encoding: "s2", scale: "/10" }
     }
     reg16995: ElecAcLineAvgQualityCurrentSensor? <notHaystack> {
       imbalance
       dis: "Min of Current Unbalance"
-      modbusCurAddr: { addr: "416996", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "416996", encoding: "s2", scale: "/10" }
     }
     reg17023: ElecAcQualityCurrentSensor? <notHaystack> {
       elecThd
       elecL1
       dis: "Min of THD_I1"
-      modbusCurAddr: { addr: "417024", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417024", encoding: "s2", scale: "/100" }
     }
     reg17030: ElecAcQualityCurrentSensor? <notHaystack> {
       elecThd
       elecL2
       dis: "Min of THD_I2"
-      modbusCurAddr: { addr: "417031", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417031", encoding: "s2", scale: "/100" }
     }
     reg17037: ElecAcQualityCurrentSensor? <notHaystack> {
       elecThd
       elecL3
       dis: "Min of THD_I3"
-      modbusCurAddr: { addr: "417038", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417038", encoding: "s2", scale: "/100" }
     }
 
 
@@ -3778,7 +3778,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sensor
       dis: "Run Time"
       unit: Unit "hr"
-      modbusCurAddr: { addr: "404149", encoding: "u4", scale: "*0.01" }
+      modbusCurAddr: { addr: "404149", encoding: "u4", scale: "/100" }
     }
     // Group number (1-16) of the most recent alarm record, or 0 if none
     reg4146: NumberPoint? <notHaystack> {
@@ -8051,15 +8051,15 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg4101: NumberPoint? <notHaystack> {
       sp
       dis: "PT1"
-      modbusCurAddr: { addr: "404102", encoding: "u4", scale: "*0.1" }
-      modbusWriteAddr: { addr: "404102", encoding: "u4", scale: "*0.1" }
+      modbusCurAddr: { addr: "404102", encoding: "u4", scale: "/10" }
+      modbusWriteAddr: { addr: "404102", encoding: "u4", scale: "/10" }
     }
     // PT2 in tenths of a volt, 220.0V is 2200 (checked on a meter; range 50.0~400.0).
     reg4103: NumberPoint? <notHaystack> {
       sp
       dis: "PT2"
-      modbusCurAddr: { addr: "404104", encoding: "u2", scale: "*0.1" }
-      modbusWriteAddr: { addr: "404104", encoding: "u2", scale: "*0.1" }
+      modbusCurAddr: { addr: "404104", encoding: "u2", scale: "/10" }
+      modbusWriteAddr: { addr: "404104", encoding: "u2", scale: "/10" }
     }
     reg4104: NumberPoint? <notHaystack> {
       sp
@@ -18479,7 +18479,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29952: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_imp (sharp) demand"
-      modbusCurAddr: { addr: "429953", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429953", encoding: "s2", scale: "/10" }
     }
     reg29953: NumberPoint? <notHaystack> {
       sensor
@@ -18499,7 +18499,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29956: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_exp (sharp) demand"
-      modbusCurAddr: { addr: "429957", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429957", encoding: "s2", scale: "/10" }
     }
     reg29957: NumberPoint? <notHaystack> {
       sensor
@@ -18519,7 +18519,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29960: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_Imp (sharp) demand"
-      modbusCurAddr: { addr: "429961", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429961", encoding: "s2", scale: "/10" }
     }
     reg29961: NumberPoint? <notHaystack> {
       sensor
@@ -18539,7 +18539,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29964: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_exp (sharp) demand"
-      modbusCurAddr: { addr: "429965", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429965", encoding: "s2", scale: "/10" }
     }
     reg29965: NumberPoint? <notHaystack> {
       sensor
@@ -18559,7 +18559,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29968: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Es (sharp) demand"
-      modbusCurAddr: { addr: "429969", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429969", encoding: "s2", scale: "/10" }
     }
     reg29969: NumberPoint? <notHaystack> {
       sensor
@@ -18642,7 +18642,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29984: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_imp (peak) demand"
-      modbusCurAddr: { addr: "429985", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429985", encoding: "s2", scale: "/10" }
     }
     reg29985: NumberPoint? <notHaystack> {
       sensor
@@ -18662,7 +18662,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29988: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_exp (peak) demand"
-      modbusCurAddr: { addr: "429989", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429989", encoding: "s2", scale: "/10" }
     }
     reg29989: NumberPoint? <notHaystack> {
       sensor
@@ -18682,7 +18682,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29992: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_Imp (peak) demand"
-      modbusCurAddr: { addr: "429993", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429993", encoding: "s2", scale: "/10" }
     }
     reg29993: NumberPoint? <notHaystack> {
       sensor
@@ -18702,7 +18702,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg29996: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_exp (peak) demand"
-      modbusCurAddr: { addr: "429997", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "429997", encoding: "s2", scale: "/10" }
     }
     reg29997: NumberPoint? <notHaystack> {
       sensor
@@ -18722,7 +18722,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30000: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Es (peak) demand"
-      modbusCurAddr: { addr: "430001", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430001", encoding: "s2", scale: "/10" }
     }
     reg30001: NumberPoint? <notHaystack> {
       sensor
@@ -18805,7 +18805,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30016: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_imp (valley) demand"
-      modbusCurAddr: { addr: "430017", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430017", encoding: "s2", scale: "/10" }
     }
     reg30017: NumberPoint? <notHaystack> {
       sensor
@@ -18825,7 +18825,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30020: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_exp (valley) demand"
-      modbusCurAddr: { addr: "430021", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430021", encoding: "s2", scale: "/10" }
     }
     reg30021: NumberPoint? <notHaystack> {
       sensor
@@ -18845,7 +18845,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30024: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_Imp (valley) demand"
-      modbusCurAddr: { addr: "430025", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430025", encoding: "s2", scale: "/10" }
     }
     reg30025: NumberPoint? <notHaystack> {
       sensor
@@ -18865,7 +18865,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30028: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_exp (valley) demand"
-      modbusCurAddr: { addr: "430029", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430029", encoding: "s2", scale: "/10" }
     }
     reg30029: NumberPoint? <notHaystack> {
       sensor
@@ -18885,7 +18885,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30032: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Es (valley) demand"
-      modbusCurAddr: { addr: "430033", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430033", encoding: "s2", scale: "/10" }
     }
     reg30033: NumberPoint? <notHaystack> {
       sensor
@@ -18968,7 +18968,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30048: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_imp (normal) demand"
-      modbusCurAddr: { addr: "430049", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430049", encoding: "s2", scale: "/10" }
     }
     reg30049: NumberPoint? <notHaystack> {
       sensor
@@ -18988,7 +18988,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30052: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_exp (normal) demand"
-      modbusCurAddr: { addr: "430053", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430053", encoding: "s2", scale: "/10" }
     }
     reg30053: NumberPoint? <notHaystack> {
       sensor
@@ -19008,7 +19008,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30056: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_Imp (normal) demand"
-      modbusCurAddr: { addr: "430057", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430057", encoding: "s2", scale: "/10" }
     }
     reg30057: NumberPoint? <notHaystack> {
       sensor
@@ -19028,7 +19028,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30060: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_exp (normal) demand"
-      modbusCurAddr: { addr: "430061", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430061", encoding: "s2", scale: "/10" }
     }
     reg30061: NumberPoint? <notHaystack> {
       sensor
@@ -19048,7 +19048,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30064: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Es (normal) demand"
-      modbusCurAddr: { addr: "430065", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430065", encoding: "s2", scale: "/10" }
     }
     reg30065: NumberPoint? <notHaystack> {
       sensor
@@ -19131,7 +19131,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30080: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_imp (all) demand"
-      modbusCurAddr: { addr: "430081", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430081", encoding: "s2", scale: "/10" }
     }
     reg30081: NumberPoint? <notHaystack> {
       sensor
@@ -19151,7 +19151,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30084: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ep_exp (all) demand"
-      modbusCurAddr: { addr: "430085", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430085", encoding: "s2", scale: "/10" }
     }
     reg30085: NumberPoint? <notHaystack> {
       sensor
@@ -19171,7 +19171,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30088: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_Imp (all) demand"
-      modbusCurAddr: { addr: "430089", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430089", encoding: "s2", scale: "/10" }
     }
     reg30089: NumberPoint? <notHaystack> {
       sensor
@@ -19191,7 +19191,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30092: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Eq_exp (all) demand"
-      modbusCurAddr: { addr: "430093", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430093", encoding: "s2", scale: "/10" }
     }
     reg30093: NumberPoint? <notHaystack> {
       sensor
@@ -19211,7 +19211,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30096: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Es (all) demand"
-      modbusCurAddr: { addr: "430097", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430097", encoding: "s2", scale: "/10" }
     }
     reg30097: NumberPoint? <notHaystack> {
       sensor
@@ -19301,7 +19301,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30208: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Import Active Energy Max Demand"
-      modbusCurAddr: { addr: "430209", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430209", encoding: "s2", scale: "/10" }
     }
     reg30209: NumberPoint? <notHaystack> {
       sensor
@@ -19321,7 +19321,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30212: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Export Active Energy Max Demand"
-      modbusCurAddr: { addr: "430213", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430213", encoding: "s2", scale: "/10" }
     }
     reg30213: NumberPoint? <notHaystack> {
       sensor
@@ -19341,7 +19341,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30216: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Import Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430217", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430217", encoding: "s2", scale: "/10" }
     }
     reg30217: NumberPoint? <notHaystack> {
       sensor
@@ -19361,7 +19361,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30220: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Export Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430221", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430221", encoding: "s2", scale: "/10" }
     }
     reg30221: NumberPoint? <notHaystack> {
       sensor
@@ -19381,7 +19381,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30224: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Apparent Energy Max Demand"
-      modbusCurAddr: { addr: "430225", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430225", encoding: "s2", scale: "/10" }
     }
     reg30225: NumberPoint? <notHaystack> {
       sensor
@@ -19464,7 +19464,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30240: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Import Active Energy Max Demand"
-      modbusCurAddr: { addr: "430241", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430241", encoding: "s2", scale: "/10" }
     }
     reg30241: NumberPoint? <notHaystack> {
       sensor
@@ -19484,7 +19484,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30244: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Export Active Energy Max Demand"
-      modbusCurAddr: { addr: "430245", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430245", encoding: "s2", scale: "/10" }
     }
     reg30245: NumberPoint? <notHaystack> {
       sensor
@@ -19504,7 +19504,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30248: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Import Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430249", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430249", encoding: "s2", scale: "/10" }
     }
     reg30249: NumberPoint? <notHaystack> {
       sensor
@@ -19524,7 +19524,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30252: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Export Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430253", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430253", encoding: "s2", scale: "/10" }
     }
     reg30253: NumberPoint? <notHaystack> {
       sensor
@@ -19544,7 +19544,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30256: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Apparent Energy Max Demand"
-      modbusCurAddr: { addr: "430257", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430257", encoding: "s2", scale: "/10" }
     }
     reg30257: NumberPoint? <notHaystack> {
       sensor
@@ -19627,7 +19627,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30272: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Import Active Energy Max Demand"
-      modbusCurAddr: { addr: "430273", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430273", encoding: "s2", scale: "/10" }
     }
     reg30273: NumberPoint? <notHaystack> {
       sensor
@@ -19647,7 +19647,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30276: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Export Active Energy Max Demand"
-      modbusCurAddr: { addr: "430277", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430277", encoding: "s2", scale: "/10" }
     }
     reg30277: NumberPoint? <notHaystack> {
       sensor
@@ -19667,7 +19667,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30280: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Import Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430281", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430281", encoding: "s2", scale: "/10" }
     }
     reg30281: NumberPoint? <notHaystack> {
       sensor
@@ -19687,7 +19687,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30284: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Export Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430285", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430285", encoding: "s2", scale: "/10" }
     }
     reg30285: NumberPoint? <notHaystack> {
       sensor
@@ -19707,7 +19707,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30288: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Apparent Energy Max Demand"
-      modbusCurAddr: { addr: "430289", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430289", encoding: "s2", scale: "/10" }
     }
     reg30289: NumberPoint? <notHaystack> {
       sensor
@@ -19790,7 +19790,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30304: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Import Active Energy Max Demand"
-      modbusCurAddr: { addr: "430305", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430305", encoding: "s2", scale: "/10" }
     }
     reg30305: NumberPoint? <notHaystack> {
       sensor
@@ -19810,7 +19810,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30308: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Export Active Energy Max Demand"
-      modbusCurAddr: { addr: "430309", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430309", encoding: "s2", scale: "/10" }
     }
     reg30309: NumberPoint? <notHaystack> {
       sensor
@@ -19830,7 +19830,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30312: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Import Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430313", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430313", encoding: "s2", scale: "/10" }
     }
     reg30313: NumberPoint? <notHaystack> {
       sensor
@@ -19850,7 +19850,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30316: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Export Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430317", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430317", encoding: "s2", scale: "/10" }
     }
     reg30317: NumberPoint? <notHaystack> {
       sensor
@@ -19870,7 +19870,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30320: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Apparent Energy Max Demand"
-      modbusCurAddr: { addr: "430321", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430321", encoding: "s2", scale: "/10" }
     }
     reg30321: NumberPoint? <notHaystack> {
       sensor
@@ -19953,7 +19953,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30336: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Import Active Energy Max Demand"
-      modbusCurAddr: { addr: "430337", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430337", encoding: "s2", scale: "/10" }
     }
     reg30337: NumberPoint? <notHaystack> {
       sensor
@@ -19973,7 +19973,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30340: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Export Active Energy Max Demand"
-      modbusCurAddr: { addr: "430341", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430341", encoding: "s2", scale: "/10" }
     }
     reg30341: NumberPoint? <notHaystack> {
       sensor
@@ -19993,7 +19993,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30344: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Import Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430345", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430345", encoding: "s2", scale: "/10" }
     }
     reg30345: NumberPoint? <notHaystack> {
       sensor
@@ -20013,7 +20013,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30348: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Export Reactive Energy Max Demand"
-      modbusCurAddr: { addr: "430349", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430349", encoding: "s2", scale: "/10" }
     }
     reg30349: NumberPoint? <notHaystack> {
       sensor
@@ -20033,7 +20033,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg30352: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Apparent Energy Max Demand"
-      modbusCurAddr: { addr: "430353", encoding: "s2", scale: "*0.1" }
+      modbusCurAddr: { addr: "430353", encoding: "s2", scale: "/10" }
     }
     reg30353: NumberPoint? <notHaystack> {
       sensor
@@ -20208,8 +20208,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 1: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404178", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404178", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404178", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404178", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4178: NumberPoint? <notHaystack> {
@@ -20242,8 +20242,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 2: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404183", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404183", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404183", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404183", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4183: NumberPoint? <notHaystack> {
@@ -20276,8 +20276,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 3: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404188", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404188", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404188", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404188", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4188: NumberPoint? <notHaystack> {
@@ -20310,8 +20310,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 4: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404193", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404193", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404193", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404193", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4193: NumberPoint? <notHaystack> {
@@ -20344,8 +20344,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 5: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404198", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404198", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404198", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404198", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4198: NumberPoint? <notHaystack> {
@@ -20378,8 +20378,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 6: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404203", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404203", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404203", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404203", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4203: NumberPoint? <notHaystack> {
@@ -20412,8 +20412,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 7: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404208", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404208", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404208", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404208", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4208: NumberPoint? <notHaystack> {
@@ -20446,8 +20446,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 8: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404213", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404213", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404213", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404213", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4213: NumberPoint? <notHaystack> {
@@ -20480,8 +20480,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 9: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404218", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404218", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404218", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404218", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4218: NumberPoint? <notHaystack> {
@@ -20514,8 +20514,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 10: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404223", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404223", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404223", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404223", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4223: NumberPoint? <notHaystack> {
@@ -20548,8 +20548,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 11: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404228", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404228", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404228", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404228", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4228: NumberPoint? <notHaystack> {
@@ -20582,8 +20582,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 12: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404233", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404233", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404233", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404233", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4233: NumberPoint? <notHaystack> {
@@ -20616,8 +20616,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 13: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404238", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404238", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404238", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404238", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4238: NumberPoint? <notHaystack> {
@@ -20650,8 +20650,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 14: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404243", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404243", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404243", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404243", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4243: NumberPoint? <notHaystack> {
@@ -20684,8 +20684,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 15: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404248", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404248", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404248", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404248", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4248: NumberPoint? <notHaystack> {
@@ -20718,8 +20718,8 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Channel 16: Delay"
       unit: Unit "sec"
-      modbusCurAddr: { addr: "404253", encoding: "u2", scale: "*0.01" }
-      modbusWriteAddr: { addr: "404253", encoding: "u2", scale: "*0.01" }
+      modbusCurAddr: { addr: "404253", encoding: "u2", scale: "/100" }
+      modbusWriteAddr: { addr: "404253", encoding: "u2", scale: "/100" }
     }
     // 0: none, 1~8: RO ID
     reg4253: NumberPoint? <notHaystack> {
@@ -22388,176 +22388,176 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Current Month Accumulation TOU Energy: Sharp: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429185", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429185", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429185", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429185", encoding: "u4", scale: "/1000" }
     }
     reg29186: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Sharp: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429187", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429187", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429187", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429187", encoding: "u4", scale: "/1000" }
     }
     reg29188: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Sharp: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429189", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429189", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429189", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429189", encoding: "u4", scale: "/1000" }
     }
     reg29190: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Sharp: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429191", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429191", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429191", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429191", encoding: "u4", scale: "/1000" }
     }
     reg29192: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Sharp: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429193", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429193", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429193", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429193", encoding: "u4", scale: "/1000" }
     }
     reg29194: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Peak: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429195", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429195", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429195", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429195", encoding: "u4", scale: "/1000" }
     }
     reg29196: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Peak: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429197", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429197", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429197", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429197", encoding: "u4", scale: "/1000" }
     }
     reg29198: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Peak: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429199", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429199", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429199", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429199", encoding: "u4", scale: "/1000" }
     }
     reg29200: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Peak: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429201", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429201", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429201", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429201", encoding: "u4", scale: "/1000" }
     }
     reg29202: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Peak: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429203", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429203", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429203", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429203", encoding: "u4", scale: "/1000" }
     }
     reg29204: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Valley: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429205", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429205", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429205", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429205", encoding: "u4", scale: "/1000" }
     }
     reg29206: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Valley: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429207", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429207", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429207", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429207", encoding: "u4", scale: "/1000" }
     }
     reg29208: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Valley: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429209", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429209", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429209", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429209", encoding: "u4", scale: "/1000" }
     }
     reg29210: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Valley: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429211", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429211", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429211", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429211", encoding: "u4", scale: "/1000" }
     }
     reg29212: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Valley: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429213", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429213", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429213", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429213", encoding: "u4", scale: "/1000" }
     }
     reg29214: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Normal: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429215", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429215", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429215", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429215", encoding: "u4", scale: "/1000" }
     }
     reg29216: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Normal: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429217", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429217", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429217", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429217", encoding: "u4", scale: "/1000" }
     }
     reg29218: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Normal: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429219", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429219", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429219", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429219", encoding: "u4", scale: "/1000" }
     }
     reg29220: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Normal: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429221", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429221", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429221", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429221", encoding: "u4", scale: "/1000" }
     }
     reg29222: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Normal: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429223", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429223", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429223", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429223", encoding: "u4", scale: "/1000" }
     }
     reg29224: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Total: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429225", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429225", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429225", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429225", encoding: "u4", scale: "/1000" }
     }
     reg29226: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Total: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429227", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429227", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429227", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429227", encoding: "u4", scale: "/1000" }
     }
     reg29228: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Total: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429229", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429229", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429229", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429229", encoding: "u4", scale: "/1000" }
     }
     reg29230: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Total: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429231", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429231", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429231", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429231", encoding: "u4", scale: "/1000" }
     }
     reg29232: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Accumulation TOU Energy: Total: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429233", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429233", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429233", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429233", encoding: "u4", scale: "/1000" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -22568,176 +22568,176 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Sharp: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429235", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429235", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429235", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429235", encoding: "u4", scale: "/1000" }
     }
     reg29236: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Sharp: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429237", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429237", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429237", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429237", encoding: "u4", scale: "/1000" }
     }
     reg29238: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Sharp: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429239", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429239", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429239", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429239", encoding: "u4", scale: "/1000" }
     }
     reg29240: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Sharp: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429241", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429241", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429241", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429241", encoding: "u4", scale: "/1000" }
     }
     reg29242: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Sharp: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429243", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429243", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429243", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429243", encoding: "u4", scale: "/1000" }
     }
     reg29244: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Peak: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429245", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429245", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429245", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429245", encoding: "u4", scale: "/1000" }
     }
     reg29246: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Peak: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429247", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429247", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429247", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429247", encoding: "u4", scale: "/1000" }
     }
     reg29248: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Peak: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429249", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429249", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429249", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429249", encoding: "u4", scale: "/1000" }
     }
     reg29250: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Peak: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429251", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429251", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429251", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429251", encoding: "u4", scale: "/1000" }
     }
     reg29252: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Peak: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429253", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429253", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429253", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429253", encoding: "u4", scale: "/1000" }
     }
     reg29254: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Valley: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429255", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429255", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429255", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429255", encoding: "u4", scale: "/1000" }
     }
     reg29256: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Valley: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429257", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429257", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429257", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429257", encoding: "u4", scale: "/1000" }
     }
     reg29258: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Valley: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429259", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429259", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429259", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429259", encoding: "u4", scale: "/1000" }
     }
     reg29260: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Valley: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429261", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429261", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429261", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429261", encoding: "u4", scale: "/1000" }
     }
     reg29262: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Valley: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429263", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429263", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429263", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429263", encoding: "u4", scale: "/1000" }
     }
     reg29264: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Normal: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429265", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429265", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429265", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429265", encoding: "u4", scale: "/1000" }
     }
     reg29266: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Normal: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429267", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429267", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429267", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429267", encoding: "u4", scale: "/1000" }
     }
     reg29268: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Normal: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429269", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429269", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429269", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429269", encoding: "u4", scale: "/1000" }
     }
     reg29270: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Normal: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429271", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429271", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429271", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429271", encoding: "u4", scale: "/1000" }
     }
     reg29272: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Normal: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429273", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429273", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429273", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429273", encoding: "u4", scale: "/1000" }
     }
     reg29274: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Total: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429275", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429275", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429275", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429275", encoding: "u4", scale: "/1000" }
     }
     reg29276: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Total: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429277", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429277", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429277", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429277", encoding: "u4", scale: "/1000" }
     }
     reg29278: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Total: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429279", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429279", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429279", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429279", encoding: "u4", scale: "/1000" }
     }
     reg29280: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Total: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429281", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429281", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429281", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429281", encoding: "u4", scale: "/1000" }
     }
     reg29282: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Accumulation TOU Energy: Total: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429283", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429283", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429283", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429283", encoding: "u4", scale: "/1000" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -22748,176 +22748,176 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Current Month Incremental TOU Energy: Sharp: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429441", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429441", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429441", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429441", encoding: "u4", scale: "/1000" }
     }
     reg29442: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Sharp: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429443", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429443", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429443", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429443", encoding: "u4", scale: "/1000" }
     }
     reg29444: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Sharp: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429445", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429445", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429445", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429445", encoding: "u4", scale: "/1000" }
     }
     reg29446: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Sharp: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429447", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429447", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429447", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429447", encoding: "u4", scale: "/1000" }
     }
     reg29448: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Sharp: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429449", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429449", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429449", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429449", encoding: "u4", scale: "/1000" }
     }
     reg29450: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Peak: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429451", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429451", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429451", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429451", encoding: "u4", scale: "/1000" }
     }
     reg29452: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Peak: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429453", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429453", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429453", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429453", encoding: "u4", scale: "/1000" }
     }
     reg29454: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Peak: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429455", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429455", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429455", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429455", encoding: "u4", scale: "/1000" }
     }
     reg29456: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Peak: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429457", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429457", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429457", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429457", encoding: "u4", scale: "/1000" }
     }
     reg29458: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Peak: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429459", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429459", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429459", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429459", encoding: "u4", scale: "/1000" }
     }
     reg29460: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Valley: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429461", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429461", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429461", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429461", encoding: "u4", scale: "/1000" }
     }
     reg29462: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Valley: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429463", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429463", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429463", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429463", encoding: "u4", scale: "/1000" }
     }
     reg29464: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Valley: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429465", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429465", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429465", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429465", encoding: "u4", scale: "/1000" }
     }
     reg29466: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Valley: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429467", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429467", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429467", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429467", encoding: "u4", scale: "/1000" }
     }
     reg29468: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Valley: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429469", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429469", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429469", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429469", encoding: "u4", scale: "/1000" }
     }
     reg29470: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Normal: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429471", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429471", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429471", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429471", encoding: "u4", scale: "/1000" }
     }
     reg29472: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Normal: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429473", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429473", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429473", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429473", encoding: "u4", scale: "/1000" }
     }
     reg29474: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Normal: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429475", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429475", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429475", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429475", encoding: "u4", scale: "/1000" }
     }
     reg29476: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Normal: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429477", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429477", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429477", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429477", encoding: "u4", scale: "/1000" }
     }
     reg29478: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Normal: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429479", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429479", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429479", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429479", encoding: "u4", scale: "/1000" }
     }
     reg29480: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Total: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429481", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429481", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429481", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429481", encoding: "u4", scale: "/1000" }
     }
     reg29482: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Total: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429483", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429483", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429483", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429483", encoding: "u4", scale: "/1000" }
     }
     reg29484: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Total: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429485", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429485", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429485", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429485", encoding: "u4", scale: "/1000" }
     }
     reg29486: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Total: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429487", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429487", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429487", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429487", encoding: "u4", scale: "/1000" }
     }
     reg29488: NumberPoint? <notHaystack> {
       sp
       dis: "Current Month Incremental TOU Energy: Total: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429489", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429489", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429489", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429489", encoding: "u4", scale: "/1000" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -22928,176 +22928,176 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sp
       dis: "Prior Month Incremental TOU Energy: Sharp: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429491", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429491", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429491", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429491", encoding: "u4", scale: "/1000" }
     }
     reg29492: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Sharp: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429493", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429493", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429493", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429493", encoding: "u4", scale: "/1000" }
     }
     reg29494: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Sharp: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429495", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429495", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429495", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429495", encoding: "u4", scale: "/1000" }
     }
     reg29496: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Sharp: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429497", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429497", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429497", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429497", encoding: "u4", scale: "/1000" }
     }
     reg29498: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Sharp: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429499", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429499", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429499", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429499", encoding: "u4", scale: "/1000" }
     }
     reg29500: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Peak: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429501", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429501", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429501", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429501", encoding: "u4", scale: "/1000" }
     }
     reg29502: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Peak: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429503", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429503", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429503", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429503", encoding: "u4", scale: "/1000" }
     }
     reg29504: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Peak: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429505", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429505", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429505", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429505", encoding: "u4", scale: "/1000" }
     }
     reg29506: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Peak: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429507", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429507", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429507", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429507", encoding: "u4", scale: "/1000" }
     }
     reg29508: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Peak: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429509", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429509", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429509", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429509", encoding: "u4", scale: "/1000" }
     }
     reg29510: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Valley: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429511", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429511", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429511", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429511", encoding: "u4", scale: "/1000" }
     }
     reg29512: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Valley: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429513", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429513", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429513", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429513", encoding: "u4", scale: "/1000" }
     }
     reg29514: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Valley: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429515", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429515", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429515", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429515", encoding: "u4", scale: "/1000" }
     }
     reg29516: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Valley: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429517", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429517", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429517", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429517", encoding: "u4", scale: "/1000" }
     }
     reg29518: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Valley: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429519", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429519", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429519", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429519", encoding: "u4", scale: "/1000" }
     }
     reg29520: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Normal: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429521", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429521", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429521", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429521", encoding: "u4", scale: "/1000" }
     }
     reg29522: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Normal: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429523", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429523", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429523", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429523", encoding: "u4", scale: "/1000" }
     }
     reg29524: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Normal: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429525", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429525", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429525", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429525", encoding: "u4", scale: "/1000" }
     }
     reg29526: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Normal: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429527", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429527", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429527", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429527", encoding: "u4", scale: "/1000" }
     }
     reg29528: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Normal: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429529", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429529", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429529", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429529", encoding: "u4", scale: "/1000" }
     }
     reg29530: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Total: Import Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429531", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429531", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429531", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429531", encoding: "u4", scale: "/1000" }
     }
     reg29532: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Total: Export Active Energy"
       unit: Unit "kWh"
-      modbusCurAddr: { addr: "429533", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429533", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429533", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429533", encoding: "u4", scale: "/1000" }
     }
     reg29534: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Total: Import Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429535", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429535", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429535", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429535", encoding: "u4", scale: "/1000" }
     }
     reg29536: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Total: Export Reactive Energy"
       unit: Unit "kVARh"
-      modbusCurAddr: { addr: "429537", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429537", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429537", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429537", encoding: "u4", scale: "/1000" }
     }
     reg29538: NumberPoint? <notHaystack> {
       sp
       dis: "Prior Month Incremental TOU Energy: Total: Apparent Energy"
       unit: Unit "kVAh"
-      modbusCurAddr: { addr: "429539", encoding: "u4", scale: "*0.001" }
-      modbusWriteAddr: { addr: "429539", encoding: "u4", scale: "*0.001" }
+      modbusCurAddr: { addr: "429539", encoding: "u4", scale: "/1000" }
+      modbusWriteAddr: { addr: "429539", encoding: "u4", scale: "/1000" }
     }
 
 
@@ -24166,73 +24166,73 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     reg12316: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase A Power"
-      modbusCurAddr: { addr: "412317", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412317", encoding: "f4", scale: "/1000" }
       unit: Unit "kW"
     }
     reg12318: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase B Power"
-      modbusCurAddr: { addr: "412319", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412319", encoding: "f4", scale: "/1000" }
       unit: Unit "kW"
     }
     reg12320: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase C Power"
-      modbusCurAddr: { addr: "412321", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412321", encoding: "f4", scale: "/1000" }
       unit: Unit "kW"
     }
     reg12322: NumberPoint? <notHaystack> {
       sensor
       dis: "Total System Power"
-      modbusCurAddr: { addr: "412323", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412323", encoding: "f4", scale: "/1000" }
       unit: Unit "kW"
     }
     reg12324: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase A Reactive Power"
-      modbusCurAddr: { addr: "412325", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412325", encoding: "f4", scale: "/1000" }
       unit: Unit "kVAR"
     }
     reg12326: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase B Reactive Power"
-      modbusCurAddr: { addr: "412327", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412327", encoding: "f4", scale: "/1000" }
       unit: Unit "kVAR"
     }
     reg12328: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase C Reactive Power"
-      modbusCurAddr: { addr: "412329", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412329", encoding: "f4", scale: "/1000" }
       unit: Unit "kVAR"
     }
     reg12330: NumberPoint? <notHaystack> {
       sensor
       dis: "Total Reactive Power"
-      modbusCurAddr: { addr: "412331", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412331", encoding: "f4", scale: "/1000" }
       unit: Unit "kVAR"
     }
     reg12332: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase A Apparent Power"
-      modbusCurAddr: { addr: "412333", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412333", encoding: "f4", scale: "/1000" }
       unit: Unit "kVA"
     }
     reg12334: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase B Apparent Power"
-      modbusCurAddr: { addr: "412335", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412335", encoding: "f4", scale: "/1000" }
       unit: Unit "kVA"
     }
     reg12336: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase C Apparent Power"
-      modbusCurAddr: { addr: "412337", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412337", encoding: "f4", scale: "/1000" }
       unit: Unit "kVA"
     }
     reg12338: NumberPoint? <notHaystack> {
       sensor
       dis: "Total Apparent Power"
-      modbusCurAddr: { addr: "412339", encoding: "f4", scale: "*0.001" }
+      modbusCurAddr: { addr: "412339", encoding: "f4", scale: "/1000" }
       unit: Unit "kVA"
     }
     reg12340: NumberPoint? <notHaystack> {
