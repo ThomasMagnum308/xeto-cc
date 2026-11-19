@@ -1428,35 +1428,35 @@ AcuvimLElecAc1LNOr1LLOr3LNMeter : AcuvimLElecAcMeter <abstract> {
     //////////////////////////////////////////////////////////////////
 
     // Angle of V2 in degrees, 0~360 counted counter-clockwise from V1 (0deg) (Table 6-36). About 240 with ABC rotation, 120 with ACB.
-    // Convention seen on a meter's web page, ACB rotation (V2 120.2, V3 240.0, I1 340.4); the registers themselves not read.
+    // Checked on a meter, ACB rotation: the registers read V2 120.1, V3 240.0, I1 342.5, I2 114.0, I3 224.6, matching its web page.
     reg17056: ElecAcAngleVoltageSensor? {
       elecL2
       dis: "Phase Angle of V2 to V1"
       modbusCurAddr: { addr: "417057", encoding: "u2", scale: "/10" }
     }
     // Angle of V3 in degrees, 0~360 counted counter-clockwise from V1 (0deg) (Table 6-36). About 120 with ABC rotation, 240 with ACB.
-    // Convention seen on a meter's web page, ACB rotation (V2 120.2, V3 240.0, I1 340.4); the registers themselves not read.
+    // Checked on a meter, ACB rotation: the registers read V2 120.1, V3 240.0, I1 342.5, I2 114.0, I3 224.6, matching its web page.
     reg17057: ElecAcAngleVoltageSensor? {
       elecL3
       dis: "Phase Angle of V3 to V1"
       modbusCurAddr: { addr: "417058", encoding: "u2", scale: "/10" }
     }
     // Angle of I1 in degrees, 0~360 counted counter-clockwise from V1 (0deg) (Table 6-36). A lagging load puts I1 just clockwise of its voltage.
-    // Convention seen on a meter's web page, ACB rotation (V2 120.2, V3 240.0, I1 340.4); the registers themselves not read.
+    // Checked on a meter, ACB rotation: the registers read V2 120.1, V3 240.0, I1 342.5, I2 114.0, I3 224.6, matching its web page.
     reg17058: ElecAcAngleCurrentSensor? {
       elecL1
       dis: "Phase Angle of I1 to V1"
       modbusCurAddr: { addr: "417059", encoding: "u2", scale: "/10" }
     }
     // Angle of I2 in degrees, 0~360 counted counter-clockwise from V1 (0deg) (Table 6-36). A lagging load puts I2 just clockwise of its voltage.
-    // Convention seen on a meter's web page, ACB rotation (V2 120.2, V3 240.0, I1 340.4); the registers themselves not read.
+    // Checked on a meter, ACB rotation: the registers read V2 120.1, V3 240.0, I1 342.5, I2 114.0, I3 224.6, matching its web page.
     reg17059: ElecAcAngleCurrentSensor? {
       elecL2
       dis: "Phase Angle of I2 to V1"
       modbusCurAddr: { addr: "417060", encoding: "u2", scale: "/10" }
     }
     // Angle of I3 in degrees, 0~360 counted counter-clockwise from V1 (0deg) (Table 6-36). A lagging load puts I3 just clockwise of its voltage.
-    // Convention seen on a meter's web page, ACB rotation (V2 120.2, V3 240.0, I1 340.4); the registers themselves not read.
+    // Checked on a meter, ACB rotation: the registers read V2 120.1, V3 240.0, I1 342.5, I2 114.0, I3 224.6, matching its web page.
     reg17060: ElecAcAngleCurrentSensor? {
       elecL3
       dis: "Phase Angle of I3 to V1"
