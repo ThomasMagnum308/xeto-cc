@@ -1427,26 +1427,36 @@ AcuvimLElecAc2LLOr3LLMeter : AcuvimLElecAcMeter <abstract> {
     // Phase angle (Table 6-36)
     //////////////////////////////////////////////////////////////////
 
+    // Angle of V23 in degrees, 0~360 counted counter-clockwise from V12 (0deg) (Table 6-36). About 240 with ABC rotation, 120 with ACB.
+    // Same convention as the wye wiring, not checked on delta wiring.
     reg17056: ElecAcAngleVoltageSensor? <notHaystack> {
       elecL2L3
       dis: "Phase Angle of V23 to V12"
       modbusCurAddr: { addr: "417057", encoding: "u2", scale: "/10" }
     }
+    // Angle of V31 in degrees, 0~360 counted counter-clockwise from V12 (0deg) (Table 6-36). About 120 with ABC rotation, 240 with ACB.
+    // Same convention as the wye wiring, not checked on delta wiring.
     reg17057: ElecAcAngleVoltageSensor? <notHaystack> {
       elecL3L1
       dis: "Phase Angle of V31 to V12"
       modbusCurAddr: { addr: "417058", encoding: "u2", scale: "/10" }
     }
+    // Angle of I1 in degrees, 0~360 counted counter-clockwise from V12 (0deg) (Table 6-36). A lagging load puts I1 just clockwise of its voltage.
+    // Same convention as the wye wiring, not checked on delta wiring.
     reg17058: ElecAcAngleCurrentSensor? {
       elecL1
       dis: "Phase Angle of I1 to V12"
       modbusCurAddr: { addr: "417059", encoding: "u2", scale: "/10" }
     }
+    // Angle of I2 in degrees, 0~360 counted counter-clockwise from V12 (0deg) (Table 6-36). A lagging load puts I2 just clockwise of its voltage.
+    // Same convention as the wye wiring, not checked on delta wiring.
     reg17059: ElecAcAngleCurrentSensor? {
       elecL2
       dis: "Phase Angle of I2 to V12"
       modbusCurAddr: { addr: "417060", encoding: "u2", scale: "/10" }
     }
+    // Angle of I3 in degrees, 0~360 counted counter-clockwise from V12 (0deg) (Table 6-36). A lagging load puts I3 just clockwise of its voltage.
+    // Same convention as the wye wiring, not checked on delta wiring.
     reg17060: ElecAcAngleCurrentSensor? {
       elecL3
       dis: "Phase Angle of I3 to V12"
