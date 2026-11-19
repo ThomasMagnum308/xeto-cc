@@ -104,6 +104,8 @@ meter's web page, November 2026:
   BACnet MS/TP, as Table 6-15 says; the note after it (1 is BACnet) is
   wrong, and acuvim2 follows the note. A raw register, since the codes
   aren't contiguous.
+- Phase angles (Table 6-36) are `u2 /10` degrees, 0~360 counter-clockwise
+  from V1 (ACB rotation: V2 120.1, V3 240.0).
 - AO setpoint 4 reads 10000 (10A, the top of the current range) where the
   manual's default says 1000.
 
