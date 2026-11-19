@@ -7999,10 +7999,12 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       modbusCurAddr: { addr: "404094", encoding: "u2" }
       modbusWriteAddr: { addr: "404094", encoding: "u2" }
     }
-    reg4094: EnumPoint? <notHaystack> {
+    // 0: Modbus, 2: BACnet MS/TP (Table 6-15; checked on a meter, which reads
+    // 2 set to BACnet MS/TP; the note after the table saying 1 is wrong).
+    // Not contiguous, so modeled as a raw register rather than an Enum.
+    reg4094: NumberPoint? <notHaystack> {
       sp
       dis: "Channel 1 Communication Protocol"
-      enum: Obj <val:AcuvimCommProtocolEnum>
       modbusCurAddr: { addr: "404095", encoding: "u2" }
       modbusWriteAddr: { addr: "404095", encoding: "u2" }
     }
@@ -25687,14 +25689,6 @@ AcuvimIoModuleEnum : Enum {
 
 AcuvimFrequencyEnum : Enum {
   hz50, hz60
-}
-
-// Table 6-15 prints "0: Modbus, 2: BACnet MS/TP" for this register, but
-// the note on the following page states "When the register 0FFEH is 1,
-// the channel 1 communication protocol is set to BACnet" -- trusting
-// the note (deliberate clarifying prose) over the table.
-AcuvimCommProtocolEnum : Enum {
-  modbus, bacnet
 }
 
 AcuvimParityEnum : Enum {

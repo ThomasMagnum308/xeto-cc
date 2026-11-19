@@ -100,14 +100,15 @@ meter's web page, November 2026:
   95 is 0.095A secondary, 95A primary).
 - PT1 is `u4` and PT2 `u2`, both in tenths of a volt (2200 is 220.0V), not
   a float.
+- Channel 1 communication protocol (0FFEH) reads 0 on Modbus and 2 on
+  BACnet MS/TP, as Table 6-15 says; the note after it (1 is BACnet) is
+  wrong, and acuvim2 follows the note. A raw register, since the codes
+  aren't contiguous.
 - AO setpoint 4 reads 10000 (10A, the top of the current range) where the
   manual's default says 1000.
 
 ## Unverified
 
-- The communication protocol codes (0FFEH, 102FH): Table 6-15 gives 0
-  Modbus, 2 BACnet MS/TP; its note says 1 is BACnet. The codes follow the
-  note, as acuvim2 does. A meter on Modbus reads 0.
 - The TOU error code (780EH) is read only, as in acuvim2; the manual says
   R/W.
 - The fourth data log (settings 1500H-15B9H, window 6404H-647EH) is not
