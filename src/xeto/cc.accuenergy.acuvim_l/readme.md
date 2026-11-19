@@ -70,15 +70,48 @@ v4.1.13 (November 2026), no longer contains the register map.
 - Net energies (active, reactive, apparent) are `s4`: the manual's range is
   -999999999 to 999999999 although its table says uint32.
 
+## Raw registers
+
+Some registers have no fixed scale, so they are read raw, as in acuvim2,
+typed `NumberPoint` with no unit, and each point's doc gives the manual's
+formula:
+
+- Max and min records and TOU current max demand (Tables 6-25, 6-26, 6-34,
+  6-35): V = Rx x (PT1/PT2) / 10, A = Rx x (CT1/CT2) / 1000; power and demand
+  are whole kW, kvar and kVA. CT2 counts as 1 for 333mV, RCT and mA-output
+  CTs (the manual's pulse constant note), so on an RCT meter with CT1 1000
+  the raw current is amps.
+- Sequence components (Table 6-37): the same voltage and current formulas.
+  The table's "Rx/100 %" is copied from the THD table.
+- AO setpoint parameter values (Table 6-46): `s2`; the scale follows the AO
+  parameter (the note after the table).
+
+## Checked on a meter
+
+An Acuvim-L (RCT, CT1 1000, PT1 and PT2 220.0, Primary parameter mode,
+Primary 0.001 energy mode), read with Haxall 4.0.7 and compared with the
+meter's web page, November 2026:
+
+- TOU energy (Tables 6-21 to 6-24, 6-61, 6-62) is `*0.001`, as Table 6-20.
+- Max and min records follow the formulas above; their timestamps are
+  year, month, day, hour, minute, second.
+- The 100ms block (Table 6-18) is in Hz, V, A, kW, kvar and kVA.
+- Sequence components follow the formulas above (V raw 1230 is 123.0V; A raw
+  95 is 0.095A secondary, 95A primary).
+- PT1 is `u4` and PT2 `u2`, both in tenths of a volt (2200 is 220.0V), not
+  a float.
+- AO setpoint 4 reads 10000 (10A, the top of the current range) where the
+  manual's default says 1000.
+
 ## Unverified
 
-- TOU energy registers (Tables 6-21 to 6-24 and 6-61, 6-62): the manual gives
-  no resolution. They are scaled like the energy registers of Table 6-20
-  (`*0.001`, Primary 0.001 mode). On a meter the TOU tariffs should sum to
-  the matching Table 6-20 total.
-- Max and min records (Tables 6-34, 6-35) are `int` registers scaled by the
-  meter's PT and CT ratios, (Rx*(PT1/PT2))/10 and so on, which no fixed
-  `scale` can express. They are read raw, as in acuvim2.
+- The communication protocol codes (0FFEH, 102FH): Table 6-15 gives 0
+  Modbus, 2 BACnet MS/TP; its note says 1 is BACnet. The codes follow the
+  note, as acuvim2 does. A meter on Modbus reads 0.
+- The TOU error code (780EH) is read only, as in acuvim2; the manual says
+  R/W.
+- The fourth data log (settings 1500H-15B9H, window 6404H-647EH) is not
+  modeled; acuvim2 has three logs.
 
 ## Errors in the manual
 

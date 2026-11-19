@@ -616,6 +616,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
 
 
     // Max current demand per phase, plus timestamps (Table 6-34)
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17926: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Phase A current demand"
@@ -651,6 +652,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Phase A current demand Time stamp (Word 6)"
       modbusCurAddr: { addr: "417933", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17933: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Phase B current demand"
@@ -686,6 +688,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Phase B current demand Time stamp (Word 6)"
       modbusCurAddr: { addr: "417940", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17940: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Phase C current demand"
@@ -2092,76 +2095,88 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     // 6-37).
     //////////////////////////////////////////////////////////////////
 
+    // Raw, for troubleshooting: V = Rx x (PT1/PT2) / 10 (Table 6-37 says 'Rx/100 %', copied from the THD table; checked on a meter).
     reg17044: NumberPoint? <notHaystack> {
       sensor
       dis: "Real Part of Voltage Positive Sequence"
-      modbusCurAddr: { addr: "417045", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417045", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: V = Rx x (PT1/PT2) / 10 (Table 6-37 says 'Rx/100 %', copied from the THD table; checked on a meter).
     reg17045: NumberPoint? <notHaystack> {
       sensor
       dis: "Imaginary Part of Voltage Positive Sequence"
-      modbusCurAddr: { addr: "417046", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417046", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: V = Rx x (PT1/PT2) / 10 (Table 6-37 says 'Rx/100 %', copied from the THD table; checked on a meter).
     reg17046: NumberPoint? <notHaystack> {
       sensor
       dis: "Real Part of Voltage Negative Sequence"
-      modbusCurAddr: { addr: "417047", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417047", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: V = Rx x (PT1/PT2) / 10 (Table 6-37 says 'Rx/100 %', copied from the THD table; checked on a meter).
     reg17047: NumberPoint? <notHaystack> {
       sensor
       dis: "Imaginary Part of Voltage Negative Sequence"
-      modbusCurAddr: { addr: "417048", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417048", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: V = Rx x (PT1/PT2) / 10 (Table 6-37 says 'Rx/100 %', copied from the THD table; checked on a meter).
     reg17048: NumberPoint? <notHaystack> {
       sensor
       dis: "Real Part of Voltage Zero Sequence"
-      modbusCurAddr: { addr: "417049", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417049", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: V = Rx x (PT1/PT2) / 10 (Table 6-37 says 'Rx/100 %', copied from the THD table; checked on a meter).
     reg17049: NumberPoint? <notHaystack> {
       sensor
       dis: "Imaginary Part of Voltage Zero Sequence"
-      modbusCurAddr: { addr: "417050", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417050", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: A = Rx x (CT1/CT2) / 1000, the secondary current times the CT ratio (checked on a meter); CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17050: NumberPoint? <notHaystack> {
       sensor
       dis: "Real Part of Current Positive Sequence"
-      modbusCurAddr: { addr: "417051", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417051", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: A = Rx x (CT1/CT2) / 1000, the secondary current times the CT ratio (checked on a meter); CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17051: NumberPoint? <notHaystack> {
       sensor
       dis: "Imaginary Part of Current Positive Sequence"
-      modbusCurAddr: { addr: "417052", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417052", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: A = Rx x (CT1/CT2) / 1000, the secondary current times the CT ratio (checked on a meter); CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17052: NumberPoint? <notHaystack> {
       sensor
       dis: "Real Part of Current Negative Sequence"
-      modbusCurAddr: { addr: "417053", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417053", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: A = Rx x (CT1/CT2) / 1000, the secondary current times the CT ratio (checked on a meter); CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17053: NumberPoint? <notHaystack> {
       sensor
       dis: "Imaginary Part of Current Negative Sequence"
-      modbusCurAddr: { addr: "417054", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417054", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: A = Rx x (CT1/CT2) / 1000, the secondary current times the CT ratio (checked on a meter); CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17054: NumberPoint? <notHaystack> {
       sensor
       dis: "Real Part of Current Zero Sequence"
-      modbusCurAddr: { addr: "417055", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417055", encoding: "s2" }
     }
 
+    // Raw, for troubleshooting: A = Rx x (CT1/CT2) / 1000, the secondary current times the CT ratio (checked on a meter); CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg17055: NumberPoint? <notHaystack> {
       sensor
       dis: "Imaginary Part of Current Zero Sequence"
-      modbusCurAddr: { addr: "417056", encoding: "s2", scale: "*0.01" }
+      modbusCurAddr: { addr: "417056", encoding: "s2" }
     }
 
     //////////////////////////////////////////////////////////////////
@@ -2171,60 +2186,75 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
     // config, same as the live THD registers.
     //////////////////////////////////////////////////////////////////
 
-    reg16694: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL1
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16694: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of V1"
       modbusCurAddr: { addr: "416695", encoding: "s2" }
     }
-    reg16701: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL2
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16701: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of V2"
       modbusCurAddr: { addr: "416702", encoding: "s2" }
     }
-    reg16708: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL3
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16708: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of V3"
       modbusCurAddr: { addr: "416709", encoding: "s2" }
     }
-    reg16715: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL1L2
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16715: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of V12"
       modbusCurAddr: { addr: "416716", encoding: "s2" }
     }
-    reg16722: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL2L3
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16722: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of V23"
       modbusCurAddr: { addr: "416723", encoding: "s2" }
     }
-    reg16729: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL3L1
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16729: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of V31"
       modbusCurAddr: { addr: "416730", encoding: "s2" }
     }
-    reg16736: ElecAcRmsCurrentSensor? <notHaystack> {
-      elecL1
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
+    reg16736: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of I1"
       modbusCurAddr: { addr: "416737", encoding: "s2" }
     }
-    reg16743: ElecAcRmsCurrentSensor? <notHaystack> {
-      elecL2
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
+    reg16743: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of I2"
       modbusCurAddr: { addr: "416744", encoding: "s2" }
     }
-    reg16750: ElecAcRmsCurrentSensor? <notHaystack> {
-      elecL3
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
+    reg16750: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of I3"
       modbusCurAddr: { addr: "416751", encoding: "s2" }
     }
-    reg16757: ElecAcTotalNetActivePowerSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kW, whole kW on a meter in Primary parameter mode.
+    reg16757: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of System Power"
       modbusCurAddr: { addr: "416758", encoding: "s2" }
     }
-    reg16764: ElecAcTotalNetReactivePowerSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kvar, whole kvar on a meter in Primary parameter mode.
+    reg16764: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of Reactive Power"
       modbusCurAddr: { addr: "416765", encoding: "s2" }
     }
-    reg16771: ElecAcTotalApparentPowerSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kVA, whole kVA on a meter in Primary parameter mode.
+    reg16771: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of Apparent Power"
       modbusCurAddr: { addr: "416772", encoding: "s2" }
     }
@@ -2238,15 +2268,21 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Frequency"
       modbusCurAddr: { addr: "416786", encoding: "u2", scale: "*0.001" }
     }
-    reg16792: ElecAcTotalNetActiveDemandSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kW, whole kW on a meter in Primary parameter mode.
+    reg16792: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of Power Demand"
       modbusCurAddr: { addr: "416793", encoding: "s2" }
     }
-    reg16799: ElecAcTotalNetReactiveDemandSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kvar, whole kvar on a meter in Primary parameter mode.
+    reg16799: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of Reactive Power Demand"
       modbusCurAddr: { addr: "416800", encoding: "s2" }
     }
-    reg16806: ElecAcTotalNetApparentDemandSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kVA, whole kVA on a meter in Primary parameter mode.
+    reg16806: NumberPoint? <notHaystack> {
+      sensor
       dis: "Max of Apparent Power Demand"
       modbusCurAddr: { addr: "416807", encoding: "s2" }
     }
@@ -2278,60 +2314,75 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of THD_I3"
       modbusCurAddr: { addr: "416863", encoding: "s2", scale: "*0.01" }
     }
-    reg16869: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL1
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16869: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of V1"
       modbusCurAddr: { addr: "416870", encoding: "s2" }
     }
-    reg16876: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL2
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16876: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of V2"
       modbusCurAddr: { addr: "416877", encoding: "s2" }
     }
-    reg16883: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL3
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16883: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of V3"
       modbusCurAddr: { addr: "416884", encoding: "s2" }
     }
-    reg16890: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL1L2
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16890: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of V12"
       modbusCurAddr: { addr: "416891", encoding: "s2" }
     }
-    reg16897: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL2L3
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16897: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of V23"
       modbusCurAddr: { addr: "416898", encoding: "s2" }
     }
-    reg16904: ElecAcRmsVoltageSensor? <notHaystack> {
-      elecL3L1
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). V = Rx x (PT1/PT2) / 10.
+    reg16904: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of V31"
       modbusCurAddr: { addr: "416905", encoding: "s2" }
     }
-    reg16911: ElecAcRmsCurrentSensor? <notHaystack> {
-      elecL1
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
+    reg16911: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of I1"
       modbusCurAddr: { addr: "416912", encoding: "s2" }
     }
-    reg16918: ElecAcRmsCurrentSensor? <notHaystack> {
-      elecL2
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
+    reg16918: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of I2"
       modbusCurAddr: { addr: "416919", encoding: "s2" }
     }
-    reg16925: ElecAcRmsCurrentSensor? <notHaystack> {
-      elecL3
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
+    reg16925: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of I3"
       modbusCurAddr: { addr: "416926", encoding: "s2" }
     }
-    reg16932: ElecAcTotalNetActivePowerSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kW, whole kW on a meter in Primary parameter mode.
+    reg16932: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of System Power"
       modbusCurAddr: { addr: "416933", encoding: "s2" }
     }
-    reg16939: ElecAcTotalNetReactivePowerSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kvar, whole kvar on a meter in Primary parameter mode.
+    reg16939: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of Reactive Power"
       modbusCurAddr: { addr: "416940", encoding: "s2" }
     }
-    reg16946: ElecAcTotalApparentPowerSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kVA, whole kVA on a meter in Primary parameter mode.
+    reg16946: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of Apparent Power"
       modbusCurAddr: { addr: "416947", encoding: "s2" }
     }
@@ -2345,15 +2396,21 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Min of Frequency"
       modbusCurAddr: { addr: "416961", encoding: "u2", scale: "*0.001" }
     }
-    reg16967: ElecAcTotalNetActiveDemandSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kW, whole kW on a meter in Primary parameter mode.
+    reg16967: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of Power Demand"
       modbusCurAddr: { addr: "416968", encoding: "s2" }
     }
-    reg16974: ElecAcTotalNetReactiveDemandSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kvar, whole kvar on a meter in Primary parameter mode.
+    reg16974: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of Reactive Power Demand"
       modbusCurAddr: { addr: "416975", encoding: "s2" }
     }
-    reg16981: ElecAcTotalNetApparentDemandSensor? <notHaystack> {
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). kVA, whole kVA on a meter in Primary parameter mode.
+    reg16981: NumberPoint? <notHaystack> {
+      sensor
       dis: "Min of Apparent Power Demand"
       modbusCurAddr: { addr: "416982", encoding: "s2" }
     }
@@ -7988,17 +8045,19 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       modbusCurAddr: { addr: "404101", encoding: "u2" }
       modbusWriteAddr: { addr: "404101", encoding: "u2" }
     }
+    // PT1 in tenths of a volt over two words, 220.0V is 2200 (checked on a meter); the manual's defaults column shows display values.
     reg4101: NumberPoint? <notHaystack> {
       sp
       dis: "PT1"
-      modbusCurAddr: { addr: "404102", encoding: "f4" }
-      modbusWriteAddr: { addr: "404102", encoding: "f4" }
+      modbusCurAddr: { addr: "404102", encoding: "u4", scale: "*0.1" }
+      modbusWriteAddr: { addr: "404102", encoding: "u4", scale: "*0.1" }
     }
+    // PT2 in tenths of a volt, 220.0V is 2200 (checked on a meter; range 50.0~400.0).
     reg4103: NumberPoint? <notHaystack> {
       sp
       dis: "PT2"
-      modbusCurAddr: { addr: "404104", encoding: "u2" }
-      modbusWriteAddr: { addr: "404104", encoding: "u2" }
+      modbusCurAddr: { addr: "404104", encoding: "u2", scale: "*0.1" }
+      modbusWriteAddr: { addr: "404104", encoding: "u2", scale: "*0.1" }
     }
     reg4104: NumberPoint? <notHaystack> {
       sp
@@ -18515,6 +18574,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Es (sharp) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "429972", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg29972: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ia (sharp) demand"
@@ -18535,6 +18595,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ia (sharp) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "429976", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg29976: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ib (sharp) demand"
@@ -18555,6 +18616,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ib (sharp) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "429980", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg29980: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ic (sharp) demand"
@@ -18675,6 +18737,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Es (peak) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430004", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30004: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ia (peak) demand"
@@ -18695,6 +18758,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ia (peak) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430008", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30008: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ib (peak) demand"
@@ -18715,6 +18779,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ib (peak) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430012", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30012: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ic (peak) demand"
@@ -18835,6 +18900,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Es (valley) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430036", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30036: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ia (valley) demand"
@@ -18855,6 +18921,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ia (valley) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430040", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30040: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ib (valley) demand"
@@ -18875,6 +18942,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ib (valley) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430044", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30044: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ic (valley) demand"
@@ -18995,6 +19063,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Es (normal) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430068", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30068: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ia (normal) demand"
@@ -19015,6 +19084,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ia (normal) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430072", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30072: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ib (normal) demand"
@@ -19035,6 +19105,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ib (normal) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430076", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30076: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ic (normal) demand"
@@ -19155,6 +19226,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Es (all) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430100", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30100: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ia (all) demand"
@@ -19175,6 +19247,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ia (all) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430104", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30104: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ib (all) demand"
@@ -19195,6 +19268,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Max of Ib (all) demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430108", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30108: NumberPoint? <notHaystack> {
       sensor
       dis: "Max of Ic (all) demand"
@@ -19322,6 +19396,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Sharp: Apparent Energy Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430228", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30228: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Phase A Current Max Demand"
@@ -19342,6 +19417,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Sharp: Phase A Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430232", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30232: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Phase B Current Max Demand"
@@ -19362,6 +19438,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Sharp: Phase B Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430236", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30236: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Sharp: Phase C Current Max Demand"
@@ -19482,6 +19559,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Peak: Apparent Energy Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430260", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30260: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Phase A Current Max Demand"
@@ -19502,6 +19580,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Peak: Phase A Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430264", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30264: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Phase B Current Max Demand"
@@ -19522,6 +19601,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Peak: Phase B Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430268", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30268: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Peak: Phase C Current Max Demand"
@@ -19642,6 +19722,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Valley: Apparent Energy Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430292", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30292: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Phase A Current Max Demand"
@@ -19662,6 +19743,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Valley: Phase A Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430296", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30296: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Phase B Current Max Demand"
@@ -19682,6 +19764,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Valley: Phase B Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430300", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30300: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Valley: Phase C Current Max Demand"
@@ -19802,6 +19885,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Normal: Apparent Energy Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430324", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30324: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Phase A Current Max Demand"
@@ -19822,6 +19906,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Normal: Phase A Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430328", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30328: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Phase B Current Max Demand"
@@ -19842,6 +19927,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Normal: Phase B Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430332", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30332: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Normal: Phase C Current Max Demand"
@@ -19962,6 +20048,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Total: Apparent Energy Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430356", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30356: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Phase A Current Max Demand"
@@ -19982,6 +20069,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Total: Phase A Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430360", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30360: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Phase B Current Max Demand"
@@ -20002,6 +20090,7 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       dis: "Prior Month Maximum Demand TOU: Total: Phase B Current Max Demand Timestamp (Word 3)"
       modbusCurAddr: { addr: "430364", encoding: "u2" }
     }
+    // Raw: the scale depends on the meter's PT and CT ratios (Tables 6-25, 6-26, 6-34, 6-35). A = Rx x (CT1/CT2) / 1000; CT2 counts as 1 for 333mV, RCT and mA-output CTs (manual, pulse constant note), so on an RCT meter with CT1 1000 the raw value is amps.
     reg30364: NumberPoint? <notHaystack> {
       sensor
       dis: "Prior Month Maximum Demand TOU: Total: Phase C Current Max Demand"
@@ -23330,29 +23419,41 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       modbusCurAddr: { addr: "404305", encoding: "u2" }
       modbusWriteAddr: { addr: "404305", encoding: "u2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4305: NumberPoint? <notHaystack> {
       sp
       dis: "AO1 setpoint 1 parameter value"
-      modbusCurAddr: { addr: "404306", encoding: "u2" }
-      modbusWriteAddr: { addr: "404306", encoding: "u2" }
+      modbusCurAddr: { addr: "404306", encoding: "s2" }
+      modbusWriteAddr: { addr: "404306", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4306: NumberPoint? <notHaystack> {
       sp
       dis: "AO1 setpoint 2 parameter value"
-      modbusCurAddr: { addr: "404307", encoding: "u2" }
-      modbusWriteAddr: { addr: "404307", encoding: "u2" }
+      modbusCurAddr: { addr: "404307", encoding: "s2" }
+      modbusWriteAddr: { addr: "404307", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4307: NumberPoint? <notHaystack> {
       sp
       dis: "AO1 setpoint 3 parameter value"
-      modbusCurAddr: { addr: "404308", encoding: "u2" }
-      modbusWriteAddr: { addr: "404308", encoding: "u2" }
+      modbusCurAddr: { addr: "404308", encoding: "s2" }
+      modbusWriteAddr: { addr: "404308", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4308: NumberPoint? <notHaystack> {
       sp
       dis: "AO1 setpoint 4 parameter value"
-      modbusCurAddr: { addr: "404309", encoding: "u2" }
-      modbusWriteAddr: { addr: "404309", encoding: "u2" }
+      modbusCurAddr: { addr: "404309", encoding: "s2" }
+      modbusWriteAddr: { addr: "404309", encoding: "s2" }
     }
     reg4309: NumberPoint? <notHaystack> {
       sp
@@ -23384,29 +23485,41 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       modbusCurAddr: { addr: "404314", encoding: "u2" }
       modbusWriteAddr: { addr: "404314", encoding: "u2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4314: NumberPoint? <notHaystack> {
       sp
       dis: "AO2 setpoint 1 parameter value"
-      modbusCurAddr: { addr: "404315", encoding: "u2" }
-      modbusWriteAddr: { addr: "404315", encoding: "u2" }
+      modbusCurAddr: { addr: "404315", encoding: "s2" }
+      modbusWriteAddr: { addr: "404315", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4315: NumberPoint? <notHaystack> {
       sp
       dis: "AO2 setpoint 2 parameter value"
-      modbusCurAddr: { addr: "404316", encoding: "u2" }
-      modbusWriteAddr: { addr: "404316", encoding: "u2" }
+      modbusCurAddr: { addr: "404316", encoding: "s2" }
+      modbusWriteAddr: { addr: "404316", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4316: NumberPoint? <notHaystack> {
       sp
       dis: "AO2 setpoint 3 parameter value"
-      modbusCurAddr: { addr: "404317", encoding: "u2" }
-      modbusWriteAddr: { addr: "404317", encoding: "u2" }
+      modbusCurAddr: { addr: "404317", encoding: "s2" }
+      modbusWriteAddr: { addr: "404317", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4317: NumberPoint? <notHaystack> {
       sp
       dis: "AO2 setpoint 4 parameter value"
-      modbusCurAddr: { addr: "404318", encoding: "u2" }
-      modbusWriteAddr: { addr: "404318", encoding: "u2" }
+      modbusCurAddr: { addr: "404318", encoding: "s2" }
+      modbusWriteAddr: { addr: "404318", encoding: "s2" }
     }
     reg4318: NumberPoint? <notHaystack> {
       sp
@@ -23438,29 +23551,41 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       modbusCurAddr: { addr: "404323", encoding: "u2" }
       modbusWriteAddr: { addr: "404323", encoding: "u2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4323: NumberPoint? <notHaystack> {
       sp
       dis: "AO3 setpoint 1 parameter value"
-      modbusCurAddr: { addr: "404324", encoding: "u2" }
-      modbusWriteAddr: { addr: "404324", encoding: "u2" }
+      modbusCurAddr: { addr: "404324", encoding: "s2" }
+      modbusWriteAddr: { addr: "404324", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4324: NumberPoint? <notHaystack> {
       sp
       dis: "AO3 setpoint 2 parameter value"
-      modbusCurAddr: { addr: "404325", encoding: "u2" }
-      modbusWriteAddr: { addr: "404325", encoding: "u2" }
+      modbusCurAddr: { addr: "404325", encoding: "s2" }
+      modbusWriteAddr: { addr: "404325", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4325: NumberPoint? <notHaystack> {
       sp
       dis: "AO3 setpoint 3 parameter value"
-      modbusCurAddr: { addr: "404326", encoding: "u2" }
-      modbusWriteAddr: { addr: "404326", encoding: "u2" }
+      modbusCurAddr: { addr: "404326", encoding: "s2" }
+      modbusWriteAddr: { addr: "404326", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4326: NumberPoint? <notHaystack> {
       sp
       dis: "AO3 setpoint 4 parameter value"
-      modbusCurAddr: { addr: "404327", encoding: "u2" }
-      modbusWriteAddr: { addr: "404327", encoding: "u2" }
+      modbusCurAddr: { addr: "404327", encoding: "s2" }
+      modbusWriteAddr: { addr: "404327", encoding: "s2" }
     }
     reg4327: NumberPoint? <notHaystack> {
       sp
@@ -23492,29 +23617,41 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       modbusCurAddr: { addr: "404332", encoding: "u2" }
       modbusWriteAddr: { addr: "404332", encoding: "u2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4332: NumberPoint? <notHaystack> {
       sp
       dis: "AO4 setpoint 1 parameter value"
-      modbusCurAddr: { addr: "404333", encoding: "u2" }
-      modbusWriteAddr: { addr: "404333", encoding: "u2" }
+      modbusCurAddr: { addr: "404333", encoding: "s2" }
+      modbusWriteAddr: { addr: "404333", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4333: NumberPoint? <notHaystack> {
       sp
       dis: "AO4 setpoint 2 parameter value"
-      modbusCurAddr: { addr: "404334", encoding: "u2" }
-      modbusWriteAddr: { addr: "404334", encoding: "u2" }
+      modbusCurAddr: { addr: "404334", encoding: "s2" }
+      modbusWriteAddr: { addr: "404334", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4334: NumberPoint? <notHaystack> {
       sp
       dis: "AO4 setpoint 3 parameter value"
-      modbusCurAddr: { addr: "404335", encoding: "u2" }
-      modbusWriteAddr: { addr: "404335", encoding: "u2" }
+      modbusCurAddr: { addr: "404335", encoding: "s2" }
+      modbusWriteAddr: { addr: "404335", encoding: "s2" }
     }
+    // Raw: the scale follows the AO parameter (Table 6-45, the note after Table 6-46): frequency 4500~6500 for 45~65Hz,
+    // phase voltage 0~4800 for 0~480V, line voltage 0~8310 for 0~831V, current 0~10000 for 0~10A, power and reactive
+    // power -4800~4800 (system -14400~14400) W or var, apparent power 0~4800 (system 0~14400) VA, PF -1000~1000 for -1~1.
     reg4335: NumberPoint? <notHaystack> {
       sp
       dis: "AO4 setpoint 4 parameter value"
-      modbusCurAddr: { addr: "404336", encoding: "u2" }
-      modbusWriteAddr: { addr: "404336", encoding: "u2" }
+      modbusCurAddr: { addr: "404336", encoding: "s2" }
+      modbusWriteAddr: { addr: "404336", encoding: "s2" }
     }
     reg4336: NumberPoint? <notHaystack> {
       sp
@@ -23944,131 +24081,157 @@ AcuvimLElecAcMeter : AcElecMeter <abstract> {
       sensor
       dis: "Frequency"
       modbusCurAddr: { addr: "412289", encoding: "f4" }
+      unit: Unit "Hz"
     }
     reg12290: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase 1 Voltage"
       modbusCurAddr: { addr: "412291", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12292: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase 2 Voltage"
       modbusCurAddr: { addr: "412293", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12294: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase 3 Voltage"
       modbusCurAddr: { addr: "412295", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12296: NumberPoint? <notHaystack> {
       sensor
       dis: "Average Phase Voltage"
       modbusCurAddr: { addr: "412297", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12298: NumberPoint? <notHaystack> {
       sensor
       dis: "Line Voltage 1-2"
       modbusCurAddr: { addr: "412299", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12300: NumberPoint? <notHaystack> {
       sensor
       dis: "Line Voltage 2-3"
       modbusCurAddr: { addr: "412301", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12302: NumberPoint? <notHaystack> {
       sensor
       dis: "Line Voltage 3-1"
       modbusCurAddr: { addr: "412303", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12304: NumberPoint? <notHaystack> {
       sensor
       dis: "Average Line Voltage"
       modbusCurAddr: { addr: "412305", encoding: "f4" }
+      unit: Unit "V"
     }
     reg12306: NumberPoint? <notHaystack> {
       sensor
       dis: "Total Phase A Current"
       modbusCurAddr: { addr: "412307", encoding: "f4" }
+      unit: Unit "A"
     }
     reg12308: NumberPoint? <notHaystack> {
       sensor
       dis: "Total Phase B Current"
       modbusCurAddr: { addr: "412309", encoding: "f4" }
+      unit: Unit "A"
     }
     reg12310: NumberPoint? <notHaystack> {
       sensor
       dis: "Total Phase C Current"
       modbusCurAddr: { addr: "412311", encoding: "f4" }
+      unit: Unit "A"
     }
     reg12312: NumberPoint? <notHaystack> {
       sensor
       dis: "Average Phase Current"
       modbusCurAddr: { addr: "412313", encoding: "f4" }
+      unit: Unit "A"
     }
     reg12314: NumberPoint? <notHaystack> {
       sensor
       dis: "Neutral Current"
       modbusCurAddr: { addr: "412315", encoding: "f4" }
+      unit: Unit "A"
     }
     reg12316: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase A Power"
       modbusCurAddr: { addr: "412317", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kW"
     }
     reg12318: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase B Power"
       modbusCurAddr: { addr: "412319", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kW"
     }
     reg12320: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase C Power"
       modbusCurAddr: { addr: "412321", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kW"
     }
     reg12322: NumberPoint? <notHaystack> {
       sensor
       dis: "Total System Power"
       modbusCurAddr: { addr: "412323", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kW"
     }
     reg12324: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase A Reactive Power"
       modbusCurAddr: { addr: "412325", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVAR"
     }
     reg12326: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase B Reactive Power"
       modbusCurAddr: { addr: "412327", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVAR"
     }
     reg12328: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase C Reactive Power"
       modbusCurAddr: { addr: "412329", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVAR"
     }
     reg12330: NumberPoint? <notHaystack> {
       sensor
       dis: "Total Reactive Power"
       modbusCurAddr: { addr: "412331", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVAR"
     }
     reg12332: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase A Apparent Power"
       modbusCurAddr: { addr: "412333", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVA"
     }
     reg12334: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase B Apparent Power"
       modbusCurAddr: { addr: "412335", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVA"
     }
     reg12336: NumberPoint? <notHaystack> {
       sensor
       dis: "Phase C Apparent Power"
       modbusCurAddr: { addr: "412337", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVA"
     }
     reg12338: NumberPoint? <notHaystack> {
       sensor
       dis: "Total Apparent Power"
       modbusCurAddr: { addr: "412339", encoding: "f4", scale: "*0.001" }
+      unit: Unit "kVA"
     }
     reg12340: NumberPoint? <notHaystack> {
       sensor
